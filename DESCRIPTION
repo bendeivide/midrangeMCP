@@ -26,4 +26,6 @@ Imports:
         tkrplot
 License: GPL (>= 2)
 LazyData: TRUE
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat
