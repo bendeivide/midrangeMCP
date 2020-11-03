@@ -3,4 +3,11 @@ url: https://bendeivide.github.io/midrangeMCP/
 template:
   params:
     bootswatch: flatly
-    ganalytics: UA-84499524-2
+    ganalytics:
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+  right:
+    - text: "Text"
