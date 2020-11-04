@@ -1,0 +1,24 @@
+---
+title: "midrangeMCP - Multiple Comparisons Procedures"
+date: '`r Sys.Date()`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{midrangeMCP - Multiple Comparisons Procedures}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(midrangeMCP)
+```
+
+# How to use GUI?
+
+# Types of data entries

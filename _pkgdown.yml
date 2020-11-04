@@ -3,11 +3,30 @@ url: https://bendeivide.github.io/midrangeMCP/
 template:
   params:
     bootswatch: flatly
-    ganalytics:
+reference:
+  - title: Exported Functions
+    desc: >
+      Functions exported by midrangeMCP package
+  - contents:
+      - '`guimidrangeMCP`'
+      - '`MRtest`'
+      - '`MRbarplot`'
+      - '`MRwrite`'
 navbar:
   type: inverse
   left:
-    - icon: fa-home
+    - icon: fa fa-home
       href: index.html
+    - text: "faq"
+      icon: fa-question-circle-o
+      href: articles/guimidrangeMCP.html
+    - text: "Articles"
+      icon: fas fa-air-freshener
+
+
+      menu:
+       - text: Instalation
+         href: articles/guimidrangeMCP.html
   right:
-    - text: "Text"
+    - icon: fa-github fa-lg
+      href:

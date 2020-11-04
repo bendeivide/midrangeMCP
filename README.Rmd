@@ -1,0 +1,21 @@
+---
+output:
+  github_document:
+    toc: no
+    toc_depth: 2
+---
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Travis build status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
+<!-- badges: end -->
