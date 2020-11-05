@@ -4,8 +4,10 @@ Title: Multiples Comparisons Procedures Based on Studentized Midrange and Range 
 Version: 3.2
 Date: 2020-07-14
 Authors@R: c(
-    person("Ben", "Deivide", email = "ben.deivide@ufsj.edu.br", role = c("aut", "cre")),
-    person("Daniel", "Furtado", email = "danielff@dex.ufla.br", role = "aut"),
+    person("Ben", "Deivide", email = "ben.deivide@ufsj.edu.br", 
+    role = c("aut", "cre"), comment = c(ORCID = '0000-0001-7019-8794')),
+    person("Daniel", "Furtado", email = "danielff@dex.ufla.br", role = "aut",
+    comment = c(ORCID = '0000-0002-4371-5239')),
     person("Diego", "Arthur", email = "digo.arthur@hotmail.com", role = "ctb"))
 Description: Apply tests of multiple comparisons based
     on studentized 'midrange' and 'range' distributions. 

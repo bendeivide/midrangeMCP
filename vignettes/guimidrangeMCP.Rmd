@@ -1,9 +1,9 @@
 ---
-title: "midrangeMCP - Multiple Comparisons Procedures"
+title: "How to use the GUI of midrangeMCP package"
 date: '`r Sys.Date()`'
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{midrangeMCP - Multiple Comparisons Procedures}
+  %\VignetteIndexEntry{How to use the GUI of midrangeMCP package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,6 +19,18 @@ knitr::opts_chunk$set(
 library(midrangeMCP)
 ```
 
-# How to use GUI?
+# How to load the GUI?
 
-# Types of data entries
+# Data input
+
+# Entry types to apply the tests
+
+## Experimental model
+
+## data vector
+
+## Averages
+
+# Data output
+
+# Edit and export Graphics

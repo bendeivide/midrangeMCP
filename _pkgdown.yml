@@ -21,12 +21,18 @@ navbar:
       icon: fa-question-circle-o
       href: articles/guimidrangeMCP.html
     - text: "Articles"
-      icon: fas fa-air-freshener
-
-
+      icon: fas fa-book
       menu:
-       - text: Instalation
+       - text: About the functions of the midrangeMCP package
+         href: articles/guimidrangeMCP.html
+       - text: How to use the GUI of midrangeMCP package
          href: articles/guimidrangeMCP.html
   right:
+    - icon: fa-newspaper-o
+      text: "news"
+      href: news/index.html
+    - icon: fa-file-code-o
+      text: "functions"
+      href: reference/index.html
     - icon: fa-github fa-lg
-      href:
+      href: https://github.com/bendeivide/midrangeMCP

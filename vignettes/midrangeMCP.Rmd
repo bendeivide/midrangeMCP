@@ -1,13 +1,16 @@
 ---
-title: "midrangeMCP"
+title: "About the functions of the midrangeMCP package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{midrangeMCP}
+  %\VignetteIndexEntry{About the functions of the midrangeMCP package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
+## Loading package
+library(midrangeMCP)
+##
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -15,13 +18,25 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(midrangeMCP)
+
 ```
 
 # Install midrangeMCP package
 
-# Basic functions
+# Using the basic functions
 
-# Using GUI
+# GUI
 
-# Applications
+# Tests
+
+## Tukey midrange test (TM test)
+
+## SNK midrange test (SNKM test)
+
+## Mean grouping based on midrange (MGM test)
+
+## Mean grouping based on range (MGR test)
+
+## Performance and evaluation of the tests
+
+## Application and interpretation of tests 
