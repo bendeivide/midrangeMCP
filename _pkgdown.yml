@@ -7,7 +7,7 @@ reference:
   - title: Exported Functions
     desc: >
       Functions exported by midrangeMCP package
-  - contents:
+    contents:
       - '`guimidrangeMCP`'
       - '`MRtest`'
       - '`MRbarplot`'
