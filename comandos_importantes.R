@@ -12,5 +12,7 @@ badgeplacer(
 usethis::use_pkgdown() # Primeiro comando
 pkgdown::build_site()
 
+# Badge codcov
 badge_codecov(ghaccount = "bendeivide", ghrepo = "midrangeMCP", branch = "master")
+
 

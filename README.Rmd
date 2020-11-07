@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 [![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--06-yellowgreen.svg)](/commits/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build Status](https://travis-ci.org/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.org/bendeivide/midrangeMCP)
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 
 # midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
