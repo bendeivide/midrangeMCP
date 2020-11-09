@@ -76,7 +76,7 @@ install.packages("devtools")
 install_github("bendeivide/midrangeMCP")
 ```
 
-## Functions
+## <i class="fa fa-code" aria-hidden="true"></i> Functions
 
 The package’s functions are: `MRbarplot`, `MRwrite`, `guimidrangeMCP`
 and `MRtest`. The latter is the main function. From the arguments
@@ -85,7 +85,7 @@ inserted in it, the other functions can be performed. In the case of the
 there the database and the necessary arguments for the functions can be
 entered.
 
-## Citation
+## <i class="fa fa-pencil-alt" aria-hidden="true"></i> Citation
 
 The package article is still being submitted. But the works mentioned
 above can assist in citing the package. Still, as the midrangeMCP
@@ -110,13 +110,13 @@ package is available on CRAN, quote it this way:
     #>     url = {https://CRAN.R-project.org/package=midrangeMCP},
     #>   }
 
-## Website
+## <i class="fa fa-globe" aria-hidden="true"></i> Website
 
 For a complete description of the `midrangeMCP` package, **visit our
 website at
 [bendeivide.github.io/midrangeMCP](https://bendeivide.github.io/midrangeMCP/)**
 
-## News
+## <i class="fas fa-newspaper" aria-hidden="true"></i> News
 
   - Version 3.1 (2020-06-29): Update GUI (`guimidrangeMCP` function).
     Corrections in the graphic device in which the ‘save-as’ button was
