@@ -16,3 +16,6 @@ pkgdown::build_site()
 badge_codecov(ghaccount = "bendeivide", ghrepo = "midrangeMCP", branch = "master")
 
 
+# Inserir funcoes ou arquivos no .Rbuildignore
+usethis::use_build_ignore()
+

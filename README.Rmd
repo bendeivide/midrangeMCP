@@ -32,11 +32,29 @@ knitr::opts_chunk$set(
 
 [midrangeMCP](https://bendeivide.github.io/midrangeMCP) is an "R" package designed to present four new multiple comparison tests. This work was developed during the doctorate in Statistics and Agricultural Experimentation, by the [Federal University of Lavras](https://ufla.br/) (UFLA/BRAZIL). The supervisor of this work was Professor [Daniel Furtado Ferreira](http://www.dex.ufla.br/~danielff/). I am currently as Professor of Statistics at the [Federal University of São João del-Rei](https://ufsj.edu.br/) (UFSJ/BRAZIL). Today, we have the collaboration of a student of scientific initiation, [Diego Arthur Bispo Justino de Oliveira](https://digoarthur.github.io/), student of Mechatronics Engineering at UFSJ.
 
-Four tests are presented, three based on the [distribution of the externally studentized midrange](https://www.scielo.br/scielo.php?script=sci_abstract&pid=S1413-70542017000400378&lng=en&nrm=iso&tlng=pt). There are many distributions based on this last distribution, the difference for our case is that it was used for a test based on grouping methods for multiple comparisons, something similar to what was done with the Scott-Knot test.
+Four tests are presented, three based on the [distribution of the externally studentized midrange](https://www.scielo.br/scielo.php?script=sci_abstract&pid=S1413-70542017000400378&lng=en&nrm=iso&tlng=pt) and one based on the distribution of the externally studented range, well documented distribution in the literature. There are many distributions based on this last distribution, the difference for our case is that it was used for a test based on grouping methods for multiple comparisons, something similar to what was done with the Scott-Knot test.
 
 The tests based on the distribution of the externally studentized midrange are the Tukey Midrange test (TM test), the SNK Midrange test (SNKM test) and the Means Grouping based on Midrange test (MGM test). Finally, the test based on the distribution of the externally studentized range which is the Means Grouping based on the Range test (MGR test).
 
-These tests are available in the [thesis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT) of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the [Journal of Science and Agrotechnology](https://www.scielo.br/scielo.php?pid=1413-7054&script=sci_serial)
+Finally, a versatility of the package is the use of the GUI. This feature provides users unfamiliar with the R language when using the [midrangeMCP](https://bendeivide.github.io/midrangeMCP) package.
+
+These tests are available in the [thesis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT) of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the [Journal of Science and Agrotechnology](https://www.scielo.br/scielo.php?pid=1413-7054&script=sci_serial).
+
+## Instalation
+To install the [midrangeMCP](https://bendeivide.github.io/midrangeMCP) package via CRAN:
+```{r instalar, eval = FALSE}
+install.packages("midrangeMCP")
+```
+To install via GitHub:
+```{r instalar2, eval = FALSE}
+install.packages("devtools")
+install_github("bendeivide/midrangeMCP")
+```
+
+
+## Functions 
+
+The package's functions are: `MRbarplot`, `MRwrite`, `guimidrangeMCP` and `MRtest`. The latter is the main function. From the arguments inserted in it, the other functions can be performed. In the case of the `guimidrangeMCP` function, once executed, it will open the GUI. From there the database and the necessary arguments for the functions can be entered.
 
 ## Citation
 
