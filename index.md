@@ -17,7 +17,7 @@ Status](https://travis-ci.org/bendeivide/midrangeMCP.svg?branch=master)](https:/
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
-# <i class="fa fa-globe" aria-hidden="true"></i> midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
+# <i class="fas fa-box-open" aria-hidden="true"></i> midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
 
 [midrangeMCP](https://bendeivide.github.io/midrangeMCP) is an “R”
 package designed to present four new multiple comparison tests. This
