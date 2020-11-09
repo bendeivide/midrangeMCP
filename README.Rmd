@@ -36,12 +36,12 @@ Four tests are presented, three based on the [distribution of the externally stu
 
 The tests based on the distribution of the externally studentized midrange are the Tukey Midrange test (TM test), the SNK Midrange test (SNKM test) and the Means Grouping based on Midrange test (MGM test). Finally, the test based on the distribution of the externally studentized range which is the Means Grouping based on the Range test (MGR test).
 
-Finally, a versatility of the package is the use of the GUI. This feature provides users unfamiliar with the R language when using the [midrangeMCP](https://bendeivide.github.io/midrangeMCP) package.
+Finally, a versatility of the package is the use of the GUI. This feature provides users unfamiliar with the R language when using the [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP) package.
 
 These tests are available in the [thesis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT) of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the [Journal of Science and Agrotechnology](https://www.scielo.br/scielo.php?pid=1413-7054&script=sci_serial).
 
 ## Instalation
-To install the [midrangeMCP](https://bendeivide.github.io/midrangeMCP) package via CRAN:
+To install the [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP) package via CRAN:
 ```{r instalar, eval = FALSE}
 install.packages("midrangeMCP")
 ```
@@ -70,22 +70,19 @@ For a complete description of the `midrangeMCP` package, **visit our website at 
 
 ## News
 
-- Version 3.1 (2020-06-29): Corrections in the graphic device in which the 'save-as' button was pressed twice so that the window was opened, when RStudio was being used.
-  Corrections to the Plot configuration in the 'save-as' button.
-  Corretions to the Plot configuration in the 'Update Plot' button.
-  Internationalization of 'Scale of Plot' to the language in Portuguese.
+- Version 3.1 (2020-06-29): Update GUI (`guimidrangeMCP` function). Corrections in the graphic device in which the 'save-as' button was pressed twice so that the window was opened, when RStudio was being used. Corrections to the Plot configuration in the 'save-as' button. Corretions to the Plot configuration in the 'Update Plot' button. Internationalization of 'Scale of Plot' to the language in Portuguese.
   Internationalization of '...Nor will you need to use quotes between treatment levels...',
 part of the message in help button (Average option -> treatment).
 
 
-- Version 3.0 (2020-06-23): Reactivation of the package to CRAN. There was a change in the design of the graphical user interface using the Tcl / tk language, through the tcltk package. The basic settings of the Interface have been preserved.
+- Version 3.0 (2020-06-23): Reactivation of the package to CRAN. There was a change in the design of the graphical user interface using the Tcl/tk language, through the tcltk package. The basic settings of the Interface have been preserved.
   However, some features of the interface have been changed, such as its color.
   Another modified feature was the plot area. Some modifications will still be added in the following versions.
 
-- Version 2.1 (2020-04-14): Internationalization of the package to the language in Portuguese (Brazil). On   5/21/2020 the midrangeMCP package was removed from the CRAN repository due to a dependency on the gWidgets package. This package has been archived.
+- Version 2.1 (2020-04-14): Internationalization of the package to the language in Portuguese (Brazil). On   5/21/2020 the [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP) package was removed from the CRAN repository due to a dependency on the [gWidgets](https://CRAN.R-project.org/package=gWidgets) package. This package has been archived.
 
 
-- Version 2.0 (2020-04-11): Creation of the graphical user interface using the `gWidgets` package with GTk+ language support (gWidgetsRGtk2). This resulted in the \code{guimidrangeMCP} function.
+- Version 2.0 (2020-04-11): Creation of the graphical user interface using the [gWidgets](https://CRAN.R-project.org/package=gWidgets) package with GTk+ language support ([gWidgetsRGtk2](https://CRAN.R-project.org/package=gWidgetsRGtk2)). This resulted in the `guimidrangeMCP` function.
 
 - Version 1.3 (2016-07-14): Removing bugs.
 - Version 1.2 (2016-04-28):  Removing bugs.
