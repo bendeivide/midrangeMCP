@@ -7,6 +7,12 @@ cache:
 after_success:
   - Rscript -e 'pkgdown::build_site()'
 
+addons:
+  apt:
+    packages:
+    - tcl8.5-dev
+    - tk8.5-dev
+
 
 deploy:
   provider: pages
