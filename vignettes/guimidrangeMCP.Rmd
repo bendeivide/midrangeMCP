@@ -15,11 +15,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(midrangeMCP)
-```
+
 
 # How to load the GUI?
+
+```{r load, eval=FALSE}
+# Load midrangeMCP package
+library(midrangeMCP)
+# Load GUI
+guimidrangeMCP(gui = TRUE)
+```
 
 # Data input
 

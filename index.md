@@ -59,7 +59,7 @@ articles of these are in the submission stage, one of which has already
 been approved by the [Journal of Science and
 Agrotechnology](https://www.scielo.br/scielo.php?pid=1413-7054&script=sci_serial).
 
-## Instalation
+## <i class="fa fa-download" aria-hidden="true"></i> Instalation
 
 To install the
 [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP) package

@@ -40,7 +40,8 @@ Finally, a versatility of the package is the use of the GUI. This feature provid
 
 These tests are available in the [thesis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT) of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the [Journal of Science and Agrotechnology](https://www.scielo.br/scielo.php?pid=1413-7054&script=sci_serial).
 
-## Instalation
+## <i class="fa fa-download" aria-hidden="true"></i> Instalation
+
 To install the [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP) package via CRAN:
 ```{r instalar, eval = FALSE}
 install.packages("midrangeMCP")
