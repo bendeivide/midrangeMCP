@@ -8,6 +8,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
+[![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
 [![Project Status:
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#concept)
 [![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--06-yellowgreen.svg)](/commits/master)

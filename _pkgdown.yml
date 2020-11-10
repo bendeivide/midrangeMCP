@@ -2,7 +2,7 @@ title: midrangeMCP
 url: https://bendeivide.github.io/midrangeMCP/
 template:
   params:
-    bootswatch: flatly
+    bootswatch: cerulean
 reference:
   - title: Exported Functions
     desc: >
