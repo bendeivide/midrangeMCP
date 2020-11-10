@@ -2,7 +2,7 @@ Package: midrangeMCP
 Type: Package
 Title: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions
 Version: 3.2
-Date: 2020-07-14
+Date: 2020-11-10
 Authors@R: c(
     person("Ben", "Deivide", email = "ben.deivide@ufsj.edu.br", 
     role = c("aut", "cre"), comment = c(ORCID = '0000-0001-7019-8794')),
@@ -27,6 +27,8 @@ Imports:
         tcltk,
         tkrplot
 License: GPL (>= 2)
+URL: https://bendeivide.github.io/midrangeMCP/, https://github.com/bendeivide/midrangeMCP
+BugReports: https://github.com/bendeivide/midrangeMCP/issues
 LazyData: TRUE
 RoxygenNote: 7.1.1
 Suggests: 
