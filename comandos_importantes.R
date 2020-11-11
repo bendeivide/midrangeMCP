@@ -7,6 +7,7 @@ badgeplacer(
                          githubaccount = "bendeivide",
                          githubrepo = "midrangeMCP"
                          )
+badgecreatr::minimal_badges()
 
 # Criando a website do pacote
 usethis::use_pkgdown() # Primeiro comando
