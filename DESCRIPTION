@@ -2,7 +2,7 @@ Package: midrangeMCP
 Type: Package
 Title: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions
 Version: 3.2
-Date: 2020-11-10
+Date: 2020-11-11
 Authors@R: c(
     person("Ben", "Deivide", email = "ben.deivide@ufsj.edu.br", 
     role = c("aut", "cre"), comment = c(ORCID = '0000-0001-7019-8794')),
