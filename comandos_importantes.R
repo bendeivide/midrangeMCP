@@ -10,7 +10,17 @@ badgeplacer(
 
 # Criando a website do pacote
 usethis::use_pkgdown() # Primeiro comando
+# use_pkgdown(): creates a pkgdown config file,
+#    adds relevant files or directories
+#    to .Rbuildignore and .gitignore, and builds
+#    favicons if your package has a logo
 pkgdown::build_site()
+
+
+# Gerar o token do github
+usethis::browse_github_token()
+#'https://github.com/settings/tokens/new?scopes=repo,gist,user:email&description=R:GITHUB_PAT'
+usethis::edit_r_environ()
 
 # Badge codcov
 badge_codecov(ghaccount = "bendeivide", ghrepo = "midrangeMCP", branch = "master")
