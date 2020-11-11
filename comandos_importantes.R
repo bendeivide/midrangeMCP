@@ -57,9 +57,11 @@ usethis::use_release_issue()
 # 3: patch --> 3.2.1
 # 4:   dev --> 3.2.0.9000
 
-#API's
+#API's - verificar
 Sys.getenv("R_TRAVIS")
 Sys.setenv
 
 
+# Configurar o TRAVIS
+https://sahirbhatnagar.com/blog/2020/03/03/creating-a-website-for-your-r-package/
 
