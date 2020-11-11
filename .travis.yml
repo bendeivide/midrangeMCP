@@ -19,6 +19,8 @@ addons:
 before_install:
     - export DISPLAY=:99.0
 
+warnings_are_errors: false
+
 
 deploy:
   provider: pages
