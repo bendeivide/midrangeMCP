@@ -17,6 +17,21 @@ usethis::use_pkgdown() # Primeiro comando
 pkgdown::build_site()
 
 
+#Travis:
+# travis::browse_travis_token()
+# i Querying API token...
+# > Opening URL <https://travis-ci.com/account/preferences>.
+# i Call `usethis::edit_r_environ()` to open ~/.Renviron and store
+# the API key as env var `R_TRAVIS_COM` (or `R_TRAVIS_ORG` if you
+#                                        are using the '.org' endpoint). Example: `R_TRAVIS_COM = <key>`
+#
+# The API key can alternatively be stored in ~/.travis/config.yml.
+# This is only suggested if you previously used the Travis CI CLI
+# tool.
+#
+# See `?travis::browse_travis_token()` for details.
+
+
 # Gerar o token do github
 usethis::browse_github_token()
 #'https://github.com/settings/tokens/new?scopes=repo,gist,user:email&description=R:GITHUB_PAT'
@@ -42,7 +57,9 @@ usethis::use_release_issue()
 # 3: patch --> 3.2.1
 # 4:   dev --> 3.2.0.9000
 
-
+#API's
+Sys.getenv("R_TRAVIS")
+Sys.setenv
 
 
 
