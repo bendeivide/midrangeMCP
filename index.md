@@ -14,9 +14,9 @@ Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repost
 [![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--06-yellowgreen.svg)](/commits/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
-Status](https://travis-ci.org/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.org/bendeivide/midrangeMCP)
+Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
 [![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+stable](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 # <i class="fas fa-box-open" aria-hidden="true"></i> midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
 
