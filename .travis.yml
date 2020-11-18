@@ -1,15 +1,28 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-cache: packages
+cache:
+  - packages
 
-after_success:
-  - Rscript -e 'pkgdown::build_site()'
+env:
+  - _R_CHECK_FORCE_SUGGESTS_=FALSE
+
+addons:
+  apt:
+    packages:
+      - tcl8.5-dev
+      - tk8.5-dev
+
+before_install:
+    - export DISPLAY=:99.0
+
+warnings_are_errors: false
+
+before_cache:
+  - Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_PAT
-  keep-history: true
-  local-dir: docs
-  on:
-    branch: master
+  provider: script
+  script:
+    - R CMD INSTALL .
+    - Rscript -e 'pkgdown::deploy_site_github(ssh_id = Sys.getenv("TRAVIS_DEPLOY_KEY", ""))'
+  skip_cleanup: true
