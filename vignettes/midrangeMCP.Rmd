@@ -23,8 +23,8 @@ knitr::opts_chunk$set(
 
 
 
-<a href="#"> <img   onclick="traduzir(1)" src="man/figures/icon_EUA.png"  ></a>
-<a href="#"> <img  onclick="traduzir(0)"src="man/figures/icon_BR.png"  ></a>
+<a href="#"> <img   onclick="traduzir(1)" src="icon_EUA.png"  ></a>
+<a href="#"> <img  onclick="traduzir(0)"src="icon_BR.png"  ></a>
 
 
 <h1 id="titulo_install">Install midrangeMCP package </h1>
