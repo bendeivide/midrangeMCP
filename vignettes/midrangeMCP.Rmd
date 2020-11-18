@@ -1,5 +1,5 @@
 ---
-title: "About the functions of the midrangeMCP package"
+title: ""
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{About the functions of the midrangeMCP package}
@@ -20,23 +20,87 @@ knitr::opts_chunk$set(
 ```{r setup}
 
 ```
+<h1 id="titulo">About the functions of the midrangeMCP package  </h1>
 
-# Install midrangeMCP package
+<a href="#"> <img   onclick="traduzir(1)" src="img/icon_EUA.png"  ></a>
+<a href="#"> <img  onclick="traduzir(0)"src="img/icon_BR.png"  ></a>
 
-# Using the basic functions
 
-# GUI
+<h1 id="titulo_install">Install midrangeMCP package </h1>
 
-# Tests
 
-## Tukey midrange test (TM test)
+<h5 id="subTitulo_arquivo">Archive.r (R Studio) </h5>
 
-## SNK midrange test (SNKM test)
 
-## Mean grouping based on midrange (MGM test)
 
-## Mean grouping based on range (MGR test)
 
-## Performance and evaluation of the tests
+<script>
+function traduzir(op) {
 
-## Application and interpretation of tests 
+if (op==0){
+ document.querySelector("#titulo").innerHTML = "Sobre as funções do pacote midrangeMCP"
+document.querySelector("#titulo_install").innerHTML = "Instalando o Pacote midrangeMCP"
+ document.querySelector("#subTitulo_arquivo").innerHTML = "Arquivo.r (R Studio)"
+  document.querySelector("#titulo_Using").innerHTML = "Usando as funções básicas"
+  document.querySelector("#tituto_Tests").innerHTML = "Testes"
+}
+
+if (op==1){
+
+ document.querySelector("#titulo").innerHTML = "About the functions of the midrangeMCP package"
+ document.querySelector("#titulo_install").innerHTML = "Install midrangeMCP package"
+ document.querySelector("#subTitulo_arquivo").innerHTML = "Archive.r (R Studio)"
+  document.querySelector("#titulo_Using").innerHTML = "Using the basic functions"
+  document.querySelector("#tituto_Tests").innerHTML = "Tests"
+  
+}
+}
+
+
+</script>
+
+
+~~~r
+install.packages("midrangeMCP")
+~~~
+###### Console (R Studio)
+~~~r
+> install.packages("midrangeMCP")
+tentando a URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/midrangeMCP_3.1.zip'
+Content type 'application/zip' length 122987 bytes (120 KB)
+downloaded 120 KB
+
+package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
+~~~
+
+
+
+<!---
+$$
+   f(x,y) = \sin(x+y)
+$$
+-->
+
+
+
+
+<h1 id="titulo_Using">Using the basic functions </h1>
+
+
+
+<h1 id="tituto_Gui">GUI </h1>
+
+
+<h1 id="tituto_Tests">Tests</h1>
+
+<h2 id="titulo_Tukey">Tukey midrange test (TM test) </h2>
+
+<h2 id="titulo_SNK">SNK midrange test (SNKM test)</h2>
+
+<h2 id="titulo_MGM">Mean grouping based on midrange (MGM test) </h2>
+
+<h2 id="titulo_MGR">Mean grouping based on range (MGR test) </h2>
+
+<h2 id="titulo_Performance">Performance and evaluation of the tests </h2>
+ 
+<h2 id="titulo_Application">Application and interpretation of tests </h2>
