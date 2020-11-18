@@ -24,7 +24,7 @@ navbar:
       icon: fas fa-book
       menu:
        - text: About the functions of the midrangeMCP package
-         href: articles/guimidrangeMCP.html
+         href: articles/midrangeMCP.html
        - text: How to use the GUI of midrangeMCP package
          href: articles/guimidrangeMCP.html
     - icon: fa-newspaper-o

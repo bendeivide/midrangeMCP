@@ -67,7 +67,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/guimidrangeMCP.html">About the functions of the midrangeMCP package</a>
+      <a href="../articles/midrangeMCP.html">About the functions of the midrangeMCP package</a>
     </li>
     <li>
       <a href="../articles/guimidrangeMCP.html">How to use the GUI of midrangeMCP package</a>
@@ -106,7 +106,7 @@
 
       
 
-      </header><script src="midrangeMCP_files/header-attrs-2.3/header-attrs.js"></script><script src="midrangeMCP_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="midrangeMCP_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>About the functions of the midrangeMCP package</h1>
@@ -119,53 +119,84 @@
 
     
     
-<div id="install-midrangemcp-package" class="section level1">
-<h1 class="hasAnchor">
-<a href="#install-midrangemcp-package" class="anchor"></a>Install midrangeMCP package</h1>
-</div>
-<div id="using-the-basic-functions" class="section level1">
-<h1 class="hasAnchor">
-<a href="#using-the-basic-functions" class="anchor"></a>Using the basic functions</h1>
-</div>
-<div id="gui" class="section level1">
-<h1 class="hasAnchor">
-<a href="#gui" class="anchor"></a>GUI</h1>
-</div>
-<div id="tests" class="section level1">
-<h1 class="hasAnchor">
-<a href="#tests" class="anchor"></a>Tests</h1>
-<div id="tukey-midrange-test-tm-test" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tukey-midrange-test-tm-test" class="anchor"></a>Tukey midrange test (TM test)</h2>
-</div>
-<div id="snk-midrange-test-snkm-test" class="section level2">
-<h2 class="hasAnchor">
-<a href="#snk-midrange-test-snkm-test" class="anchor"></a>SNK midrange test (SNKM test)</h2>
-</div>
-<div id="mean-grouping-based-on-midrange-mgm-test" class="section level2">
-<h2 class="hasAnchor">
-<a href="#mean-grouping-based-on-midrange-mgm-test" class="anchor"></a>Mean grouping based on midrange (MGM test)</h2>
-</div>
-<div id="mean-grouping-based-on-range-mgr-test" class="section level2">
-<h2 class="hasAnchor">
-<a href="#mean-grouping-based-on-range-mgr-test" class="anchor"></a>Mean grouping based on range (MGR test)</h2>
-</div>
-<div id="performance-and-evaluation-of-the-tests" class="section level2">
-<h2 class="hasAnchor">
-<a href="#performance-and-evaluation-of-the-tests" class="anchor"></a>Performance and evaluation of the tests</h2>
-</div>
-<div id="application-and-interpretation-of-tests" class="section level2">
-<h2 class="hasAnchor">
-<a href="#application-and-interpretation-of-tests" class="anchor"></a>Application and interpretation of tests</h2>
-</div>
+<p><a href="#"> <img onclick="traduzir(1)" src="img/icon_EUA.png"></a> <a href="#"> <img onclick="traduzir(0)" src="img/icon_BR.png"></a></p>
+<h1 id="titulo_install">
+Install midrangeMCP package
+</h1>
+<h5 id="subTitulo_arquivo">
+Archive.r (R Studio)
+</h5>
+<script>
+function traduzir(op) {
+
+if (op==0){
+ 
+document.querySelector("#titulo_install").innerHTML = "Instalando o Pacote midrangeMCP"
+ document.querySelector("#subTitulo_arquivo").innerHTML = "Arquivo.r (R Studio)"
+  document.querySelector("#titulo_Using").innerHTML = "Usando as funções básicas"
+  document.querySelector("#tituto_Tests").innerHTML = "Testes"
+}
+
+if (op==1){
+
+ 
+ document.querySelector("#titulo_install").innerHTML = "Install midrangeMCP package"
+ document.querySelector("#subTitulo_arquivo").innerHTML = "Archive.r (R Studio)"
+  document.querySelector("#titulo_Using").innerHTML = "Using the basic functions"
+  document.querySelector("#tituto_Tests").innerHTML = "Tests"
+  
+}
+}
+
+
+</script><div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"midrangeMCP"</span>)</pre></body></html></div>
+<div id="console-r-studio" class="section level6">
+<h6>Console (R Studio)</h6>
+<div class="sourceCode" id="cb2"><html><body><pre class="r">&gt; install.packages("midrangeMCP")
+tentando a URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/midrangeMCP_3.1.zip'
+Content type 'application/zip' length 122987 bytes (120 KB)
+downloaded 120 KB
+
+package ‘midrangeMCP’ successfully unpacked and MD5 sums checked</pre></body></html></div>
+<!---
+$$
+  s f(x,y) = \sin(x+y)
+$$
+-->
+<h1 id="titulo_Using" class="hasAnchor">
+<a href="#console-r-studio" class="anchor"></a>
+Using the basic functions
+</h1>
+<h1 id="tituto_Gui">
+GUI
+</h1>
+<h1 id="tituto_Tests">
+Tests
+</h1>
+<h2 id="titulo_Tukey">
+Tukey midrange test (TM test)
+</h2>
+<h2 id="titulo_SNK">
+SNK midrange test (SNKM test)
+</h2>
+<h2 id="titulo_MGM">
+Mean grouping based on midrange (MGM test)
+</h2>
+<h2 id="titulo_MGR">
+Mean grouping based on range (MGR test)
+</h2>
+<h2 id="titulo_Performance">
+Performance and evaluation of the tests
+</h2>
+<h2 id="titulo_Application">
+Application and interpretation of tests
+</h2>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
