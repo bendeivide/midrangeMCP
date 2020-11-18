@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "About the functions of the midrangeMCP package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{About the functions of the midrangeMCP package}
@@ -20,7 +20,8 @@ knitr::opts_chunk$set(
 ```{r setup}
 
 ```
-<h1 id="titulo">About the functions of the midrangeMCP package  </h1>
+
+
 
 <a href="#"> <img   onclick="traduzir(1)" src="img/icon_EUA.png"  ></a>
 <a href="#"> <img  onclick="traduzir(0)"src="img/icon_BR.png"  ></a>
@@ -38,7 +39,7 @@ knitr::opts_chunk$set(
 function traduzir(op) {
 
 if (op==0){
- document.querySelector("#titulo").innerHTML = "Sobre as funções do pacote midrangeMCP"
+ 
 document.querySelector("#titulo_install").innerHTML = "Instalando o Pacote midrangeMCP"
  document.querySelector("#subTitulo_arquivo").innerHTML = "Arquivo.r (R Studio)"
   document.querySelector("#titulo_Using").innerHTML = "Usando as funções básicas"
@@ -47,7 +48,7 @@ document.querySelector("#titulo_install").innerHTML = "Instalando o Pacote midra
 
 if (op==1){
 
- document.querySelector("#titulo").innerHTML = "About the functions of the midrangeMCP package"
+ 
  document.querySelector("#titulo_install").innerHTML = "Install midrangeMCP package"
  document.querySelector("#subTitulo_arquivo").innerHTML = "Archive.r (R Studio)"
   document.querySelector("#titulo_Using").innerHTML = "Using the basic functions"
