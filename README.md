@@ -10,7 +10,7 @@
 status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
 [![Project Status:
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#concept)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--11-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--25-yellowgreen.svg)](/commits/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
 Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
@@ -96,18 +96,16 @@ package is available on CRAN, quote it this way:
     #> 
     #>   Ben Deivide and Daniel Furtado (2020). midrangeMCP: Multiples
     #>   Comparisons Procedures Based on Studentized Midrange and Range
-    #>   Distributions. R package version 3.1.
-    #>   https://CRAN.R-project.org/package=midrangeMCP
+    #>   Distributions. https://bendeivide.github.io/midrangeMCP/,
+    #>   https://github.com/bendeivide/midrangeMCP.
     #> 
     #> A BibTeX entry for LaTeX users is
     #> 
     #>   @Manual{,
-    #>     title = {midrangeMCP: Multiples Comparisons Procedures Based on Studentized Midrange
-    #> and Range Distributions},
+    #>     title = {midrangeMCP: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions},
     #>     author = {Ben Deivide and Daniel Furtado},
     #>     year = {2020},
-    #>     note = {R package version 3.1},
-    #>     url = {https://CRAN.R-project.org/package=midrangeMCP},
+    #>     note = {https://bendeivide.github.io/midrangeMCP/, https://github.com/bendeivide/midrangeMCP},
     #>   }
 
 ## Website

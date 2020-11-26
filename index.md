@@ -97,18 +97,16 @@ package is available on CRAN, quote it this way:
     #> 
     #>   Ben Deivide and Daniel Furtado (2020). midrangeMCP: Multiples
     #>   Comparisons Procedures Based on Studentized Midrange and Range
-    #>   Distributions. R package version 3.1.
-    #>   https://CRAN.R-project.org/package=midrangeMCP
+    #>   Distributions. https://bendeivide.github.io/midrangeMCP/,
+    #>   https://github.com/bendeivide/midrangeMCP.
     #> 
     #> A BibTeX entry for LaTeX users is
     #> 
     #>   @Manual{,
-    #>     title = {midrangeMCP: Multiples Comparisons Procedures Based on Studentized Midrange
-    #> and Range Distributions},
+    #>     title = {midrangeMCP: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions},
     #>     author = {Ben Deivide and Daniel Furtado},
     #>     year = {2020},
-    #>     note = {R package version 3.1},
-    #>     url = {https://CRAN.R-project.org/package=midrangeMCP},
+    #>     note = {https://bendeivide.github.io/midrangeMCP/, https://github.com/bendeivide/midrangeMCP},
     #>   }
 
 ## <i class="fa fa-globe" aria-hidden="true"></i> Website

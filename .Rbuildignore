@@ -8,6 +8,6 @@ _pkgdown.yml
 index.md
 index.Rmd
 cran-comments.md
-^comandos_importantes\.R$
+comandos_importantes\.R$
 ^README\.Rmd$
 ^cran-comments\.md$
