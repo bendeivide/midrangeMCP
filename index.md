@@ -11,7 +11,7 @@ status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-projec
 [![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
 [![Project Status:
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#concept)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--11-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--26-yellowgreen.svg)](/commits/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
 Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
