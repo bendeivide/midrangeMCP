@@ -17,13 +17,14 @@
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions">
+<script src="pkgdown.js"></script>
+<meta property="og:title" content="Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions">
 <meta property="og:description" content="Apply tests of multiple comparisons based
-    on studentized midrange and range distributions. 
+    on studentized midrange and range distributions.
     The tests are: Tukey Midrange (TM test),
-    Student-Newman-Keuls Midrange (SNKM test), 
-    Means Grouping Midrange (MGM test) and 
-    Means Grouping Range (MGR test). The articles of these 
+    Student-Newman-Keuls Midrange (SNKM test),
+    Means Grouping Midrange (MGM test) and
+    Means Grouping Range (MGR test). The articles of these
     tests are in the submission phase, and we will soon update the references.">
 <meta property="og:image" content="https://bendeivide.github.io/midrangeMCP/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -53,22 +54,22 @@
 <li>
   <a href="index.html">
     <span class="fa fa fa fa-home"></span>
-     
+
   </a>
 </li>
 <li>
   <a href="articles/guimidrangeMCP.html">
     <span class="fa fa-question-circle-o"></span>
-     
+
     faq
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fas fa fas fa-book"></span>
-     
-    Articles
-     
+
+    <span id="navbar_2op">Articles</span>
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -83,25 +84,41 @@
 <li>
   <a href="news/index.html">
     <span class="fa fa-newspaper-o"></span>
-     
-    news
+
+
+    <span id="navbar_3op">News</span>
   </a>
 </li>
 <li>
   <a href="reference/index.html">
     <span class="fa fa-file-code-o"></span>
-     
-    functions
+
+<span id="navbar_4op">Functions</span>
+
+
   </a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
-<li>
+<li class="icon_GitHub">
   <a href="https://github.com/bendeivide/midrangeMCP">
     <span class="fa fa-github fa-lg"></span>
-     
+
   </a>
 </li>
+
+<!--##################### AQUI É A INSERÇÃO DOS BOTÕES PARA A TRADUÇÃO DA PÁGINA ######################### -->
+<li>
+
+  <a href="#" > <img class="icon_Traducao"  onclick="traduzir(1)" src="img/icon_EUA.png"  ></a>
+
+</li>
+<li>
+  <a href="#"> <img class="icon_Traducao"   onclick="traduzir(0)"src="img/icon_BR.png"  ></a>
+
+
+</li>
+<!-- ################################################################################################## -->
       </ul>
 </div>
 <!--/.nav-collapse -->
@@ -110,7 +127,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="contents col-md-9">
@@ -120,15 +137,24 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#-midrangemcp-" class="anchor"></a><i class="fas fa-box-open" aria-hidden="true"></i> midrangeMCP <img src="reference/figures/logo.png" align="right" height="139">
 </h1></div>
-<p><a href="https://bendeivide.github.io/midrangeMCP">midrangeMCP</a> is an “R” package designed to present four new multiple comparison tests. This work was developed during the doctorate in Statistics and Agricultural Experimentation, by the <a href="https://ufla.br/">Federal University of Lavras</a> (UFLA/BRAZIL). The supervisor of this work was Professor <a href="http://www.dex.ufla.br/~danielff/">Daniel Furtado Ferreira</a>. I am currently as Professor of Statistics at the <a href="https://ufsj.edu.br/">Federal University of São João del-Rei</a> (UFSJ/BRAZIL). Today, we have the collaboration of a student of scientific initiation, <a href="https://digoarthur.github.io/">Diego Arthur Bispo Justino de Oliveira</a>, student of Mechatronics Engineering at UFSJ.</p>
-<p>Four tests are presented, three based on the <a href="https://www.scielo.br/scielo.php?script=sci_abstract&amp;pid=S1413-70542017000400378&amp;lng=en&amp;nrm=iso&amp;tlng=pt">distribution of the externally studentized midrange</a> and one based on the distribution of the externally studented range, well documented distribution in the literature. There are many distributions based on this last distribution, the difference for our case is that it was used for a test based on grouping methods for multiple comparisons, something similar to what was done with the Scott-Knot test.</p>
-<p>The tests based on the distribution of the externally studentized midrange are the Tukey Midrange test (TM test), the SNK Midrange test (SNKM test) and the Means Grouping based on Midrange test (MGM test). Finally, the test based on the distribution of the externally studentized range which is the Means Grouping based on the Range test (MGR test).</p>
-<p>Finally, a versatility of the package is the use of the GUI. This feature provides users unfamiliar with the R language when using the <a href="https://CRAN.R-project.org/package=midrangeMCP">midrangeMCP</a> package.</p>
-<p>These tests are available in the <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&amp;url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&amp;usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT">thesis</a> of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the <a href="https://www.scielo.br/scielo.php?pid=1413-7054&amp;script=sci_serial">Journal of Science and Agrotechnology</a>.</p>
+
+<!--/############################################ Parágrafos BLOCO midrangeMCP -->
+
+<p id="midrangeMCP_1P" ><a href="https://bendeivide.github.io/midrangeMCP">midrangeMCP</a> is an “R” package designed to present four new multiple comparison tests. This work was developed during the doctorate in Statistics and Agricultural Experimentation, by the <a href="https://ufla.br/">Federal University of Lavras</a> (UFLA/BRAZIL). The supervisor of this work was Professor <a href="http://www.dex.ufla.br/~danielff/">Daniel Furtado Ferreira</a>. I am currently as Professor of Statistics at the <a  href="https://ufsj.edu.br/">Federal University of São João del-Rei</a> (UFSJ/BRAZIL). Today, we have the collaboration of a student of scientific initiation, <a href="https://digoarthur.github.io/">Diego Arthur Bispo Justino de Oliveira</a>, student of Mechatronics Engineering at UFSJ.</p>
+
+<p id="midrangeMCP_2P">Four tests are presented, three based on the <a href="https://www.scielo.br/scielo.php?script=sci_abstract&amp;pid=S1413-70542017000400378&amp;lng=en&amp;nrm=iso&amp;tlng=pt">distribution of the externally studentized midrange</a> and one based on the distribution of the externally studented range, well documented distribution in the literature. There are many distributions based on this last distribution, the difference for our case is that it was used for a test based on grouping methods for multiple comparisons, something similar to what was done with the Scott-Knot test.</p>
+
+<p id="midrangeMCP_3P"  >The tests based on the distribution of the externally studentized midrange are the Tukey Midrange test (TM test), the SNK Midrange test (SNKM test) and the Means Grouping based on Midrange test (MGM test). Finally, the test based on the distribution of the externally studentized range which is the Means Grouping based on the Range test (MGR test).</p>
+
+<p id="midrangeMCP_4P" >Finally, a versatility of the package is the use of the GUI. This feature provides users unfamiliar with the R language when using the <a href="https://CRAN.R-project.org/package=midrangeMCP">midrangeMCP</a> package.</p>
+
+<p  id="midrangeMCP_5P" >These tests are available in the <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwixqp_O4u3sAhU7EbkGHUTUCOMQFjAAegQIAxAC&amp;url=http%3A%2F%2Frepositorio.ufla.br%2Fjspui%2Fbitstream%2F1%2F11466%2F2%2FTESE_Testes%2520de%2520compara%25C3%25A7%25C3%25B5es%2520m%25C3%25BAltiplas%2520baseados%2520na%2520distribui%25C3%25A7%25C3%25A3o%2520da%2520midrange%2520estudentizada%2520externamente.pdf&amp;usg=AOvVaw1N5jvuEggxmsxhq9GnbCqT">thesis</a> of the work, and their performance evaluations are presented. The articles of these are in the submission stage, one of which has already been approved by the <a href="https://www.scielo.br/scielo.php?pid=1413-7054&amp;script=sci_serial">Journal of Science and Agrotechnology</a>.</p>
 <div id="-instalation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#-instalation" class="anchor"></a><i class="fa fa-download" aria-hidden="true"></i> Instalation</h2>
+<h2   class="hasAnchor">
+<a href="#-instalation" class="anchor"></a><i class="fa fa-download" aria-hidden="true"></i><span id="tittle_Install"> Instalation</span></h2>
+
 <p>To install the <a href="https://CRAN.R-project.org/package=midrangeMCP">midrangeMCP</a> package via CRAN:</p>
+
 <div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"midrangeMCP"</span>)</pre></div>
 <p>To install via GitHub:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
@@ -137,7 +163,7 @@
 <div id="-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#-functions" class="anchor"></a><i class="fa fa-code" aria-hidden="true"></i> Functions</h2>
-<p>The package’s functions are: <code>MRbarplot</code>, <code>MRwrite</code>, <code>guimidrangeMCP</code> and <code>MRtest</code>. The latter is the main function. From the arguments inserted in it, the other functions can be performed. In the case of the <code>guimidrangeMCP</code> function, once executed, it will open the GUI. From there the database and the necessary arguments for the functions can be entered.</p>
+<p The package’s functions are: <code>MRbarplot</code>, <code>MRwrite</code>, <code>guimidrangeMCP</code> and <code>MRtest</code>. The latter is the main function. From the arguments inserted in it, the other functions can be performed. In the case of the <code>guimidrangeMCP</code> function, once executed, it will open the GUI. From there the database and the necessary arguments for the functions can be entered.</p>
 </div>
 <div id="-citation" class="section level2">
 <h2 class="hasAnchor">
@@ -239,7 +265,10 @@
       </footer>
 </div>
 
-  
+
+
+
+<script src="traducaoPkgdown.js"></script>
 
 
   </body>

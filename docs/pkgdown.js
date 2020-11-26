@@ -1,6 +1,10 @@
 /* http://gregfranko.com/blog/jquery-best-practices/ */
+
 (function($) {
+
+
   $(function() {
+
 
     $('.navbar-fixed-top').headroom();
 
@@ -38,6 +42,14 @@
       menu_anchor.closest("li.dropdown").addClass("active");
     }
   });
+
+
+
+
+
+
+
+
 
   function paths(pathname) {
     var pieces = pathname.split("/");
