@@ -1,5 +1,8 @@
 ---
 title: "About the functions of the midrangeMCP package"
+resource_files:
+  -vignettes/img/icon_BR.png
+  -vignettes/img/icon_EUA.png
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{About the functions of the midrangeMCP package}
