@@ -9,9 +9,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
 [![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
-[![Project Status:
-Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#concept)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--11--26-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--15-yellowgreen.svg)]()
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
 Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
@@ -20,7 +18,7 @@ stable](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https:
 
 # <i class="fas fa-box-open" aria-hidden="true"></i> midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
 
-[midrangeMCP](https://bendeivide.github.io/midrangeMCP) is an “R”
+[midrangeMCP](https://bendeivide.github.io/midrangeMCP/) is an “R”
 package designed to present four new multiple comparison tests. This
 work was developed during the doctorate in Statistics and Agricultural
 Experimentation, by the [Federal University of Lavras](https://ufla.br/)
@@ -92,10 +90,14 @@ The package article is still being submitted. But the works mentioned
 above can assist in citing the package. Still, as the midrangeMCP
 package is available on CRAN, quote it this way:
 
+    #> Warning in citation("midrangeMCP"): no date field in DESCRIPTION file of package
+    #> 'midrangeMCP'
+    #> Warning in citation("midrangeMCP"): could not determine year for 'midrangeMCP'
+    #> from package DESCRIPTION file
     #> 
     #> To cite package 'midrangeMCP' in publications use:
     #> 
-    #>   Ben Deivide and Daniel Furtado (2020). midrangeMCP: Multiples
+    #>   Ben Deivide and Daniel Furtado (NA). midrangeMCP: Multiples
     #>   Comparisons Procedures Based on Studentized Midrange and Range
     #>   Distributions. https://bendeivide.github.io/midrangeMCP/,
     #>   https://github.com/bendeivide/midrangeMCP.
@@ -105,7 +107,6 @@ package is available on CRAN, quote it this way:
     #>   @Manual{,
     #>     title = {midrangeMCP: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions},
     #>     author = {Ben Deivide and Daniel Furtado},
-    #>     year = {2020},
     #>     note = {https://bendeivide.github.io/midrangeMCP/, https://github.com/bendeivide/midrangeMCP},
     #>   }
 
@@ -113,7 +114,7 @@ package is available on CRAN, quote it this way:
 
 For a complete description of the `midrangeMCP` package, **visit our
 website at
-[bendeivide.github.io/midrangeMCP](https://bendeivide.github.io/midrangeMCP/)**
+[bendeivide.github.io/midrangeMCP/](https://bendeivide.github.io/midrangeMCP/)**
 
 ## <i class="fas fa-newspaper" aria-hidden="true"></i> News
 

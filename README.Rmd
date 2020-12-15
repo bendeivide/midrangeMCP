@@ -21,8 +21,8 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)[![R build status](https://github.com/bendeivide/midrangeMCP/workflows/R-CMD-check/badge.svg)](https://github.com/bendeivide/midrangeMCP/actions)
 -->
 [![CRAN status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
-[![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#concept)
-[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+[![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)]()
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 
 # midrangeMCP <img src='man/figures/logo.png' align="right" height="139" />
 
-[midrangeMCP](https://bendeivide.github.io/midrangeMCP) is an "R" package designed to present four new multiple comparison tests. This work was developed during the doctorate in Statistics and Agricultural Experimentation, by the [Federal University of Lavras](https://ufla.br/) (UFLA/BRAZIL). The supervisor of this work was Professor [Daniel Furtado Ferreira](http://www.dex.ufla.br/~danielff/). I am currently as Professor of Statistics at the [Federal University of São João del-Rei](https://ufsj.edu.br/) (UFSJ/BRAZIL). Today, we have the collaboration of a student of scientific initiation, [Diego Arthur Bispo Justino de Oliveira](https://digoarthur.github.io/), student of Mechatronics Engineering at UFSJ.
+[midrangeMCP](https://bendeivide.github.io/midrangeMCP/) is an "R" package designed to present four new multiple comparison tests. This work was developed during the doctorate in Statistics and Agricultural Experimentation, by the [Federal University of Lavras](https://ufla.br/) (UFLA/BRAZIL). The supervisor of this work was Professor [Daniel Furtado Ferreira](http://www.dex.ufla.br/~danielff/). I am currently as Professor of Statistics at the [Federal University of São João del-Rei](https://ufsj.edu.br/) (UFSJ/BRAZIL). Today, we have the collaboration of a student of scientific initiation, [Diego Arthur Bispo Justino de Oliveira](https://digoarthur.github.io/), student of Mechatronics Engineering at UFSJ.
 
 Four tests are presented, three based on the [distribution of the externally studentized midrange](https://www.scielo.br/scielo.php?script=sci_abstract&pid=S1413-70542017000400378&lng=en&nrm=iso&tlng=pt) and one based on the distribution of the externally studented range, well documented distribution in the literature. There are many distributions based on this last distribution, the difference for our case is that it was used for a test based on grouping methods for multiple comparisons, something similar to what was done with the Scott-Knot test.
 
@@ -66,7 +66,7 @@ citation("midrangeMCP")
 
 ## Website
 
-For a complete description of the `midrangeMCP` package, **visit our website at [bendeivide.github.io/midrangeMCP](https://bendeivide.github.io/midrangeMCP/)**
+For a complete description of the `midrangeMCP` package, **visit our website at [bendeivide.github.io/midrangeMCP/](https://bendeivide.github.io/midrangeMCP/)**
 
 ## News
 

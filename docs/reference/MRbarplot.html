@@ -45,6 +45,8 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
 <meta property="og:title" content="Plotting the result of the multiple comparison procedures — MRbarplot" />
 <meta property="og:description" content="MRbarplot creates a bar plot with vertical or horizontal bars
@@ -83,7 +85,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">midrangeMCP</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.1</span>
       </span>
     </div>
 
@@ -166,7 +168,7 @@
     Student-Newman-Keuls and Tukey  based on midrange.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>MRbarplot</span>(<span class='no'>x</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='kw pkg'>grDevices</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>heat.colors</a></span>(<span class='fl'>10</span>), <span class='kw'>horiz</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>MRbarplot</span><span class='op'>(</span><span class='va'>x</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span>, col <span class='op'>=</span> <span class='fu'>grDevices</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>heat.colors</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>, horiz <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -214,23 +216,24 @@ the bars are drawn horizontally with the first at the bottom.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Simulated data (completely randomized design)</span>
 
-<span class='no'>rv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>100.08</span>, <span class='fl'>105.66</span>, <span class='fl'>97.64</span>, <span class='fl'>100.11</span>, <span class='fl'>102.60</span>, <span class='fl'>121.29</span>, <span class='fl'>100.80</span>,
+<span class='va'>rv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100.08</span>, <span class='fl'>105.66</span>, <span class='fl'>97.64</span>, <span class='fl'>100.11</span>, <span class='fl'>102.60</span>, <span class='fl'>121.29</span>, <span class='fl'>100.80</span>,
         <span class='fl'>99.11</span>, <span class='fl'>104.43</span>, <span class='fl'>122.18</span>, <span class='fl'>119.49</span>, <span class='fl'>124.37</span>, <span class='fl'>123.19</span>, <span class='fl'>134.16</span>,
-        <span class='fl'>125.67</span>, <span class='fl'>128.88</span>, <span class='fl'>148.07</span>, <span class='fl'>134.27</span>, <span class='fl'>151.53</span>, <span class='fl'>127.31</span>)
+        <span class='fl'>125.67</span>, <span class='fl'>128.88</span>, <span class='fl'>148.07</span>, <span class='fl'>134.27</span>, <span class='fl'>151.53</span>, <span class='fl'>127.31</span><span class='op'>)</span>
 
 <span class='co'># Treatments</span>
-<span class='no'>treat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>LETTERS</span>[<span class='fl'>1</span>:<span class='fl'>5</span>], <span class='kw'>each</span> <span class='kw'>=</span> <span class='fl'>4</span>))
+<span class='va'>treat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>LETTERS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>]</span>, each <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Anova</span>
-<span class='no'>res</span>     <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>rv</span>~<span class='no'>treat</span>)
+<span class='va'>res</span>     <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>rv</span><span class='op'>~</span><span class='va'>treat</span><span class='op'>)</span>
 
 <span class='co'># Loading the midrangeMCP package</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>midrangeMCP</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://bendeivide.github.io/midrangeMCP/'>midrangeMCP</a></span><span class='op'>)</span>
 
 <span class='co'># Choosing tests</span>
-<span class='no'>results</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='MRtest.html'>MRtest</a></span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>res</span>, <span class='kw'>trt</span> <span class='kw'>=</span> <span class='st'>"treat"</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.05</span>,
-                   <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Multiple Comparison Procedures"</span>,
-                   <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"MGM"</span>, <span class='st'>"TM"</span>))</div><div class='output co'>#&gt; MCP's based on distributions of the studentized midrange and range
+<span class='va'>results</span> <span class='op'>&lt;-</span> <span class='fu'><a href='MRtest.html'>MRtest</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>res</span>, trt <span class='op'>=</span> <span class='st'>"treat"</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>,
+                   main <span class='op'>=</span> <span class='st'>"Multiple Comparison Procedures"</span>,
+                   MCP <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"MGM"</span>, <span class='st'>"TM"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; MCP's based on distributions of the studentized midrange and range
 #&gt; 
 #&gt; Study:  Multiple Comparison Procedures 
 #&gt; 
@@ -269,17 +272,20 @@ the bars are drawn horizontally with the first at the bottom.</p></td>
 #&gt; C 117.62     g3
 #&gt; B 105.95     g4
 #&gt; A 100.87     g4</div><div class='input'>
-<span class='fu'>MRbarplot</span>(<span class='no'>results</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"all"</span>) <span class='co'># It will be shown two</span></div><div class='img'><img src='MRbarplot-1.png' alt='' width='700' height='433' /></div><div class='input'>                             <span class='co'># graphs. First, for the</span>
+<span class='fu'>MRbarplot</span><span class='op'>(</span><span class='va'>results</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span><span class='op'>)</span> <span class='co'># It will be shown two</span>
+</div><div class='img'><img src='MRbarplot-1.png' alt='' width='700' height='433' /></div><div class='input'>                             <span class='co'># graphs. First, for the</span>
                              <span class='co'># results of \code{'MGM'}</span>
                              <span class='co'># and the second for the</span>
                              <span class='co'># results of \code{'TM'}.</span>
 
-<span class='fu'>MRbarplot</span>(<span class='no'>results</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"MGM"</span>) <span class='co'># It will be shown</span></div><div class='img'><img src='MRbarplot-2.png' alt='' width='700' height='433' /></div><div class='input'>                                 <span class='co'># only the graph</span>
+<span class='fu'>MRbarplot</span><span class='op'>(</span><span class='va'>results</span>, MCP <span class='op'>=</span> <span class='st'>"MGM"</span><span class='op'>)</span> <span class='co'># It will be shown</span>
+</div><div class='img'><img src='MRbarplot-2.png' alt='' width='700' height='433' /></div><div class='input'>                                 <span class='co'># only the graph</span>
                                  <span class='co'># for the result of</span>
                                  <span class='co'># \code{'MGM'}</span>
 
 <span class='co'># Plot for papers</span>
-<span class='fu'>MRbarplot</span>(<span class='no'>results</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/gray.colors.html'>gray.colors</a></span>(<span class='fl'>10</span>))</div><div class='img'><img src='MRbarplot-3.png' alt='' width='700' height='433' /></div></pre>
+<span class='fu'>MRbarplot</span><span class='op'>(</span><span class='va'>results</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span>, col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/gray.colors.html'>gray.colors</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='MRbarplot-3.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -295,7 +301,7 @@ the bars are drawn horizontally with the first at the bottom.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

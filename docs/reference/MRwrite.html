@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Export the results of the <code>MRtest</code> function. — MRwrite • midrangeMCP</title>
+<title>Export the results of the MRtest function. — MRwrite • midrangeMCP</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -45,8 +45,10 @@
 
 
 
+  
+  <script src="../extra.js"></script>
 
-<meta property="og:title" content="Export the results of the <code>MRtest</code> function. — MRwrite" />
+<meta property="og:title" content="Export the results of the MRtest function. — MRwrite" />
 <meta property="og:description" content="The x object from a MRtest is written to file arguments." />
 <meta property="og:image" content="https://bendeivide.github.io/midrangeMCP/logo.png" />
 
@@ -80,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">midrangeMCP</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.1</span>
       </span>
     </div>
 
@@ -160,7 +162,7 @@
     <p>The <code>x</code> object from a <code>MRtest</code> is written to file arguments.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>MRwrite</span>(<span class='no'>x</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>extension</span> <span class='kw'>=</span> <span class='st'>"csv"</span>, <span class='kw'>dataMR</span> <span class='kw'>=</span> <span class='st'>"all"</span>)</pre>
+    <pre class="usage"><span class='fu'>MRwrite</span><span class='op'>(</span><span class='va'>x</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span>, extension <span class='op'>=</span> <span class='st'>"csv"</span>, dataMR <span class='op'>=</span> <span class='st'>"all"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -205,23 +207,24 @@ for both results.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Simulated data (completely randomized design)</span>
 
-<span class='no'>rv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>100.08</span>, <span class='fl'>105.66</span>, <span class='fl'>97.64</span>, <span class='fl'>100.11</span>, <span class='fl'>102.60</span>, <span class='fl'>121.29</span>, <span class='fl'>100.80</span>,
+<span class='va'>rv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100.08</span>, <span class='fl'>105.66</span>, <span class='fl'>97.64</span>, <span class='fl'>100.11</span>, <span class='fl'>102.60</span>, <span class='fl'>121.29</span>, <span class='fl'>100.80</span>,
         <span class='fl'>99.11</span>, <span class='fl'>104.43</span>, <span class='fl'>122.18</span>, <span class='fl'>119.49</span>, <span class='fl'>124.37</span>, <span class='fl'>123.19</span>, <span class='fl'>134.16</span>,
-        <span class='fl'>125.67</span>, <span class='fl'>128.88</span>, <span class='fl'>148.07</span>, <span class='fl'>134.27</span>, <span class='fl'>151.53</span>, <span class='fl'>127.31</span>)
+        <span class='fl'>125.67</span>, <span class='fl'>128.88</span>, <span class='fl'>148.07</span>, <span class='fl'>134.27</span>, <span class='fl'>151.53</span>, <span class='fl'>127.31</span><span class='op'>)</span>
 
 <span class='co'># Treatments</span>
-<span class='no'>treat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>LETTERS</span>[<span class='fl'>1</span>:<span class='fl'>5</span>], <span class='kw'>each</span> <span class='kw'>=</span> <span class='fl'>4</span>))
+<span class='va'>treat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>LETTERS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>]</span>, each <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Anova</span>
-<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>rv</span>~<span class='no'>treat</span>)
+<span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>rv</span><span class='op'>~</span><span class='va'>treat</span><span class='op'>)</span>
 
 <span class='co'># Loading the midrangeMCP package</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>midrangeMCP</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://bendeivide.github.io/midrangeMCP/'>midrangeMCP</a></span><span class='op'>)</span>
 
 <span class='co'># Choosing any tests</span>
-<span class='no'>results</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='MRtest.html'>MRtest</a></span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>res</span>, <span class='kw'>trt</span> <span class='kw'>=</span> <span class='st'>"treat"</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.05</span>,
-                   <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Multiple Comparison Procedures"</span>,
-                   <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"MGM"</span>, <span class='st'>"TM"</span>))</div><div class='output co'>#&gt; MCP's based on distributions of the studentized midrange and range
+<span class='va'>results</span> <span class='op'>&lt;-</span> <span class='fu'><a href='MRtest.html'>MRtest</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>res</span>, trt <span class='op'>=</span> <span class='st'>"treat"</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>,
+                   main <span class='op'>=</span> <span class='st'>"Multiple Comparison Procedures"</span>,
+                   MCP <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"MGM"</span>, <span class='st'>"TM"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; MCP's based on distributions of the studentized midrange and range
 #&gt; 
 #&gt; Study:  Multiple Comparison Procedures 
 #&gt; 
@@ -261,10 +264,11 @@ for both results.</p></td>
 #&gt; B 105.95     g4
 #&gt; A 100.87     g4</div><div class='input'>
 <span class='co'>#Export file in latex (Output in Console)</span>
-<span class='fu'>MRwrite</span>(<span class='no'>results</span>, <span class='kw'>MCP</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>extension</span> <span class='kw'>=</span> <span class='st'>"latex"</span>, <span class='kw'>dataMR</span> <span class='kw'>=</span> <span class='st'>"all"</span>)</div><div class='output co'>#&gt; Table in latex of results of the MGM test
+<span class='fu'>MRwrite</span><span class='op'>(</span><span class='va'>results</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span>, extension <span class='op'>=</span> <span class='st'>"latex"</span>, dataMR <span class='op'>=</span> <span class='st'>"all"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Table in latex of results of the MGM test
 #&gt; 
 #&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Wed Nov 18 14:43:23 2020
+#&gt; % Tue Dec 15 10:01:18 2020
 #&gt; \begin{table}[ht]
 #&gt; \centering
 #&gt; \begin{tabular}{lrl}
@@ -284,7 +288,7 @@ for both results.</p></td>
 #&gt; Table in latex of results of the TM test
 #&gt; 
 #&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Wed Nov 18 14:43:23 2020
+#&gt; % Tue Dec 15 10:01:18 2020
 #&gt; \begin{table}[ht]
 #&gt; \centering
 #&gt; \begin{tabular}{lrl}
@@ -304,7 +308,7 @@ for both results.</p></td>
 #&gt; Table in latex of results of descriptive statistics
 #&gt; 
 #&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Wed Nov 18 14:43:23 2020
+#&gt; % Tue Dec 15 10:01:18 2020
 #&gt; \begin{table}[ht]
 #&gt; \centering
 #&gt; \begin{tabular}{lrrrrr}
@@ -322,8 +326,8 @@ for both results.</p></td>
 #&gt; 
 #&gt; See yours tables in Console
 #&gt;  Format: latex</div><div class='input'>
-#Observation: The MRwrite function export
-#             only one extension at a time
+<span class='co'>#Observation: The MRwrite function export</span>
+<span class='co'>#             only one extension at a time</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -340,7 +344,7 @@ for both results.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

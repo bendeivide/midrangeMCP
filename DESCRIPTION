@@ -1,8 +1,7 @@
 Package: midrangeMCP
 Type: Package
 Title: Multiples Comparisons Procedures Based on Studentized Midrange and Range Distributions
-Version: 3.2
-Date: 2020-11-11
+Version: 3.1.1
 Authors@R: c(
     person("Ben", "Deivide", email = "ben.deivide@ufsj.edu.br", 
     role = c("aut", "cre"), comment = c(ORCID = '0000-0001-7019-8794')),
@@ -14,8 +13,9 @@ Description: Apply tests of multiple comparisons based
     The tests are: Tukey Midrange ('TM' test),
     Student-Newman-Keuls Midrange ('SNKM' test), 
     Means Grouping Midrange ('MGM' test) and 
-    Means Grouping Range ('MGR' test). The articles of these 
-    tests are in the submission phase, and we will soon update the references.
+    Means Grouping Range ('MGR' test). The first two tests were published by 
+    Batista and Ferreira (2020) <doi:10.1590/1413-7054202044008020>. 
+    The last two are being published.
 Imports:
         stats,
         utils,
@@ -24,16 +24,16 @@ Imports:
         SMR,
         writexl,
         xtable,
-        tcltk,
-        tkrplot
+        tcltk
+Suggests:
+        tkrplot,
+        testthat,
+        knitr,
+        rmarkdown,
+        covr
 License: GPL (>= 2)
 URL: https://bendeivide.github.io/midrangeMCP/, https://github.com/bendeivide/midrangeMCP
 BugReports: https://github.com/bendeivide/midrangeMCP/issues
 LazyData: TRUE
 RoxygenNote: 7.1.1
-Suggests: 
-    testthat,
-    knitr,
-    rmarkdown,
-    covr
 VignetteBuilder: knitr
