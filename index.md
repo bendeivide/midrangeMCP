@@ -9,7 +9,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
 [![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--15-yellowgreen.svg)]()
+[![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--15-yellowgreen.svg)](https://github.com/bendeivide/midrangeMCP/commit/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
 Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
