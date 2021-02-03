@@ -26,6 +26,8 @@ library(midrangeMCP)
 guimidrangeMCP(gui = TRUE)
 ```
 
+(Video)
+
 # Interface
 
 ![ Pacote midrangeMCP ; Versão 3.1.1](./img/interface.png){width=100%}
@@ -33,6 +35,7 @@ guimidrangeMCP(gui = TRUE)
 # Data input 
 A sessão de entrada de dados se encontra na parte superior esquerda da Interface. Aqui terá as opções de "selecionar um arquivo","separador de variáveis", "Edite/Visualize" e "Escolha o Diretório".
 
+(IMAGEM)
 
 #### Data input → Choose directoy: 
 O primeiro passo é a escolha do diretório para que os arquivos dos dados trabalhados sejam exportados. E isso é feito da seguinte maneira:
@@ -51,7 +54,14 @@ Terceiro passo é a importação do conjunto de dados. Como exemplo, utilizamos 
 (Vídeo)
 
 
+#### (Data input) → Edit/View Data:
+Essa opçãonão só possiblilita a edição dos dados caso queira alterar no momento e obter outras análises, como também dá a opção de conferência correta dos dados depois da importação. Mas lembre-se! A edição do dados é feita apenas dentro do programa, o arquivo raiz nao é alterado.
+
+(Video)
+
 # Entry types to apply the tests
+
+
 
 
 
