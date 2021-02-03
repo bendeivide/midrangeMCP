@@ -26,9 +26,34 @@ library(midrangeMCP)
 guimidrangeMCP(gui = TRUE)
 ```
 
-# Data input
+# Interface
+
+![ Pacote midrangeMCP ; Versão 3.1.1](./img/interface.png){width=100%}
+
+# Data input 
+A sessão de entrada de dados se encontra na parte superior esquerda da Interface. Aqui terá as opções de "selecionar um arquivo","separador de variáveis", "Edite/Visualize" e "Escolha o Diretório".
+
+
+#### Data input → Choose directoy: 
+O primeiro passo é a escolha do diretório para que os arquivos dos dados trabalhados sejam exportados. E isso é feito da seguinte maneira:
+
+(Vídeo)
+
+#### (Data input) → Variables Separate:
+O próximo passo importante é identificar como as variáves do seu conjunto de dados estão separados. A norma internacional considera o ponto, mas caso seja vírgula, espaço ou ponto e vírgula deverá ser especificado para que haja a possiblidade de leitura do arquivo.
+
+(Video)
+
+#### (Data input) → Data set:
+Terceiro passo é a importação do conjunto de dados. Como exemplo, utilizamos um conjunto de dados específico e prosseguimos:
+
+(Link conjunto de dados como exemplo )
+(Vídeo)
+
 
 # Entry types to apply the tests
+
+
 
 ## Experimental model
 
