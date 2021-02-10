@@ -16,50 +16,110 @@ knitr::opts_chunk$set(
 ```
 
 
+<!--- -------------------------------
+                  LOGO 
+------------------------------------>
 
-# How to load the GUI?
+ <p align="center">
+   <img  alt="gif_"  width="120" height="120" src="https://user-images.githubusercontent.com/59892368/107445760-d6fb1400-6b1b-11eb-9aac-bf788e0c9937.png"></img>
+</p>
 
-```{r load, eval=FALSE}
+
+<!--- -------------------------------
+         How to load the GUI?
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107446333-f9416180-6b1c-11eb-8163-eb2a732c4fd1.PNG"></img> How to load the GUI? </h1>
+</p>
+
+
+
+~~~r
 # Load midrangeMCP package
 library(midrangeMCP)
 # Load GUI
 guimidrangeMCP(gui = TRUE)
-```
-
+~~~
+Note: Remember to select the midrangeMCP package under "package".
 (Video)
 
-# Interface
+
+
+<!--- -------------------------------
+               Interface
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107446738-cba8e800-6b1d-11eb-901e-95dfc202f6e2.PNG"></img> Interface </h1>
+</p>
+
+
 
 ![ Pacote midrangeMCP ; Versão 3.1.1](./img/interface.png){width=100%}
 
-# Data input 
-A sessão de entrada de dados se encontra na parte superior esquerda da Interface. Aqui terá as opções de "selecionar um arquivo","separador de variáveis", "Edite/Visualize" e "Escolha o Diretório".
+<!--- -------------------------------
+              Data input
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451967-22ff8600-6b27-11eb-9b69-56c38156e7a4.png"></img>  Data input  </h1>
+</p>
+
+The data entry session is at the top left of the Interface. Here you have the options to "select a file", "variable separator", "Edit / View" and "Choose Directory".
 
 (IMAGEM)
 
-#### Data input → Choose directoy: 
-O primeiro passo é a escolha do diretório para que os arquivos dos dados trabalhados sejam exportados. E isso é feito da seguinte maneira:
+#### Data input → Choose directory: 
+The first step is to choose the directory so that the files containing the data are exported. And this is done as follows:
 
 (Vídeo)
 
-#### (Data input) → Variables Separate:
-O próximo passo importante é identificar como as variáves do seu conjunto de dados estão separados. A norma internacional considera o ponto, mas caso seja vírgula, espaço ou ponto e vírgula deverá ser especificado para que haja a possiblidade de leitura do arquivo.
+#### Data input → Variables Separate:
+The next important step is to identify by which symbol the variables in your data set are separated. The international standard considers the period, but if it is a comma, space or semicolon, it must be specified so that the file can be read.
 
 (Video)
 
-#### (Data input) → Data set:
-Terceiro passo é a importação do conjunto de dados. Como exemplo, utilizamos um conjunto de dados específico e prosseguimos:
+#### Data input → Search:
+Third step is the import of the data set can be of the type .txt or .csv. Once imported, so that your data set is correct, the names of the variables that have been assigned to each column must appear in the first line.
+As an example, we used a specific data set and proceeded:
 
 (Link conjunto de dados como exemplo )
 (Vídeo)
 
 
-#### (Data input) → Edit/View Data:
-Essa opçãonão só possiblilita a edição dos dados caso queira alterar no momento e obter outras análises, como também dá a opção de conferência correta dos dados depois da importação. Mas lembre-se! A edição do dados é feita apenas dentro do programa, o arquivo raiz nao é alterado.
+#### Data input → Edit/View Data:
+This option not only makes it possible to edit the data if you want to change it at the moment and obtain other analyzes, but it also gives you the option of checking the data correctly after importing. But remember! Data editing is done only within the program, the root file is not changed.
 
 (Video)
 
-# Entry types to apply the tests
+<!--- -------------------------------
+              Data output
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451900-01060380-6b27-11eb-9029-434789a53438.png"></img>  Data output  </h1>
+</p>
+
+
+Here is shown the path of the source folder from which the data set was imported, and the description of the set's columns contained in the file.
+
+(VIDEO)
+
+
+
+
+<!--- -------------------------------
+   Entry types to apply the tests
+------------------------------------>
+
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Entry types to apply the tests </h1>
+</p>
+
+
+
 
 
 
@@ -71,6 +131,12 @@ Essa opçãonão só possiblilita a edição dos dados caso queira alterar no mo
 
 ## Averages
 
-# Data output
 
-# Edit and export Graphics
+<!--- -------------------------------
+    Edit and export Graphics
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107450203-969f9400-6b23-11eb-917c-e36f66e6cb6f.png"></img>   Edit and export Graphics </h1>
+</p>
+
