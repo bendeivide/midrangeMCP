@@ -71,7 +71,7 @@ The data entry session is at the top left of the Interface. Here you have the op
 (IMAGEM)
 
 ### 1st Choose directory: 
-The first step is to choose the directory so that the files containing the data are exported. And this is done as follows:
+The first step is to choose the directory for the data set analysis to be exported. And this is done as follows:
 
 (Vídeo)
 
@@ -119,19 +119,15 @@ Here is shown the path of the source folder from which the data set was imported
     <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Tests, Extension and level of insignificance. </h1>
 </p>
 
+### 6th Tests
+Os tipos de testes para a análise dos dados são escolhidos aqui, por enquanto tem: MGM, MGR, SNKM e TM. Nota: A explicação detalhada dos testes estão presentes em outra página deste site!
 
 
+### 7th Extension 
+A extensão é o tipo de arquivo que será exportado os resultados e seguirá para o caminho do 1º passo. Os tipos de arquivos são: latex, txt, xlsx. Escolha de acordo com a sua necessidade de formato para a análise. Nota: os dados da escolha da extensão Latex será mostrado no Console para que o uso do mesmo seja copiado e colado no documento.
 
-
-
-
-
-## Tests
-
-## Extension 
-
-## Level of insignificance
-
+### 8th Level of insignificance
+O nível de significância para análise é colocado aqui, sendo em um intervalo entre 0 e 1.Como padrão o valor 0.05 já é inserido.
 
 <!--- -------------------------------
    Data entry options
@@ -139,15 +135,45 @@ Here is shown the path of the source folder from which the data set was imported
 
 
  <p>
-    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Data entry options </h1>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107861885-93f4b580-6e27-11eb-911b-06fb5e9e0569.png"></img>  Data entry options </h1>
 </p>
 
 
-## Model
+### 9th Choose the Data entry options
+<ul>
+<li>
 
-## Variable Response
+#### Model
 
-## Averages
+</li>
+
+
+<li>
+
+#### Model
+
+</li>
+
+
+#### Variable Response
+
+
+
+#### Averages
+
+</ul>
+
+
+
+<ul>
+   <li> 
+#### Model
+   </li>
+   <li>
+#### Variable Response 
+</li>
+   <li>Item 3 +</li>
+</ul>
 
 
 
