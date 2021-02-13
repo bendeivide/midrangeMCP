@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 ------------------------------------>
 
  <p align="center">
-   <img  alt="gif_"  width="120" height="120" src="https://user-images.githubusercontent.com/59892368/107445760-d6fb1400-6b1b-11eb-9aac-bf788e0c9937.png"></img>
+   <img  alt="gif_"  width="180" height="180" src="https://user-images.githubusercontent.com/59892368/107445760-d6fb1400-6b1b-11eb-9aac-bf788e0c9937.png"></img>
 </p>
 
 
@@ -59,28 +59,28 @@ Note: Remember to select the midrangeMCP package under "package".
 ![ Pacote midrangeMCP ; Versão 3.1.1](./img/interface.png){width=100%}
 
 <!--- -------------------------------
-              Data input
+  Input data set and other functions:
 ------------------------------------>
 
  <p>
-    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451967-22ff8600-6b27-11eb-9b69-56c38156e7a4.png"></img>  Data input  </h1>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451967-22ff8600-6b27-11eb-9b69-56c38156e7a4.png"></img> Input data set and other functions:  </h1>
 </p>
 
 The data entry session is at the top left of the Interface. Here you have the options to "select a file", "variable separator", "Edit / View" and "Choose Directory".
 
 (IMAGEM)
 
-#### Data input → Choose directory: 
+### 1st Choose directory: 
 The first step is to choose the directory so that the files containing the data are exported. And this is done as follows:
 
 (Vídeo)
 
-#### Data input → Variables Separate:
+### 2nd Variables Separate:
 The next important step is to identify by which symbol the variables in your data set are separated. The international standard considers the period, but if it is a comma, space or semicolon, it must be specified so that the file can be read.
 
 (Video)
 
-#### Data input → Search:
+### 3rd Search → Open file (.txt or .csv) :
 Third step is the import of the data set can be of the type .txt or .csv. Once imported, so that your data set is correct, the names of the variables that have been assigned to each column must appear in the first line.
 As an example, we used a specific data set and proceeded:
 
@@ -88,7 +88,7 @@ As an example, we used a specific data set and proceeded:
 (Vídeo)
 
 
-#### Data input → Edit/View Data:
+### 4th Edit/View Data:
 This option not only makes it possible to edit the data if you want to change it at the moment and obtain other analyzes, but it also gives you the option of checking the data correctly after importing. But remember! Data editing is done only within the program, the root file is not changed.
 
 (Video)
@@ -102,7 +102,8 @@ This option not only makes it possible to edit the data if you want to change it
 </p>
 
 
-Here is shown the path of the source folder from which the data set was imported, and the description of the set's columns contained in the file.
+### 5th Output:
+Here is shown the path of the source folder from which the data set was imported, and the description of the set's columns contained in the file. Note: the name of the columns in the data set must be correctly described.
 
 (VIDEO)
 
@@ -110,12 +111,12 @@ Here is shown the path of the source folder from which the data set was imported
 
 
 <!--- -------------------------------
-   Entry types to apply the tests
+   Tests, Extension and level of insignificance.
 ------------------------------------>
 
 
  <p>
-    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Entry types to apply the tests </h1>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Tests, Extension and level of insignificance. </h1>
 </p>
 
 
@@ -125,11 +126,31 @@ Here is shown the path of the source folder from which the data set was imported
 
 
 
-## Experimental model
+## Tests
 
-## data vector
+## Extension 
+
+## Level of insignificance
+
+
+<!--- -------------------------------
+   Data entry options
+------------------------------------>
+
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"></img>  Data entry options </h1>
+</p>
+
+
+## Model
+
+## Variable Response
 
 ## Averages
+
+
+
 
 
 <!--- -------------------------------
