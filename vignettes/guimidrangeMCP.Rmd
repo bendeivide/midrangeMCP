@@ -124,10 +124,10 @@ Os tipos de testes para a análise dos dados são escolhidos aqui, por enquanto 
 
 
 ### 7th Extension 
-A extensão é o tipo de arquivo que será exportado os resultados e seguirá para o caminho do 1º passo. Os tipos de arquivos são: latex, txt, xlsx. Escolha de acordo com a sua necessidade de formato para a análise. Nota: os dados da escolha da extensão Latex será mostrado no Console para que o uso do mesmo seja copiado e colado no documento.
+A extensão é o tipo de arquivo em que o resultado será exportado e seguirá para o caminho do 1º passo. Os tipos de arquivos são: latex, txt, xlsx. Escolha a extensão de acordo com a sua necessidade para a análise. Nota: os dados da escolha da extensão Latex será mostrado no Console para que o uso do mesmo seja copiado e colado no documento.
 
 ### 8th Level of insignificance
-O nível de significância para análise é colocado aqui, sendo em um intervalo entre 0 e 1.Como padrão o valor 0.05 já é inserido.
+O nível de significância para análise é colocado aqui, sendo em um intervalo entre 0 e 1.Como padrão o valor 0.05 já está inserido.
 
 <!--- -------------------------------
    Data entry options
@@ -140,42 +140,35 @@ O nível de significância para análise é colocado aqui, sendo em um intervalo
 
 
 ### 9th Choose the Data entry options
-<ul>
-<li>
+
+As opções de entrada de dados é a que determina a forma como será calculado o teste escolhido e, por ter mais escolhas de entrada, o grande diferencial deste programa para outros já existentes é análise por meio da proteção do conjunto de dados. As opções Variável Resposta e Média proporcionam essa possibilidade. 
+
 
 #### Model
 
-</li>
-
-
-<li>
-
-#### Model
-
-</li>
+A primeira opção denominada como ’Modelo’ é a mais comum, pois todos os dados para a análise devem ser fornecidas, sendo elas contidas no arquivo. 
 
 
 #### Variable Response
-
+A Variável Resposta é para o caso em que o pesquisador nao quer fornecer o conjunto de dados na íntegra, e sim alguns dados específicos para a análise. Neste caso apenas é repassado o conjunto de dados, de acordo com o que estamos trabalhando aqui como exemplo, em que o objeto é o TRAT(tratamento) e PROD(variável resposta). Sendo assim apenas o valor de grau de liberdade e quadrado médio terão que ser inseridos.
 
 
 #### Averages
-
-</ul>
-
+Já o caso da opção de entrada ’Médias’ é usado quando o PROD e TRAT não são informados, sendo assim, dando a possibilidade de inserção de outros dados para a análise como as médias, o tratamento, o grau de liberdade, o quadrado médio e o número de repetição do conjunto.
 
 
-<ul>
-   <li> 
-#### Model
-   </li>
-   <li>
-#### Variable Response 
-</li>
-   <li>Item 3 +</li>
-</ul>
 
 
+<!--- -------------------------------
+              Console
+------------------------------------>
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107886448-a67df600-6ede-11eb-8b22-93659ab64a5f.png"></img>  Console </h1>
+</p>
+
+#### 10th Press Button Calculate
+Após clicar o botão Calcular, os dados de análise do conjunto serão mostrados no Console. Serão exibidos o sumário, o resultado do teste, a média do experimento, o coeficiente de variação, o quadrado médio do resíduo, os graus de liberdade e, caso a Extensão de Saída esteja como latex, o código do mesmo será exibido também no console.
 
 
 
