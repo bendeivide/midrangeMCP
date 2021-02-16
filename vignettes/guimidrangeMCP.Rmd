@@ -150,7 +150,7 @@ A primeira opção denominada como ’Modelo’ é a mais comum, pois todos os d
 
 
 #### Variable Response
-A Variável Resposta é para o caso em que o pesquisador nao quer fornecer o conjunto de dados na íntegra, e sim alguns dados específicos para a análise. Neste caso apenas é repassado o conjunto de dados, de acordo com o que estamos trabalhando aqui como exemplo, em que o objeto é o TRAT(tratamento) e PROD(variável resposta). Sendo assim apenas o valor de grau de liberdade e quadrado médio terão que ser inseridos.
+A Variável Resposta é para o caso em que o pesquisador nao queira fornecer o conjunto de dados na íntegra, e sim alguns dados específicos para a análise. Neste caso apenas é repassado o conjunto de dados, de acordo com o que estamos trabalhando aqui como exemplo, em que o objeto é o TRAT(tratamento) e PROD(variável resposta). Sendo assim apenas o valor de grau de liberdade e quadrado médio terão que ser inseridos.
 
 
 #### Averages
@@ -176,7 +176,21 @@ Após clicar o botão Calcular, os dados de análise do conjunto serão mostrado
     Edit and export Graphics
 ------------------------------------>
 
- <p>
-    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107450203-969f9400-6b23-11eb-917c-e36f66e6cb6f.png"></img>   Edit and export Graphics </h1>
+
+<p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107450203-969f9400-6b23-11eb-917c-e36f66e6cb6f.png"></img>  Graphics </h1>
 </p>
 
+### 11th Graphics Parameters
+
+Esta função traz a possibilidade de atualização de três componentes relacionados ao gráfico.
+
+#### Color
+O primeiro componente é a mudança de cor que pode ser mudada para cinza com o seguinte comando ’gray.color(4)’, por exemplo.
+
+
+#### Horizontal
+Já o segundo componente é a mudança de sentido dos eixos do gráfico sendo ela na Vertical (padrão) ou Horizontal, definindo isso com o comando de ’FALSE’ ou ’TRUE’.
+
+#### Axes
+O terceiro componente é a opção de nomear os eixos do gráfico e isso é feito com o seguinte comando ’xlab = “VR”; ylab = “Tratamento”’, sendo o xlab responsável por nomear o eixo X e o ylab pelo o eixo Y.
