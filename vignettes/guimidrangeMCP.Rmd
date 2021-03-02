@@ -34,6 +34,7 @@ knitr::opts_chunk$set(
 </p>
 
 
+Note: First select in Packages the "midrangeMCP" option.
 
 ~~~r
 # Load midrangeMCP package
@@ -41,8 +42,7 @@ library(midrangeMCP)
 # Load GUI
 guimidrangeMCP(gui = TRUE)
 ~~~
-Note: Remember to select the midrangeMCP package under "package".
-(Video)
+
 
 
 
