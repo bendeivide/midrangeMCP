@@ -120,14 +120,14 @@ Here is shown the path of the source folder from which the data set was imported
 </p>
 
 ### 6th Tests
-Os tipos de testes para a análise dos dados são escolhidos aqui, por enquanto tem: MGM, MGR, SNKM e TM. Nota: A explicação detalhada dos testes estão presentes em outra página deste site!
+Here, the types of tests for data analysis are chosen, for the moment: MGM, MGR, SNKM and TM. Note: A detailed explanation of the tests is present on the other page of this website!
 
 
 ### 7th Extension 
-A extensão é o tipo de arquivo em que o resultado será exportado e seguirá para o caminho do 1º passo. Os tipos de arquivos são: latex, txt, xlsx. Escolha a extensão de acordo com a sua necessidade para a análise. Nota: os dados da escolha da extensão Latex será mostrado no Console para que o uso do mesmo seja copiado e colado no documento.
+The extension is the type of file in which the result will be exported and will follow the path of the 1st step. The file types are: .txt; .tex; .xlsx. Choose the extension according to your need for the analysis. Note: the type of extension .tex will be shown in the Console so that its use can be copied and pasted into the document.
 
 ### 8th Level of insignificance
-O nível de significância para análise é colocado aqui, sendo em um intervalo entre 0 e 1.Como padrão o valor 0.05 já está inserido.
+The level of significance for analysis is placed here, being in an interval between 0 and 1. As a default, the value 0.05 is already inserted.
 
 <!--- -------------------------------
    Data entry options
@@ -141,21 +141,21 @@ O nível de significância para análise é colocado aqui, sendo em um intervalo
 
 ### 9th Choose the Data entry options
 
-As opções de entrada de dados é a que determina a forma como será calculado o teste escolhido e, por ter mais escolhas de entrada, o grande diferencial deste programa para outros já existentes é análise por meio da proteção do conjunto de dados. As opções Variável Resposta e Média proporcionam essa possibilidade. 
+The data entry options are the ones that determine how the chosen test will be calculated and, because it has more input choices, the great advantage of this program for others that already exist is analysis through the protection of the data set. The Variable Response and Average options provide this possibility.
 
 
 #### Model
 
-A primeira opção denominada como ’Modelo’ é a mais comum, pois todos os dados para a análise devem ser fornecidas, sendo elas contidas no arquivo. 
+The first option called 'Model' is the most common, as all data for analysis must be provided, and they are contained in the file. 
 
 
 #### Variable Response
-A Variável Resposta é para o caso em que o pesquisador nao queira fornecer o conjunto de dados na íntegra, e sim alguns dados específicos para a análise. Neste caso apenas é repassado o conjunto de dados, de acordo com o que estamos trabalhando aqui como exemplo, em que o objeto é o TRAT(tratamento) e PROD(variável resposta). Sendo assim apenas o valor de grau de liberdade e quadrado médio terão que ser inseridos.
+The Response Variable is for the case where the researcher does not want to provide the data set in its entirety, but rather some specific data for the analysis. In this case, only the data set is passed on, according to what we are working on here as an example, in which the object is TRAT (treatment) and PROD (response variable). Therefore, only the value of degree of freedom and average square will have to be entered.
 
 
 #### Averages
-Já o caso da opção de entrada ’Médias’ é usado quando o PROD e TRAT não são informados, sendo assim, dando a possibilidade de inserção de outros dados para a análise como as médias, o tratamento, o grau de liberdade, o quadrado médio e o número de repetição do conjunto.
 
+The case of the input option 'Means' is used when PROD and TRAT are not informed, giving the possibility of inserting other data for analysis such as means, treatment, degree of freedom, mean square and number repetition of the set.
 
 
 
@@ -168,7 +168,7 @@ Já o caso da opção de entrada ’Médias’ é usado quando o PROD e TRAT nã
 </p>
 
 #### 10th Press Button Calculate
-Após clicar o botão Calcular, os dados de análise do conjunto serão mostrados no Console. Serão exibidos o sumário, o resultado do teste, a média do experimento, o coeficiente de variação, o quadrado médio do resíduo, os graus de liberdade e, caso a Extensão de Saída esteja como latex, o código do mesmo será exibido também no console.
+After clicking the Calculate button, the analysis data for the set will be shown in the Console. The summary, the test result, the average of the experiment, the coefficient of variation, the average square of the residue, the degrees of freedom will be displayed and, if the Output Extension is latex, the code of the same will be displayed here.
 
 
 
@@ -183,14 +183,15 @@ Após clicar o botão Calcular, os dados de análise do conjunto serão mostrado
 
 ### 11th Graphics Parameters
 
-Esta função traz a possibilidade de atualização de três componentes relacionados ao gráfico.
+This function provides the possibility to update three components related to the graph.
 
 #### Color
-O primeiro componente é a mudança de cor que pode ser mudada para cinza com o seguinte comando ’gray.color(4)’, por exemplo.
+
+The first component is the color change that can be changed to gray with the following command ’gray.color (4)’, for example.
 
 
 #### Horizontal
-Já o segundo componente é a mudança de sentido dos eixos do gráfico sendo ela na Vertical (padrão) ou Horizontal, definindo isso com o comando de ’FALSE’ ou ’TRUE’.
+The second component is the change of direction of the graph's axes, being it Vertical (default) or Horizontal, defining this with the command 'FALSE' or 'TRUE'.
 
 #### Axes
-O terceiro componente é a opção de nomear os eixos do gráfico e isso é feito com o seguinte comando ’xlab = “VR”; ylab = “Tratamento”’, sendo o xlab responsável por nomear o eixo X e o ylab pelo o eixo Y.
+The third component is the option to name the axes of the graph and this is done with the following command ’xlab =“ VR ”; ylab = "Treatment" ’, the xlab being responsible for naming the X axis and the ylab for the Y axis.
