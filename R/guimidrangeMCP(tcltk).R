@@ -27,15 +27,25 @@ guimidrangeMCP <- function(gui = TRUE) {
   # # Ingles
   # Sys.setenv(LANG = "en")
 
+  # Language
+  # # portugues
+  # Sys.setenv(LANG = "pt_BR")
+  #
+  # # Ingles
+  # Sys.setenv(LANG = "en")
+
+  # Environment of package
+  envmidrangeMCP <- new.env(parent = base::emptyenv())
+  assign("dat", NULL, envir = envmidrangeMCP)
+  assign("results", NULL, envir = envmidrangeMCP)
+  assign("LaTeX", NULL, envir = envmidrangeMCP)
+  assign("symmb_promp", NULL, envir = envmidrangeMCP)
+
   # Graphical User Interface
   if (gui == TRUE) {
     if (!requireNamespace("tkrplot", quietly = TRUE)) {
       stop("Package \"tkrplot\" needed for this function to work. Please install it!")
     } else {
-      # Protection to the 'dat' global variable
-      if (any(ls(.GlobalEnv) == "dat")) {
-        rm(list = c("dat", "dat2"), envir = .GlobalEnv)
-      }
       # Insert Icons
       img <- tclVar(); img2 <- tclVar(); img3 <- tclVar()
       imageinfo <- tkimage.create("photo", img, file = system.file("etc", "info.gif", package = "midrangeMCP"))
@@ -269,9 +279,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                  sep = " "))
                start_dir <- tclvalue(filetemp)
                if (file.exists(start_dir)) {
-                 dat <- NULL
-                 dat2 <- NULL
-                 dat2 <<- dat <<- f.read(start_dir)
+                  envmidrangeMCP$dat <- f.read(start_dir)
                  tclvalue(txt_var) <- start_dir
                  tcl(search_results, "delete", "1.0", "end")
                  tkinsert(search_results, "end",
@@ -341,11 +349,10 @@ guimidrangeMCP <- function(gui = TRUE) {
       dat2 <- NULL # This variable is internal, not exported to the console
       tkbind(group_buttons_1, "<ButtonRelease>",
              function(...) {
-               if (is.null(dat2)) {
+               if (is.null(envmidrangeMCP$dat)) {
                  tkmessageBox(message = gettext("No data set has been entered!", domain = "R-midrangeMCP"))
                } else{
-                 dat <- NULL
-                 dat2 <<- dat <- dat <<- edit(dat2)
+                 envmidrangeMCP$dat <- edit(envmidrangeMCP$dat)
                }
              }
       )
@@ -424,14 +431,14 @@ guimidrangeMCP <- function(gui = TRUE) {
           cutoff <- 0.75 * getOption("width")
           dcmd <- deparse(cmd , width.cutoff = cutoff)
           command <-
-            paste(getOption("prompt"),
+            paste("mMCP> ",
                   paste(dcmd, collapse = paste("\n", getOption("continue"), sep = "")) ,
                   sep = "" , collapse = "")
           tkinsert(console , "end" , command , "commandTag" )
           tkinsert(console , "end" , "\n")
           ## output, should check for errors in eval!
           # The function sink() stores the output in a file
-          output <- capture.output(eval(cmd, envir = .GlobalEnv))
+          output <- capture.output(eval(cmd, envir = envmidrangeMCP))
           output <- paste(output , collapse = "\n" )
           tkinsert(console, "end", output, "outputTag" )
           tkinsert(console, "end" , "\n")
@@ -474,18 +481,19 @@ guimidrangeMCP <- function(gui = TRUE) {
         results <- NULL
         tcl(console, "delete", "1.0", "end")
         if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-          capture.output(results <- results <<- midrangeMCP::MRtest(y = aov(eval(parse(text = tclvalue(vari5))), data = dat),
+          capture.output(envmidrangeMCP$results <- midrangeMCP::MRtest(y = aov(eval(parse(text = tclvalue(vari5))), data = envmidrangeMCP$dat),
                                                                     trt = tclvalue(vari6),
                                                                     alpha = eval(parse(text = tclvalue(vari4))),
                                                                     MCP = tclvalue(vari)))
-          objtreat <- dat[,tclvalue(vari6)]
+          objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari6)])
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            eval_cmd_chunk(console, "results; midrangeMCP::MRwrite(x = results, extension = 'latex')")
+            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            midrangeMCP::MRwrite(x = results, MCP = 'all', extension = tclvalue(vari2), dataMR = 'all')
+            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
@@ -515,7 +523,7 @@ guimidrangeMCP <- function(gui = TRUE) {
           ##
           plotmidrangeMCP <- tkplot(parent = frameplot,
                                     function(...) {
-                                      midrangeMCP::MRbarplot(results,col = heat.colors(length(levels(objtreat))))
+                                      midrangeMCP::MRbarplot(envmidrangeMCP$results,col = heat.colors(length(levels(objtreat))))
                                     }, hscale = fator, vscale = fator)
           # Auxiliar function
           f <- function(...) {
@@ -535,10 +543,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari6)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari8)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
@@ -563,7 +571,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                                     color <- eval(parse(text = tclvalue(vari16)))
                                   }
                                 }
-                                midrangeMCP::MRbarplot(results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
+                                midrangeMCP::MRbarplot(envmidrangeMCP$results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
                               })
           tkpack(bsaveas, side = "left")
 
@@ -594,9 +602,9 @@ guimidrangeMCP <- function(gui = TRUE) {
 
         }
         if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-          objrv <- dat[,tclvalue(vari7)]
-          objtreat <- dat[,tclvalue(vari8)]
-          capture.output(results <- results <<- midrangeMCP::MRtest(y = objrv,
+          objrv <- envmidrangeMCP$dat[,tclvalue(vari7)]
+          objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari8)])
+          capture.output(envmidrangeMCP$results <- midrangeMCP::MRtest(y = objrv,
                                                                     trt = objtreat,
                                                                     dferror = eval(parse(text = tclvalue(vari9))),
                                                                     mserror = eval(parse(text = tclvalue(vari10))),
@@ -605,10 +613,11 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            eval_cmd_chunk(console, "results; midrangeMCP::MRwrite(x = results, extension = 'latex')")
+            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            midrangeMCP::MRwrite(x = results, MCP = 'all', extension = tclvalue(vari2), dataMR = 'all')
+            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
@@ -638,7 +647,7 @@ guimidrangeMCP <- function(gui = TRUE) {
           ##
           plotmidrangeMCP <- tkplot(parent = frameplot,
                                     function(...) {
-                                      midrangeMCP::MRbarplot(results,col = heat.colors(length(levels(objtreat))))
+                                      midrangeMCP::MRbarplot(envmidrangeMCP$results,col = heat.colors(length(levels(objtreat))))
                                     }, hscale = fator, vscale = fator)
           # Auxiliar function
           f <- function(...) {
@@ -658,10 +667,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari6)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari8)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
@@ -686,7 +695,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                                     color <- eval(parse(text = tclvalue(vari16)))
                                   }
                                 }
-                                midrangeMCP::MRbarplot(results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
+                                midrangeMCP::MRbarplot(envmidrangeMCP$results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
                               })
           tkpack(bsaveas, side = "left")
 
@@ -724,7 +733,7 @@ guimidrangeMCP <- function(gui = TRUE) {
           trat <- as.factor(trat)
 
           # Functions
-          capture.output(results <- results <<- midrangeMCP::MRtest(y = eval(parse(text = aver)),
+          capture.output(envmidrangeMCP$results <- midrangeMCP::MRtest(y = eval(parse(text = aver)),
                                                                     trt = trat,
                                                                     dferror = eval(parse(text = tclvalue(vari13))),
                                                                     mserror = eval(parse(text = tclvalue(vari14))),
@@ -735,10 +744,11 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            eval_cmd_chunk(console, "results; midrangeMCP::MRwrite(x = results, extension = 'latex')")
+            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            midrangeMCP::MRwrite(x = results, MCP = 'all', extension = tclvalue(vari2), dataMR = 'all')
+            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
@@ -768,7 +778,7 @@ guimidrangeMCP <- function(gui = TRUE) {
           ##
           plotmidrangeMCP <- tkplot(parent = frameplot,
                                     function(...) {
-                                      midrangeMCP::MRbarplot(results,col = heat.colors(length(levels(trat))))
+                                      midrangeMCP::MRbarplot(envmidrangeMCP$results,col = heat.colors(length(levels(trat))))
                                     }, hscale = fator, vscale = fator)
           # Auxiliar function
           f <- function(...) {
@@ -788,10 +798,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari6)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- dat[,tclvalue(vari8)]
+                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
@@ -816,7 +826,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                                     color <- eval(parse(text = tclvalue(vari16)))
                                   }
                                 }
-                                midrangeMCP::MRbarplot(results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
+                                midrangeMCP::MRbarplot(envmidrangeMCP$results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
                               })
           tkpack(bsaveas, side = "left")
 
@@ -1376,10 +1386,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                       parent = child21.group2,
                                       command = function() {
                                         if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                          objtreat <- dat[,tclvalue(vari6)]
+                                          objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
                                         }
                                         if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                          objtreat <- dat[,tclvalue(vari8)]
+                                          objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
                                         }
                                         if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                           trat <- strsplit(tclvalue(vari12), split = ",", perl = TRUE)[[1]]
@@ -1426,7 +1436,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                                         ##
                                         plotmidrangeMCP <- tkplot(parent = frameplot,
                                                                   function(...) {
-                                                                    midrangeMCP::MRbarplot(results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
+                                                                    midrangeMCP::MRbarplot(envmidrangeMCP$results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
                                                                   }, hscale = fator, vscale = fator)
                                         # Auxiliar function
                                         f <- function(...) {
@@ -1446,10 +1456,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                                               dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                                               #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                                               if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                                                objtreat <- dat[,tclvalue(vari6)]
+                                                                objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
                                                               }
                                                               if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                                                objtreat <- dat[,tclvalue(vari8)]
+                                                                objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
                                                               }
 
                                                               if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
@@ -1475,7 +1485,7 @@ guimidrangeMCP <- function(gui = TRUE) {
                                                                   color <- eval(parse(text = tclvalue(vari16)))
                                                                 }
                                                               }
-                                                              midrangeMCP::MRbarplot(results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
+                                                              midrangeMCP::MRbarplot(envmidrangeMCP$results, col = color, horiz = hor, xlab = xlab, ylab = ylab)
                                                             })
                                         tkpack(bsaveas, side = "left")
 
