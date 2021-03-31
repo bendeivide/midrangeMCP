@@ -543,10 +543,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari6)])
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari8)])
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
@@ -667,10 +667,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari6)])
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari8)])
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
@@ -798,10 +798,10 @@ guimidrangeMCP <- function(gui = TRUE) {
                                 dispplot <<- grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 #grDevices::dev.new(noRStudioGD = TRUE) # New device plot
                                 if (tclvalue(vari3) == gettext("Model", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari6)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari6)])
                                 }
                                 if (tclvalue(vari3) == gettext("Response variable", domain = "R-midrangeMCP")) {
-                                  objtreat <- envmidrangeMCP$dat[,tclvalue(vari8)]
+                                  objtreat <- as.factor(envmidrangeMCP$dat[,tclvalue(vari8)])
                                 }
                                 if (tclvalue(vari3) == gettext("Averages", domain = "R-midrangeMCP")) {
                                   # Treatment levels
