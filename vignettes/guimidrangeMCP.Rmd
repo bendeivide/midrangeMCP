@@ -111,7 +111,7 @@ Here is shown the path of the source folder from which the data set was imported
 
 
 <!--- -------------------------------
-   Tests, Extension and level of insignificance.
+   Tests, Extension and level of significance.
 ------------------------------------>
 
 
@@ -126,7 +126,7 @@ Here, the types of tests for data analysis are chosen, for the moment: MGM, MGR,
 ### 7th Extension 
 The extension is the type of file in which the result will be exported and will follow the path of the 1st step. The file types are: .txt; .tex; .xlsx. Choose the extension according to your need for the analysis. Note: the type of extension .tex will be shown in the Console so that its use can be copied and pasted into the document.
 
-### 8th Level of insignificance
+### 8th Level of significance
 The level of significance for analysis is placed here, being in an interval between 0 and 1. As a default, the value 0.05 is already inserted.
 
 <!--- -------------------------------
@@ -149,7 +149,7 @@ The data entry options are the ones that determine how the chosen test will be c
 The first option called 'Model' is the most common, as all data for analysis must be provided, and they are contained in the file. 
 
 
-#### Variable Response
+#### Response Variable
 The Response Variable is for the case where the researcher does not want to provide the data set in its entirety, but rather some specific data for the analysis. In this case, only the data set is passed on, according to what we are working on here as an example, in which the object is TRAT (treatment) and PROD (response variable). Therefore, only the value of degree of freedom and average square will have to be entered.
 
 
@@ -195,3 +195,6 @@ The second component is the change of direction of the graph's axes, being it Ve
 
 #### Axes
 The third component is the option to name the axes of the graph and this is done with the following command ’xlab =“ VR ”; ylab = "Treatment" ’, the xlab being responsible for naming the X axis and the ylab for the Y axis.
+
+#### Save as...
+Here the generated graphic can be saved in the following formats: metafile, png, pdf, bmp, tiff, jpeg ... Among other functions.
