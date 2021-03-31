@@ -489,11 +489,11 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
+            midrangeMCP::MRwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
@@ -613,11 +613,11 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
+            midrangeMCP::MRwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
@@ -744,11 +744,11 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- MCPtests::MCPwrite(x = envmidrangeMCP$results, extension = 'latex')
+            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
-            MCPtests::MCPwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
+            midrangeMCP::MRwrite(x = envmidrangeMCP$results, MCP = tclvalue(vari), extension = tclvalue(vari2), dataMR = 'all')
             eval_cmd_chunk(console, "results")
           }
 
