@@ -25,9 +25,16 @@ knitr::opts_chunk$set(
 ```
 
 
-
+<!--
 <a href="#"> <img   onclick="traduzir(1)" src="img/icon_EUA.png"  ></a>
 <a href="#"> <img  onclick="traduzir(0)"src="img/icon_BR.png"  ></a>
+-->
+
+
+
+
+
+
 
 
 <h1 id="titulo_install">Install midrangeMCP package </h1>
@@ -79,16 +86,79 @@ package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
 
 
 
-<!---
-$$
-  s f(x,y) = \sin(x+y)
-$$
--->
+
+<!--- -------------------------------
+  PACOTE midrangeMCP :
+------------------------------------>
+
+
+ <p>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="50" height="50" src="https://user-images.githubusercontent.com/59892368/115161200-a3d08600-a072-11eb-909d-c310c414bcfe.png"></img> MidrangeMCP Package </h1>
+</p>
 
 
 
 
-<h1 id="titulo_Using">Using the basic functions </h1>
+
+ <p>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions: </h2>
+</p>
+
+### MRtest Function: 
+
+The MRtest function is expressed as follows:
+
+> MRtest( y,  trt  =  NULL,  dferror  =  NULL,  mserror  =  NULL,
+replication  =  NULL,  alpha  =  0.05,  main  =  NULL,
+MCP  =  "all",  ismean  =  FALSE)
+
+being:
+
+* y: vector with the response variables, the desired model or the average of treatments;
+
+* trt: vector with the levels of the factor under study. If y is an object that receives
+a model of the functions lm () or aov (), in the argument trt you must indicate which
+the model component represents the effect of the treatments. For example, if y
+<- aov (vr ∼ treat), then trt = "treat". The default trt = NULL is
+function protection if the user forgets to enter some information to
+that argument;
+
+* dferror: degree of freedom of the residue. This option will only be needed
+when the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is dferror = NULL;
+
+* msferror: mean square of the residue. This option is necessary only when
+the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is mserror = NULL;
+
+* alpha: level of significance adopted in the tests. The default is alpha = 0.05;
+
+* replication: number of treatment repetitions. If the data are
+unbalanced, the harmonic mean of these repetitions must be reported. This argument should be only when the argument is a vector of means or
+the repetitions of the main treatments unbalanced. The default is replication
+= NULL;
+
+* main: title of your analysis;
+
+* MCP: allows you to choose the desired multiple comparison test. The options are:
+"MGM", "MGR", "SNKM", "TM" and "all". The latter is the default, which results in
+calculate the four tests at once. If you want some tests, but not all,
+this argument can be concatenated with the desired options. For example, if
+want to perform the MGM and TM tests, just use MCP = c ("MGM",
+"TM")
+
+* ismean: logical argument. If ismean = TRUE, it is because the argument y is a
+vector of treatment means. Otherwise, ismean = FALSE.
+
+
+
+
+
+
+<!--- -------------------------------
+  FUNÇÕES :
+------------------------------------>
+
+
+
 
 
 
