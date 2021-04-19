@@ -99,10 +99,13 @@ package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
 
 
 
-
+<!--- -------------------------------
+  FUNÇÕES :
+------------------------------------>
  <p>
     <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions: </h2>
 </p>
+
 
 ### MRtest Function: 
 
@@ -150,12 +153,68 @@ vector of treatment means. Otherwise, ismean = FALSE.
 
 
 
+### MRbarplot Function: 
+
+The MRbarplot function is expressed as follows:
+
+> MRbarplot(x, MCP = "all", col = heat.colors(10),
+horiz = FALSE, ...)
+
+being:
+
+* x:MRtest function object;
+
+* MCP: allows you to choose the desired multiple comparison test. The default is
+"all". This option will perform all the tests that were chosen on the object
+MRtest. If you want some of the tests used on this object, you can concatenate it. See the MRCP function MCP argument;
+
+* col: allows you to choose the color of the graph bars. The default is heat.colors (10).
+The value 10 means the desired number of colors. If you want the graph to be colored on the black and white scale, you can choose the gray.colors (10) option;
+
+
+* horiz: choose the direction of the bars. The default is horiz = FALSE, that is, bars
+vertically. If you choose horiz = TRUE, the bars will be plotted horizontally;
+
+
+* ... the function allows the user to add more arguments to the function
+barplot.
+
+
+
+### MRwrite Function:
+
+The MRwrite function is expressed as follows:
+
+> MRwrite(x, MCP = "all", extension = "csv",
+dataMR = "all")
+
+
+being:
+
+* x: MRtest function object;
+
+* MCP: allows you to choose the desired multiple comparison test. The default is
+MCP = "all". This option will perform all the tests that were chosen in the
+MRtest object. If you want some of the tests used on this object, you can
+concatenate it. See the MRCP function MCP argument;
+
+* extension: type of file format. There are four options: "csv", "txt",
+"xlsx" and "latex". The default is "csv".
+
+* dataMR: allows you to choose the results to be exported. There are three options:
+"groups", "summary" or "all". The "groups" option exports groups
+of treatment averages evaluated by choosing the test in the MCP argument. The "summary" option exports the descriptive statistics for the response variable. The option
+"all" exports both results. 
+
 
 
 
 <!--- -------------------------------
-  FUNÇÕES :
+  TESTES :
 ------------------------------------>
+ <p>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115166354-1c424180-a089-11eb-911f-44fa69a7642f.png"></img> Tests: </h2>
+</p>
 
 
 
