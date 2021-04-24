@@ -25,6 +25,9 @@ knitr::opts_chunk$set(
 ```
 
 
+
+
+
 <!--
 <a href="#"> <img   onclick="traduzir(1)" src="img/icon_EUA.png"  ></a>
 <a href="#"> <img  onclick="traduzir(0)"src="img/icon_BR.png"  ></a>
@@ -209,6 +212,12 @@ of treatment averages evaluated by choosing the test in the MCP argument. The "s
 
 
 
+
+
+
+
+
+
 <!--- -------------------------------
   TESTES :
 ------------------------------------>
@@ -217,7 +226,25 @@ of treatment averages evaluated by choosing the test in the MCP argument. The "s
 </p>
 
 
+<!-- ACENTO LETRA: http://carinercrs.blogspot.com/2010/07/acentos-no-modo-matematico-em-latex.html   -->
 
+
+
+
+### Tukey midrange test (TM test) : 
+
+Os passos paa a aplicação do teste são:
+
+1. As médias dos tratamentos devem ser ordenadas: $\overline{Y}_{1}.,\overline{Y}_{2}.,..,\overline{Y}_{n}$ 
+
+
+
+2. A diferença mínima significativa 
+
+$$ \Delta_{n} = \overline{q}_{\alpha/2;n;v}  \dfrac {\sqrt{QME} }{r}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   $$
+
+
+3. Calcula-se o valor da estatítica, determinando-se $k$ e $\overline{Y}$ como descrito anteriormente, por:
 
 
 
@@ -227,6 +254,11 @@ of treatment averages evaluated by choosing the test in the MCP argument. The "s
 <h1 id="tituto_Tests">Tests</h1>
 
 <h2 id="titulo_Tukey">Tukey midrange test (TM test) </h2>
+
+
+
+
+
 
 <h2 id="titulo_SNK">SNK midrange test (SNKM test)</h2>
 
