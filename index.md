@@ -9,7 +9,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/midrangeMCP)](https://CRAN.R-project.org/package=midrangeMCP)
 [![](https://cranlogs.r-pkg.org/badges/midrangeMCP?color=orange)](https://cran.r-project.org/package=midrangeMCP)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--15-yellowgreen.svg)](https://github.com/bendeivide/midrangeMCP/commit/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--04--25-yellowgreen.svg)](https://github.com/bendeivide/midrangeMCP/commit/master)
 [![codecov](https://codecov.io/gh/bendeivide/midrangeMCP/branch/master/graph/badge.svg)](https://codecov.io/gh/bendeivide/midrangeMCP)
 [![Build
 Status](https://travis-ci.com/bendeivide/midrangeMCP.svg?branch=master)](https://travis-ci.com/bendeivide/midrangeMCP)
@@ -22,13 +22,14 @@ stable](https://img.shields.io/badge/lifecycle-maturing-brightgreen.svg)](https:
 package designed to present four new multiple comparison tests. This
 work was developed during the doctorate in Statistics and Agricultural
 Experimentation, by the [Federal University of Lavras](https://ufla.br/)
-(UFLA/BRAZIL). The supervisor of this work was Professor [Daniel Furtado
-Ferreira](http://www.dex.ufla.br/~danielff/). I am currently as
-Professor of Statistics at the [Federal University of São João
-del-Rei](https://ufsj.edu.br/) (UFSJ/BRAZIL). Today, we have the
-collaboration of a student of scientific initiation, [Diego Arthur Bispo
-Justino de Oliveira](https://digoarthur.github.io/), student of
-Mechatronics Engineering at UFSJ.
+(UFLA/BRAZIL). The authors of this work are Professor [Daniel Furtado
+Ferreira](http://www.dex.ufla.br/~danielff/) and [Ben Dêivide de
+Oliveira Batista](http://bendeivide.github.io), Professor of Statistics
+at the [Federal University of São João del-Rei](https://ufsj.edu.br/)
+(UFSJ/BRAZIL). Today, we have the collaboration of a student of
+scientific initiation, [Diego Arthur Bispo Justino de
+Oliveira](https://digoarthur.github.io/), student of Mechatronics
+Engineering at UFSJ.
 
 Four tests are presented, three based on the [distribution of the
 externally studentized
@@ -118,7 +119,7 @@ website at
 
 ## <i class="fas fa-newspaper" aria-hidden="true"></i> News
 
-  - Version 3.1 (2020-06-29): Update GUI (`guimidrangeMCP` function).
+-   Version 3.1 (2020-06-29): Update GUI (`guimidrangeMCP` function).
     Corrections in the graphic device in which the ‘save-as’ button was
     pressed twice so that the window was opened, when RStudio was being
     used. Corrections to the Plot configuration in the ‘save-as’ button.
@@ -126,9 +127,9 @@ website at
     Internationalization of ‘Scale of Plot’ to the language in
     Portuguese. Internationalization of ‘…Nor will you need to use
     quotes between treatment levels…’, part of the message in help
-    button (Average option -\> treatment).
+    button (Average option -&gt; treatment).
 
-  - Version 3.0 (2020-06-23): Reactivation of the package to CRAN. There
+-   Version 3.0 (2020-06-23): Reactivation of the package to CRAN. There
     was a change in the design of the graphical user interface using the
     Tcl/tk language, through the tcltk package. The basic settings of
     the Interface have been preserved. However, some features of the
@@ -136,26 +137,26 @@ website at
     feature was the plot area. Some modifications will still be added in
     the following versions.
 
-  - Version 2.1 (2020-04-14): Internationalization of the package to the
+-   Version 2.1 (2020-04-14): Internationalization of the package to the
     language in Portuguese (Brazil). On 5/21/2020 the
     [midrangeMCP](https://CRAN.R-project.org/package=midrangeMCP)
     package was removed from the CRAN repository due to a dependency on
     the [gWidgets](https://CRAN.R-project.org/package=gWidgets) package.
     This package has been archived.
 
-  - Version 2.0 (2020-04-11): Creation of the graphical user interface
+-   Version 2.0 (2020-04-11): Creation of the graphical user interface
     using the [gWidgets](https://CRAN.R-project.org/package=gWidgets)
     package with GTk+ language support
     ([gWidgetsRGtk2](https://CRAN.R-project.org/package=gWidgetsRGtk2)).
     This resulted in the `guimidrangeMCP` function.
 
-  - Version 1.3 (2016-07-14): Removing bugs.
+-   Version 1.3 (2016-07-14): Removing bugs.
 
-  - Version 1.2 (2016-04-28): Removing bugs.
+-   Version 1.2 (2016-04-28): Removing bugs.
 
-  - Version 1.1 (2016-02-21): Removing bugs.
+-   Version 1.1 (2016-02-21): Removing bugs.
 
-  - Version 1.0 (2015-11-05): In the first version, we created the basic
+-   Version 1.0 (2015-11-05): In the first version, we created the basic
     functions of the
     [midrangeMCP](https://cran.r-project.org/package=midrangeMCP)
     package: `MRtest`, `MRwrite` and `MRbarplot`.
