@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">midrangeMCP</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.2</span>
       </span>
     </div>
 
@@ -52,14 +52,14 @@
 </li>
 <li>
   <a href="../articles/guimidrangeMCP.html">
-    <span class="fa fa-question-circle-o"></span>
+    <span class="fas fa-question-circle-o"></span>
      
     faq
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa fas fa-book"></span>
+    <span class="fas fa-book"></span>
      
     Articles
      
@@ -76,14 +76,14 @@
 </li>
 <li>
   <a href="../news/index.html">
-    <span class="fa fa-newspaper-o"></span>
+    <span class="fas fa-newspaper-o"></span>
      
     news
   </a>
 </li>
 <li>
   <a href="../reference/index.html">
-    <span class="fa fa-file-code-o"></span>
+    <span class="fas fa-file-code-o"></span>
      
     functions
   </a>
@@ -92,7 +92,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/bendeivide/midrangeMCP">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -106,12 +106,12 @@
 
       
 
-      </header><script src="guimidrangeMCP_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="guimidrangeMCP_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>How to use the GUI of midrangeMCP package</h1>
             
-            <h4 class="date">2020-12-15</h4>
+            <h4 class="date">2021-04-25</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/bendeivide/midrangeMCP/blob/master/vignettes/guimidrangeMCP.Rmd"><code>vignettes/guimidrangeMCP.Rmd</code></a></small>
       <div class="hidden name"><code>guimidrangeMCP.Rmd</code></div>
@@ -120,50 +120,249 @@
 
     
     
-<div id="how-to-load-the-gui" class="section level1">
-<h1 class="hasAnchor">
-<a href="#how-to-load-the-gui" class="anchor"></a>How to load the GUI?</h1>
+<!--- -------------------------------
+                  LOGO 
+------------------------------------>
+<p align="center">
+<img alt="gif_" width="180" height="180" src="https://user-images.githubusercontent.com/59892368/107445760-d6fb1400-6b1b-11eb-9aac-bf788e0c9937.png"></p>
+<!--- -------------------------------
+         How to load the GUI?
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107446333-f9416180-6b1c-11eb-8163-eb2a732c4fd1.PNG"> How to load the GUI?
+</h1>
+
+<p>Note: First select in Packages the “midrangeMCP” option.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Load midrangeMCP package</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://bendeivide.github.io/midrangeMCP/">midrangeMCP</a></span><span class="op">)</span>
 <span class="co"># Load GUI</span>
 <span class="fu"><a href="../reference/guimidrangeMCP.html">guimidrangeMCP</a></span><span class="op">(</span>gui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<!--- -------------------------------
+               Interface
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107446738-cba8e800-6b1d-11eb-901e-95dfc202f6e2.PNG"> Interface
+</h1>
+
+<div class="figure">
+<img src="img/Interface.png" style="width:100.0%" alt=""><p class="caption">Pacote midrangeMCP ; Versão 3.1.1</p>
 </div>
-<div id="data-input" class="section level1">
-<h1 class="hasAnchor">
-<a href="#data-input" class="anchor"></a>Data input</h1>
+<!--- -------------------------------
+  Input data set and other functions:
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451967-22ff8600-6b27-11eb-9b69-56c38156e7a4.png"> Input data set and other functions:
+</h1>
+
+<p>The data entry session is at the top left of the Interface. Here you have the options to “select a file”, “variable separator”, “Edit / View” and “Choose Directory”.</p>
+<p>(IMAGEM)</p>
+<div id="st-choose-directory" class="section level3">
+<h3 class="hasAnchor">
+<a href="#st-choose-directory" class="anchor"></a>1st Choose directory:</h3>
+<p>The first step is to choose the directory for the data set analysis to be exported. And this is done as follows:</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEd1t6x45HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
 </div>
-<div id="entry-types-to-apply-the-tests" class="section level1">
-<h1 class="hasAnchor">
-<a href="#entry-types-to-apply-the-tests" class="anchor"></a>Entry types to apply the tests</h1>
-<div id="experimental-model" class="section level2">
-<h2 class="hasAnchor">
-<a href="#experimental-model" class="anchor"></a>Experimental model</h2>
+<div id="nd-variables-separate" class="section level3">
+<h3 class="hasAnchor">
+<a href="#nd-variables-separate" class="anchor"></a>2nd Variables Separate:</h3>
+<p>The next important step is to identify by which symbol the variables in your data set are separated. The international standard considers the period, but if it is a comma, space or semicolon, it must be specified so that the file can be read.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PJTN9qKyn3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
 </div>
-<div id="data-vector" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-vector" class="anchor"></a>data vector</h2>
+<div id="rd-search-open-file--txt-or--csv" class="section level3">
+<h3 class="hasAnchor">
+<a href="#rd-search-open-file--txt-or--csv" class="anchor"></a>3rd Search → Open file (.txt or .csv) :</h3>
+<p>Third step is the import of the data set can be of the type .txt or .csv. Once imported, so that your data set is correct, the names of the variables that have been assigned to each column must appear in the first line. As an example, we used a specific data set and proceeded:</p>
+<p>(Link conjunto de dados como exemplo )</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UxJ7x-ABxlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
 </div>
-<div id="averages" class="section level2">
-<h2 class="hasAnchor">
-<a href="#averages" class="anchor"></a>Averages</h2>
+<div id="th-editview-data" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-editview-data" class="anchor"></a>4th Edit/View Data:</h3>
+<p>This option not only makes it possible to edit the data if you want to change it at the moment and obtain other analyzes, but it also gives you the option of checking the data correctly after importing. But remember! Data editing is done only within the program, the root file is not changed.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D_qDBuv_iIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<!--- -------------------------------
+              Data output
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="45" height="45" src="https://user-images.githubusercontent.com/59892368/107451900-01060380-6b27-11eb-9029-434789a53438.png"> Data output
+</h1>
+
+</div>
+<div id="th-output" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-output" class="anchor"></a>5th Output:</h3>
+<p>Here is shown the path of the source folder from which the data set was imported, and the description of the set’s columns contained in the file. Note: the name of the columns in the data set must be correctly described.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kODV5CbkBIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<!--- -------------------------------
+   Tests, Extension and level of insignificance.
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107452348-c94b8b80-6b27-11eb-8511-17794d23296e.png"> Tests, Extension and level of insignificance.
+</h1>
+
+</div>
+<div id="th-tests" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-tests" class="anchor"></a>6th Tests</h3>
+<p>Here, the types of tests for data analysis are chosen, for the moment: MGM, MGR, SNKM and TM. Note: A detailed explanation of the tests is present on the other page of this website!</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BOmhAT82D0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
+<div id="th-extension" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-extension" class="anchor"></a>7th Extension</h3>
+<p>The extension is the type of file in which the result will be exported and will follow the path of the 1st step. The file types are: .txt; .tex; .xlsx. Choose the extension according to your need for the analysis. Note: the type of extension .tex will be shown in the Console so that its use can be copied and pasted into the document.</p>
+</div>
+<div id="th-significance-level" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-significance-level" class="anchor"></a>8th Significance Level</h3>
+<p>The level of significance for analysis is placed here, being in an interval between 0 and 1. As a default, the value 0.05 is already inserted.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t53dtNliYSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<!--- -------------------------------
+   Data entry options
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107861885-93f4b580-6e27-11eb-911b-06fb5e9e0569.png"> Data entry options
+</h1>
+
+</div>
+<div id="th-choose-the-data-entry-options" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-choose-the-data-entry-options" class="anchor"></a>9th Choose the Data entry options</h3>
+<p>The data entry options are the ones that determine how the chosen test will be calculated and, because it has more input choices, the great advantage of this program for others that already exist is analysis through the protection of the data set. The Variable Response and Average options provide this possibility.</p>
+<div id="model" class="section level4">
+<h4 class="hasAnchor">
+<a href="#model" class="anchor"></a>Model</h4>
+<p>The first option called ‘Model’ is the most common, as all data for analysis must be provided, and they are contained in the file.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oGbWvj3rf38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
+<div id="variable-response" class="section level4">
+<h4 class="hasAnchor">
+<a href="#variable-response" class="anchor"></a>Variable Response</h4>
+<p>The Response Variable is for the case where the researcher does not want to provide the data set in its entirety, but rather some specific data for the analysis. In this case, only the data set is passed on, according to what we are working on here as an example, in which the object is TRAT (treatment) and PROD (response variable). Therefore, only the value of degree of freedom and average square will have to be entered.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EnkkBN8-VZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
+<div id="averages" class="section level4">
+<h4 class="hasAnchor">
+<a href="#averages" class="anchor"></a>Averages</h4>
+<p>The case of the input option ‘Means’ is used when PROD and TRAT are not informed, giving the possibility of inserting other data for analysis such as means, treatment, degree of freedom, mean square and number repetition of the set.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yulrZmzI58c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<!--- -------------------------------
+              Console
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107886448-a67df600-6ede-11eb-8b22-93659ab64a5f.png"> Console
+</h1>
+
+</div>
+<div id="th-press-button-calculate" class="section level4">
+<h4 class="hasAnchor">
+<a href="#th-press-button-calculate" class="anchor"></a>10th Press Button Calculate</h4>
+<p>After clicking the Calculate button, the analysis data for the set will be shown in the Console. The summary, the test result, the average of the experiment, the coefficient of variation, the average square of the residue, the degrees of freedom will be displayed and, if the Output Extension is latex, the code of the same will be displayed here.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mMBAgNr7kwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<!--- -------------------------------
+    Edit and export Graphics
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth">
+<img alt="icon_CreatingApplication" width="40" height="40" src="https://user-images.githubusercontent.com/59892368/107450203-969f9400-6b23-11eb-917c-e36f66e6cb6f.png"> Graphics
+</h1>
+
 </div>
 </div>
-<div id="data-output" class="section level1">
-<h1 class="hasAnchor">
-<a href="#data-output" class="anchor"></a>Data output</h1>
+<div id="th-graphics-parameters" class="section level3">
+<h3 class="hasAnchor">
+<a href="#th-graphics-parameters" class="anchor"></a>11th Graphics Parameters</h3>
+<p>This function provides the possibility to update three components related to the graph.</p>
+<div id="color" class="section level4">
+<h4 class="hasAnchor">
+<a href="#color" class="anchor"></a>Color</h4>
+<p>The first component is the color change that can be changed to gray with the following command ’gray.color (4)’, for example.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pOIhFz0mC64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
 </div>
-<div id="edit-and-export-graphics" class="section level1">
-<h1 class="hasAnchor">
-<a href="#edit-and-export-graphics" class="anchor"></a>Edit and export Graphics</h1>
+<div id="horizontal" class="section level4">
+<h4 class="hasAnchor">
+<a href="#horizontal" class="anchor"></a>Horizontal</h4>
+<p>The second component is the change of direction of the graph’s axes, being it Vertical (default) or Horizontal, defining this with the command ‘FALSE’ or ‘TRUE’.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p7KUAt6PA_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
+<div id="axes" class="section level4">
+<h4 class="hasAnchor">
+<a href="#axes" class="anchor"></a>Axes</h4>
+<p>The third component is the option to name the axes of the graph and this is done with the following command ’xlab =“ VR ”; ylab = “Treatment” ’, the xlab being responsible for naming the X axis and the ylab for the Y axis.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oG2R5yzhT-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
+<div id="saves" class="section level4">
+<h4 class="hasAnchor">
+<a href="#saves" class="anchor"></a>Saves</h4>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AhVjT8rKVxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+</div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 

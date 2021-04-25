@@ -1,7 +1,9 @@
 ---
 title: "How to use the GUI of midrangeMCP package"
 date: '`r Sys.Date()`'
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    self_contained: no
 vignette: >
   %\VignetteIndexEntry{How to use the GUI of midrangeMCP package}
   %\VignetteEngine{knitr::rmarkdown}
@@ -37,15 +39,13 @@ knitr::opts_chunk$set(
 Note: First select in Packages the "midrangeMCP" option.
 
 ~~~r
-# English Language
-Sys.setenv(LANG ="en")
 # Load midrangeMCP package
 library(midrangeMCP)
 # Load GUI
 guimidrangeMCP(gui = TRUE)
 ~~~
 
-(Video How to load the GUI_Trim.mp4)
+
 
 
 <!--- -------------------------------
@@ -58,7 +58,7 @@ guimidrangeMCP(gui = TRUE)
 
 
 
-![ Pacote midrangeMCP ; Versão 3.1.2](./img/interface.png){width=100%}
+![ Pacote midrangeMCP ; Versão 3.1.1](./img/interface.png){width=100%}
 
 <!--- -------------------------------
   Input data set and other functions:
@@ -70,30 +70,39 @@ guimidrangeMCP(gui = TRUE)
 
 The data entry session is at the top left of the Interface. Here you have the options to "select a file", "variable separator", "Edit / View" and "Choose Directory".
 
-(IMAGEM 01)
+(IMAGEM)
 
 ### 1st Choose directory: 
 The first step is to choose the directory for the data set analysis to be exported. And this is done as follows:
 
-(Vídeo 1st Choose directory.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEd1t6x45HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 ### 2nd Variables Separate:
 The next important step is to identify by which symbol the variables in your data set are separated. The international standard considers the period, but if it is a comma, space or semicolon, it must be specified so that the file can be read.
 
-(Video 2nd Variables Separate.mp4 )
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PJTN9qKyn3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 ### 3rd Search → Open file (.txt or .csv) :
 Third step is the import of the data set can be of the type .txt or .csv. Once imported, so that your data set is correct, the names of the variables that have been assigned to each column must appear in the first line.
 As an example, we used a specific data set and proceeded:
 
 (Link conjunto de dados como exemplo )
-(Vídeo 3rd Search → Open file (.txt or .csv).mp4 )
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UxJ7x-ABxlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 
 ### 4th Edit/View Data:
 This option not only makes it possible to edit the data if you want to change it at the moment and obtain other analyzes, but it also gives you the option of checking the data correctly after importing. But remember! Data editing is done only within the program, the root file is not changed.
 
-(Video 4th EditView Data.mp4 )
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D_qDBuv_iIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 <!--- -------------------------------
               Data output
@@ -107,13 +116,13 @@ This option not only makes it possible to edit the data if you want to change it
 ### 5th Output:
 Here is shown the path of the source folder from which the data set was imported, and the description of the set's columns contained in the file. Note: the name of the columns in the data set must be correctly described.
 
-(VIDEO 5th Output.mp4)
-
-
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kODV5CbkBIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 
 <!--- -------------------------------
-   Tests, Extension and level of significance.
+   Tests, Extension and level of insignificance.
 ------------------------------------>
 
 
@@ -124,17 +133,21 @@ Here is shown the path of the source folder from which the data set was imported
 ### 6th Tests
 Here, the types of tests for data analysis are chosen, for the moment: MGM, MGR, SNKM and TM. Note: A detailed explanation of the tests is present on the other page of this website!
 
-(VIDEO 6th Tests.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BOmhAT82D0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 
 ### 7th Extension 
 The extension is the type of file in which the result will be exported and will follow the path of the 1st step. The file types are: .txt; .tex; .xlsx. Choose the extension according to your need for the analysis. Note: the type of extension .tex will be shown in the Console so that its use can be copied and pasted into the document.
 
-
-
-### 8th Level of significance
+### 8th Significance Level
 The level of significance for analysis is placed here, being in an interval between 0 and 1. As a default, the value 0.05 is already inserted.
 
-(VIDEO 8th Level of significance.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t53dtNliYSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 
 <!--- -------------------------------
    Data entry options
@@ -155,18 +168,25 @@ The data entry options are the ones that determine how the chosen test will be c
 
 The first option called 'Model' is the most common, as all data for analysis must be provided, and they are contained in the file. 
 
-(VIDEO 9th Choose the Data entry options_MODEL.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oGbWvj3rf38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
-#### Response Variable
+
+#### Variable Response
 The Response Variable is for the case where the researcher does not want to provide the data set in its entirety, but rather some specific data for the analysis. In this case, only the data set is passed on, according to what we are working on here as an example, in which the object is TRAT (treatment) and PROD (response variable). Therefore, only the value of degree of freedom and average square will have to be entered.
 
-(VIDEO 9th Choose the Data entry options_RESPONSE VARIABLE.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EnkkBN8-VZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 #### Averages
 
 The case of the input option 'Means' is used when PROD and TRAT are not informed, giving the possibility of inserting other data for analysis such as means, treatment, degree of freedom, mean square and number repetition of the set.
 
-(VIDEO 9th Choose the Data entry options_AVERAGE.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yulrZmzI58c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 <!--- -------------------------------
               Console
@@ -179,7 +199,9 @@ The case of the input option 'Means' is used when PROD and TRAT are not informed
 #### 10th Press Button Calculate
 After clicking the Calculate button, the analysis data for the set will be shown in the Console. The summary, the test result, the average of the experiment, the coefficient of variation, the average square of the residue, the degrees of freedom will be displayed and, if the Output Extension is latex, the code of the same will be displayed here.
 
-(VIDEO 10th Press Button Calculate.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mMBAgNr7kwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 <!--- -------------------------------
     Edit and export Graphics
@@ -198,20 +220,28 @@ This function provides the possibility to update three components related to the
 
 The first component is the color change that can be changed to gray with the following command ’gray.color (4)’, for example.
 
-(VIDEO 11th Graphics Parameters_COLOR.mp4)    
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pOIhFz0mC64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 
 #### Horizontal
 The second component is the change of direction of the graph's axes, being it Vertical (default) or Horizontal, defining this with the command 'FALSE' or 'TRUE'.
 
-(VIDEO 11th Graphics Parameters_HORIZONTAL.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p7KUAt6PA_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 #### Axes
 The third component is the option to name the axes of the graph and this is done with the following command ’xlab =“ VR ”; ylab = "Treatment" ’, the xlab being responsible for naming the X axis and the ylab for the Y axis.
 
-(VIDEO 11th Graphics Parameters_AXES.mp4)
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oG2R5yzhT-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
-#### Save as...
-Here the generated graphic can be saved in the following formats: metafile, png, pdf, bmp, tiff, jpeg ... Among other functions.
 
-(VIDEO 11th Graphics Parameters_SAVES.mp4)
+#### Saves
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AhVjT8rKVxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>

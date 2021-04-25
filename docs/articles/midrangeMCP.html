@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">midrangeMCP</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.2</span>
       </span>
     </div>
 
@@ -52,14 +52,14 @@
 </li>
 <li>
   <a href="../articles/guimidrangeMCP.html">
-    <span class="fa fa-question-circle-o"></span>
+    <span class="fas fa-question-circle-o"></span>
      
     faq
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa fas fa-book"></span>
+    <span class="fas fa-book"></span>
      
     Articles
      
@@ -76,14 +76,14 @@
 </li>
 <li>
   <a href="../news/index.html">
-    <span class="fa fa-newspaper-o"></span>
+    <span class="fas fa-newspaper-o"></span>
      
     news
   </a>
 </li>
 <li>
   <a href="../reference/index.html">
-    <span class="fa fa-file-code-o"></span>
+    <span class="fas fa-file-code-o"></span>
      
     functions
   </a>
@@ -92,7 +92,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/bendeivide/midrangeMCP">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -106,7 +106,7 @@
 
       
 
-      </header><script src="midrangeMCP_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="midrangeMCP_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>About the functions of the midrangeMCP package</h1>
@@ -119,7 +119,10 @@
 
     
     
-<p><a href="#"> <img onclick="traduzir(1)" src="img/icon_EUA.png"></a> <a href="#"> <img onclick="traduzir(0)" src="img/icon_BR.png"></a></p>
+<!--
+<a href="#"> <img   onclick="traduzir(1)" src="E:/BEN_R/pkgs_published/temporario/midrangeMCP/vignettes/img/icon_EUA.png"  ></a>
+<a href="#"> <img  onclick="traduzir(0)"src="E:/BEN_R/pkgs_published/temporario/midrangeMCP/vignettes/img/icon_BR.png"  ></a>
+-->
 <h1 id="titulo_install">
 Install midrangeMCP package
 </h1>
@@ -153,21 +156,141 @@ if (op==1){
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"midrangeMCP"</span><span class="op">)</span></code></pre></div>
 <div id="console-r-studio" class="section level6">
 <h6>Console (R Studio)</h6>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span><span class="st"> </span><span class="kw">install.packages</span>(<span class="st">"midrangeMCP"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>tentando a URL <span class="st">'https://cran.rstudio.com/bin/windows/contrib/4.0/midrangeMCP_3.1.zip'</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>Content type <span class="st">'application/zip'</span> length <span class="dv">122987</span> <span class="kw">bytes</span> (<span class="dv">120</span> KB)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>downloaded <span class="dv">120</span> KB</span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a>package ‘midrangeMCP’ successfully unpacked and MD5 sums checked</span></code></pre></div>
-<!---
-$$
-  s f(x,y) = \sin(x+y)
-$$
--->
-<h1 id="titulo_Using" class="hasAnchor">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"midrangeMCP"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tentando a URL <span class="st">'https://cran.rstudio.com/bin/windows/contrib/4.0/midrangeMCP_3.1.zip'</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Content type <span class="st">'application/zip'</span> length <span class="dv">122987</span> <span class="fu">bytes</span> (<span class="dv">120</span> KB)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>downloaded <span class="dv">120</span> KB</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>package ‘midrangeMCP’ successfully unpacked and MD5 sums checked</span></code></pre></div>
+<!--- -------------------------------
+  PACOTE midrangeMCP :
+------------------------------------>
+<p>
+</p>
+<h1 align="rigth" class="hasAnchor">
 <a href="#console-r-studio" class="anchor"></a>
-Using the basic functions
+<img alt="icon_CreatingApplication" width="50" height="50" src="https://user-images.githubusercontent.com/59892368/115161200-a3d08600-a072-11eb-909d-c310c414bcfe.png"> MidrangeMCP Package
 </h1>
+
+<!--- -------------------------------
+  FUNÇÕES :
+------------------------------------>
+<p>
+</p>
+<h2 id="titulo_Using" align="rigth">
+<img alt="icon_CreatingApplication" width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"> The three main functions:
+</h2>
+
+</div>
+<div id="mrtest-function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#mrtest-function" class="anchor"></a>MRtest Function:</h3>
+<p>The MRtest function is expressed as follows:</p>
+<blockquote>
+<p>MRtest( y, trt = NULL, dferror = NULL, mserror = NULL, replication = NULL, alpha = 0.05, main = NULL, MCP = “all”, ismean = FALSE)</p>
+</blockquote>
+<p>being:</p>
+<ul>
+<li><p>y: vector with the response variables, the desired model or the average of treatments;</p></li>
+<li><p>trt: vector with the levels of the factor under study. If y is an object that receives a model of the functions lm () or aov (), in the argument trt you must indicate which the model component represents the effect of the treatments. For example, if y &lt;- aov (vr ∼ treat), then trt = “treat”. The default trt = NULL is function protection if the user forgets to enter some information to that argument;</p></li>
+<li><p>dferror: degree of freedom of the residue. This option will only be needed when the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is dferror = NULL;</p></li>
+<li><p>msferror: mean square of the residue. This option is necessary only when the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is mserror = NULL;</p></li>
+<li><p>alpha: level of significance adopted in the tests. The default is alpha = 0.05;</p></li>
+<li><p>replication: number of treatment repetitions. If the data are unbalanced, the harmonic mean of these repetitions must be reported. This argument should be only when the argument is a vector of means or the repetitions of the main treatments unbalanced. The default is replication = NULL;</p></li>
+<li><p>main: title of your analysis;</p></li>
+<li><p>MCP: allows you to choose the desired multiple comparison test. The options are: “MGM”, “MGR”, “SNKM”, “TM” and “all”. The latter is the default, which results in calculate the four tests at once. If you want some tests, but not all, this argument can be concatenated with the desired options. For example, if want to perform the MGM and TM tests, just use MCP = c (“MGM”, “TM”)</p></li>
+<li><p>ismean: logical argument. If ismean = TRUE, it is because the argument y is a vector of treatment means. Otherwise, ismean = FALSE.</p></li>
+</ul>
+</div>
+<div id="mrbarplot-function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#mrbarplot-function" class="anchor"></a>MRbarplot Function:</h3>
+<p>The MRbarplot function is expressed as follows:</p>
+<blockquote>
+<p>MRbarplot(x, MCP = “all”, col = heat.colors(10), horiz = FALSE, …)</p>
+</blockquote>
+<p>being:</p>
+<ul>
+<li><p>x:MRtest function object;</p></li>
+<li><p>MCP: allows you to choose the desired multiple comparison test. The default is “all”. This option will perform all the tests that were chosen on the object MRtest. If you want some of the tests used on this object, you can concatenate it. See the MRCP function MCP argument;</p></li>
+<li><p>col: allows you to choose the color of the graph bars. The default is heat.colors (10). The value 10 means the desired number of colors. If you want the graph to be colored on the black and white scale, you can choose the gray.colors (10) option;</p></li>
+<li><p>horiz: choose the direction of the bars. The default is horiz = FALSE, that is, bars vertically. If you choose horiz = TRUE, the bars will be plotted horizontally;</p></li>
+<li><p>… the function allows the user to add more arguments to the function barplot.</p></li>
+</ul>
+</div>
+<div id="mrwrite-function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#mrwrite-function" class="anchor"></a>MRwrite Function:</h3>
+<p>The MRwrite function is expressed as follows:</p>
+<blockquote>
+<p>MRwrite(x, MCP = “all”, extension = “csv”, dataMR = “all”)</p>
+</blockquote>
+<p>being:</p>
+<ul>
+<li><p>x: MRtest function object;</p></li>
+<li><p>MCP: allows you to choose the desired multiple comparison test. The default is MCP = “all”. This option will perform all the tests that were chosen in the MRtest object. If you want some of the tests used on this object, you can concatenate it. See the MRCP function MCP argument;</p></li>
+<li><p>extension: type of file format. There are four options: “csv”, “txt”, “xlsx” and “latex”. The default is “csv”.</p></li>
+<li><p>dataMR: allows you to choose the results to be exported. There are three options: “groups”, “summary” or “all”. The “groups” option exports groups of treatment averages evaluated by choosing the test in the MCP argument. The “summary” option exports the descriptive statistics for the response variable. The option “all” exports both results.</p></li>
+</ul>
+<!--- -------------------------------
+  TESTES :
+------------------------------------><p>
+</p>
+<h2 id="titulo_Using" align="rigth">
+<img alt="icon_CreatingApplication" width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115166354-1c424180-a089-11eb-911f-44fa69a7642f.png"> Tests:
+</h2>
+
+<!-- ACENTO LETRA: http://carinercrs.blogspot.com/2010/07/acentos-no-modo-matematico-em-latex.html 
+
+https://www.ime.usp.br/~rfarias/simbolos.html
+
+https://wp.ufpel.edu.br/fernandosimoes/files/2012/06/Simbolos-matematicos.pdf
+
+https://xanadu1010.wordpress.com/2011/05/10/dominando-o-simbolo-somatorio-do-latex/
+
+
+-->
+</div>
+<div id="tukey-midrange-test-tm-test" class="section level3">
+<h3 class="hasAnchor">
+<a href="#tukey-midrange-test-tm-test" class="anchor"></a>Tukey midrange test (TM test) :</h3>
+<p>Os passos para a aplicação dos teste são:</p>
+<ol>
+<!--------------  ITEM 01 --------------------------><li>
+As médias dos tratamentos devem ser ordenadas: <span class="math inline">\(\overline{Y}_{1}.,\overline{Y}_{2}.,..,\overline{Y}_{n}\)</span>
+</li>
+<br><!--------------  ITEM 02 --------------------------><li>
+<p>A diferença mínima significativa por:</p>
+<p><span class="math display">\[ \Delta_{n} = \overline{q}_{\alpha/2;n;v}  \dfrac {\sqrt{QME} }{r}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   \]</span></p>
+</li>
+<br><!--------------  ITEM 03 --------------------------><li>
+<p>Calcula-se o valor da estatítica, determinando-se <span class="math inline">\(k\)</span> e <span class="math inline">\(\overline{Y}\)</span> como descrito anteriormente, por:</p>
+<span class="math display">\[\overline{r}_{n}= \dfrac {\overline{Y}_{1}+\overline{Y}_{n}} {2}-\overline{Y};\]</span>
+</li>
+<br><!--------------  ITEM 04 --------------------------><li>
+<p>Se $_n _n $, então as <span class="math inline">\(n\)</span> médias serão consideradas não diferentes. Caso contrário, vai para o passo 5, considerando <span class="math inline">\(m = n\)</span> médias;</p>
+</li>
+<br><!--------------  ITEM 05 --------------------------><li>
+<p>Faça <span class="math inline">\(m = m-1\)</span>;</p>
+</li>
+<br><!--------------  ITEM 6 --------------------------><li>
+<p>Considerando os grupos de médias:<span class="math inline">\(\overline{Y}_{(1)},\overline{Y}_{(2)},...,\overline{Y}_{(m)};\overline{Y}_{(2)},\overline{Y}_{(3)}...,\overline{Y}_{(m+1)};...;\overline{Y}_{(n-m+2)},...,\overline{Y}_{(n)};\)</span> o número de grupos é dado por <span class="math inline">\(l=n-m+1\)</span>;</p>
+</li>
+<br><!--------------  ITEM 07 --------------------------><li>
+<p>Para cada um do grupos com <span class="math inline">\(m\)</span> médias, é obtido</p>
+<p><span class="math display">\[\overline{r}_m= \dfrac {}{}\]</span></p>
+</li>
+<br><!--------------  ITEM 08 --------------------------><li>
+<p>Para cada grupo obtido e marcado como divisível, considere m o número de médias do grupo relacionado, devendo-se usar como diferença mínima significativa dada por:</p>
+<p><span class="math display">\[\Delta^*_n=\overline{q}_{\alpha/2;n.v} \sqrt{\dfrac{QME}{r}}; \]</span></p>
+</li>
+<br><!--------------  ITEM 09 --------------------------><li>
+<p>Se <span class="math inline">\(\mid \overline{r}_m \mid \leq \Delta^*_n\)</span>, então as <span class="math inline">\(m\)</span> médias não diferem estatisticamente; caso contrário elas são diferentes nesse estágio;</p>
+</li>
+<br><!--------------  ITEM 10 --------------------------><li>
+<p>Repete-se o processo para todos os <span class="math inline">\(l\)</span> grupos de <span class="math inline">\(m\)</span> médias, refazendo-se os passos 7, 8 e 9. Terminado a comparação de todos os <span class="math inline">\(l\)</span> grupos de <span class="math inline">\(m\)</span> médias, retorna-se ao passo 5, atualizando-se o valor de <span class="math inline">\(m\)</span>. Isso deve ser repetido enquanto $m $.</p>
+</li>
+</ol>
 <h1 id="tituto_Gui">
 GUI
 </h1>

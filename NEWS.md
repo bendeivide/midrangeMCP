@@ -1,5 +1,10 @@
-Version 3.1.1
+Version 3.1.2
+----------------------
+- invisible object inserted in MRwrite function
+- Corrections in the GUI
 
+Version 3.1.1
+----------------------
 - Bug partially fixed on the tkrplot package. We changed this package from the Imports field to Suggests in DESCRIPTION. But, this needs to be improved.
 
 

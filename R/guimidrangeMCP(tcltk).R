@@ -40,6 +40,8 @@ guimidrangeMCP <- function(gui = TRUE) {
   assign("results", NULL, envir = envmidrangeMCP)
   assign("LaTeX", NULL, envir = envmidrangeMCP)
   assign("symmb_promp", NULL, envir = envmidrangeMCP)
+  assign("teste", NULL, envir = envmidrangeMCP)
+  assign("saida", NULL, envir = envmidrangeMCP)
 
   # Graphical User Interface
   if (gui == TRUE) {
@@ -489,7 +491,10 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
+            capture.output(envmidrangeMCP$saida <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex'))
+            envmidrangeMCP$teste <- paste("group.", tclvalue(vari), sep = "")
+            envmidrangeMCP$LaTeX <-  envmidrangeMCP$saida[[1]][envmidrangeMCP$teste]
+
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
@@ -613,7 +618,10 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
+            capture.output(envmidrangeMCP$saida <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex'))
+            envmidrangeMCP$teste <- paste("group.", tclvalue(vari), sep = "")
+            envmidrangeMCP$LaTeX <-  envmidrangeMCP$saida[[1]][envmidrangeMCP$teste]
+
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {
@@ -744,7 +752,10 @@ guimidrangeMCP <- function(gui = TRUE) {
 
           # Results in the Console
           if (tclvalue(vari2) == "latex") {
-            envmidrangeMCP$LaTeX <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex')
+            capture.output(envmidrangeMCP$saida <- midrangeMCP::MRwrite(x = envmidrangeMCP$results, extension = 'latex'))
+            envmidrangeMCP$teste <- paste("group.", tclvalue(vari), sep = "")
+            envmidrangeMCP$LaTeX <-  envmidrangeMCP$saida[[1]][envmidrangeMCP$teste]
+
             eval_cmd_chunk(console, "results; LaTeX")
           }
           if (tclvalue(vari2) != "latex") {

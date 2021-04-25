@@ -1,10 +1,10 @@
-pandoc: 2.7.3
+pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   guimidrangeMCP: guimidrangeMCP.html
   midrangeMCP: midrangeMCP.html
-last_built: 2020-12-15T17:11Z
+last_built: 2021-04-25T17:58Z
 urls:
   reference: https://bendeivide.github.io/midrangeMCP//reference
   article: https://bendeivide.github.io/midrangeMCP//articles

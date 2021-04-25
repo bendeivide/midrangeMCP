@@ -82,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">midrangeMCP</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">3.1.2</span>
       </span>
     </div>
 
@@ -96,14 +96,14 @@
 </li>
 <li>
   <a href="../articles/guimidrangeMCP.html">
-    <span class="fa fa-question-circle-o"></span>
+    <span class="fas fa-question-circle-o"></span>
      
     faq
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa fas fa-book"></span>
+    <span class="fas fa-book"></span>
      
     Articles
      
@@ -120,14 +120,14 @@
 </li>
 <li>
   <a href="../news/index.html">
-    <span class="fa fa-newspaper-o"></span>
+    <span class="fas fa-newspaper-o"></span>
      
     news
   </a>
 </li>
 <li>
   <a href="../reference/index.html">
-    <span class="fa fa-file-code-o"></span>
+    <span class="fas fa-file-code-o"></span>
      
     functions
   </a>
@@ -136,7 +136,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/bendeivide/midrangeMCP">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -267,8 +267,8 @@ for both results.</p></td>
 <span class='fu'>MRwrite</span><span class='op'>(</span><span class='va'>results</span>, MCP <span class='op'>=</span> <span class='st'>"all"</span>, extension <span class='op'>=</span> <span class='st'>"latex"</span>, dataMR <span class='op'>=</span> <span class='st'>"all"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Table in latex of results of the MGM test
 #&gt; 
-#&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Tue Dec 15 14:11:20 2020
+#&gt; % latex table generated in R 4.0.3 by xtable 1.8-4 package
+#&gt; % Sun Apr 25 14:58:54 2021
 #&gt; \begin{table}[ht]
 #&gt; \centering
 #&gt; \begin{tabular}{lrl}
@@ -287,8 +287,8 @@ for both results.</p></td>
 #&gt; 
 #&gt; Table in latex of results of the TM test
 #&gt; 
-#&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Tue Dec 15 14:11:20 2020
+#&gt; % latex table generated in R 4.0.3 by xtable 1.8-4 package
+#&gt; % Sun Apr 25 14:58:54 2021
 #&gt; \begin{table}[ht]
 #&gt; \centering
 #&gt; \begin{tabular}{lrl}
@@ -304,28 +304,63 @@ for both results.</p></td>
 #&gt; \end{tabular}
 #&gt; \end{table}
 #&gt; 
-#&gt; 
-#&gt; Table in latex of results of descriptive statistics
-#&gt; 
-#&gt; % latex table generated in R 3.6.1 by xtable 1.8-4 package
-#&gt; % Tue Dec 15 14:11:20 2020
+#&gt; See yours tables in Console
+#&gt;  Format: latex</div><div class='output co'>#&gt; $`Result of tests`
+#&gt; $`Result of tests`$group.MGM
+#&gt; % latex table generated in R 4.0.3 by xtable 1.8-4 package
+#&gt; % Sun Apr 25 14:58:54 2021
 #&gt; \begin{table}[ht]
 #&gt; \centering
-#&gt; \begin{tabular}{lrrrrr}
+#&gt; \begin{tabular}{rlrl}
 #&gt;   \hline
-#&gt; trt &amp; Means &amp; std &amp; r &amp; Min &amp; Max \\ 
+#&gt;  &amp; trt &amp; Means &amp; Groups \\ 
 #&gt;   \hline
-#&gt; A &amp; 100.87 &amp; 3.40 &amp; 4.00 &amp; 97.64 &amp; 105.66 \\ 
-#&gt;   B &amp; 105.95 &amp; 10.33 &amp; 4.00 &amp; 99.11 &amp; 121.29 \\ 
-#&gt;   C &amp; 117.62 &amp; 9.02 &amp; 4.00 &amp; 104.43 &amp; 124.37 \\ 
-#&gt;   D &amp; 127.97 &amp; 4.74 &amp; 4.00 &amp; 123.19 &amp; 134.16 \\ 
-#&gt;   E &amp; 140.30 &amp; 11.42 &amp; 4.00 &amp; 127.31 &amp; 151.53 \\ 
+#&gt; 1 &amp; E &amp; 140.30 &amp; g1 \\ 
+#&gt;   2 &amp; D &amp; 127.97 &amp; g2 \\ 
+#&gt;   3 &amp; C &amp; 117.62 &amp; g3 \\ 
+#&gt;   4 &amp; B &amp; 105.95 &amp; g4 \\ 
+#&gt;   5 &amp; A &amp; 100.87 &amp; g4 \\ 
 #&gt;    \hline
 #&gt; \end{tabular}
 #&gt; \end{table}
 #&gt; 
-#&gt; See yours tables in Console
-#&gt;  Format: latex</div><div class='input'>
+#&gt; $`Result of tests`$group.TM
+#&gt; % latex table generated in R 4.0.3 by xtable 1.8-4 package
+#&gt; % Sun Apr 25 14:58:54 2021
+#&gt; \begin{table}[ht]
+#&gt; \centering
+#&gt; \begin{tabular}{rlrl}
+#&gt;   \hline
+#&gt;  &amp; trt &amp; Means &amp; Groups \\ 
+#&gt;   \hline
+#&gt; 1 &amp; E &amp; 140.30 &amp; g1 \\ 
+#&gt;   2 &amp; D &amp; 127.97 &amp; g2 \\ 
+#&gt;   3 &amp; C &amp; 117.62 &amp; g3 \\ 
+#&gt;   4 &amp; B &amp; 105.95 &amp; g4 \\ 
+#&gt;   5 &amp; A &amp; 100.87 &amp; g4 \\ 
+#&gt;    \hline
+#&gt; \end{tabular}
+#&gt; \end{table}
+#&gt; 
+#&gt; 
+#&gt; $`Descriptive Statistics`
+#&gt; % latex table generated in R 4.0.3 by xtable 1.8-4 package
+#&gt; % Sun Apr 25 14:58:54 2021
+#&gt; \begin{table}[ht]
+#&gt; \centering
+#&gt; \begin{tabular}{rlrrrrr}
+#&gt;   \hline
+#&gt;  &amp; trt &amp; Means &amp; std &amp; r &amp; Min &amp; Max \\ 
+#&gt;   \hline
+#&gt; 1 &amp; A &amp; 100.87 &amp; 3.40 &amp; 4.00 &amp; 97.64 &amp; 105.66 \\ 
+#&gt;   2 &amp; B &amp; 105.95 &amp; 10.33 &amp; 4.00 &amp; 99.11 &amp; 121.29 \\ 
+#&gt;   3 &amp; C &amp; 117.62 &amp; 9.02 &amp; 4.00 &amp; 104.43 &amp; 124.37 \\ 
+#&gt;   4 &amp; D &amp; 127.97 &amp; 4.74 &amp; 4.00 &amp; 123.19 &amp; 134.16 \\ 
+#&gt;   5 &amp; E &amp; 140.30 &amp; 11.42 &amp; 4.00 &amp; 127.31 &amp; 151.53 \\ 
+#&gt;    \hline
+#&gt; \end{tabular}
+#&gt; \end{table}
+#&gt; </div><div class='input'>
 <span class='co'>#Observation: The MRwrite function export</span>
 <span class='co'>#             only one extension at a time</span>
 </div></pre>
