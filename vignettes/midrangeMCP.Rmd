@@ -257,7 +257,7 @@ As médias dos tratamentos devem ser ordenadas: $\overline{Y}_{1}.,\overline{Y}_
 <li>
  A diferença mínima significativa por:
 
-$$ \Delta_{n} = \overline{q}_{\alpha/2;n;v}  \dfrac {\sqrt{QME} }{r}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   $$
+$$ \Delta_{n} = \overline{q}_{\alpha/2;n;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   $$
 
 </li>
 
@@ -310,7 +310,7 @@ Para cada grupo obtido e marcado como divisível, considere m o número de médi
 do grupo relacionado, devendo-se usar como diferença mínima significativa dada
 por:
 
-$$\Delta^*_n=\overline{q}_{\alpha/2;n.v} \sqrt{\dfrac{QME}{r}}; $$
+$$\Delta^*_n=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}; $$
 
 </li>
 
@@ -349,6 +349,29 @@ passo 5, atualizando-se o valor de $m$. Isso deve ser repetido enquanto $m\geq 2
 
 
 
+### SNK midrange test (SNKM test) : 
+
+O algoritmo para o teste de SNKM é o mesmo utilizado para o teste de TM. O
+que diferencia é o passo 8, que segue:
+
+
+<ol>
+
+
+
+<!--------------  ITEM 01 -------------------------->
+<li>
+8 O valor da diferença mínima significativa é dada por 
+
+$$\Delta_m=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}; $$
+Assim, $\Delta_m$ é alterado à medida que o número de médias $m$ se modifica nos $l =n−m+ 1$ grupos, modificando-se o argumento $n$ por $m$, que é um dos parâmetros
+da distribuição de $\overline{Q}$.
+
+
+
+</li>
+
+</ol>
 
 
 
@@ -357,7 +380,175 @@ passo 5, atualizando-se o valor de $m$. Isso deve ser repetido enquanto $m\geq 2
 
 
 
+### Mean grouping based on midrange (MGM test)
 
+A sigla MGM, vem do inglês: “Mean Grouping based on the Midrange”. Da
+mesma forma como foi proposto para o teste de TM, usou-se o critério de formar uma partição de m médias ordenadas na posição k, em que ocorre
+
+
+
+
+$$max\left\{\overline{Y}_{(j+1)}- \overline{Y}_{(j)} \right\} = \overline{Y}_{(k+1)} -\overline{Y}_{(k)}$$
+para $j = 1,2,...,m - 1$. Se houver empates com dois ou mais valores diferentes
+de $k$, digamos $k1, k2$, . . ., então forma-se a partição em que $k= max \left\{ min(k_1,m-k_1),min(k_2,m-k_2) \right\}$. Assim, definiu-se
+
+
+$$\overline{Y}^*_1 = \frac{\sum\limits_{j=1}^{k}\overline{Y}_{(j)}}{k} $$
+e
+
+$$\overline{Y}^*_2 = \frac{\sum\limits_{j=k+1}^{m}\overline{Y}_{(j)}}{m-k} $$
+
+Logo $\overline{Y}^*_m = \overline{Y}^*_1$ se $k \geq m -k$ ou $\overline{Y}^*_m=\overline{Y}^*_2$, caso contrário. Os passos para a aplicação do teste são:
+
+<ol>
+
+
+
+<!--------------  ITEM 01 -------------------------->
+
+<li>
+
+Faça $m=n$ e tome as médias ordenadas dos tratamentos por: $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(m).};$
+
+
+</li>
+
+<!--------------  ITEM 02 -------------------------->
+<li>
+
+Determina-se $k$ e $\overline{Y}^*_{m}$ como discutido anteriormente;
+
+
+</li>
+
+<!--------------  ITEM 03 -------------------------->
+<li>
+
+Determina-se o valor da estatística por:
+
+$$\overline{r}_{m}= \dfrac {\overline{Y}_{(1)}+\overline{Y}_{(m)}} {2}-\overline{Y}^*_m;$$
+
+
+
+</li>
+
+<!--------------  ITEM 04 -------------------------->
+<li>
+
+A diferença mínima significativa é
+
+
+$$ \Delta_{m} = \overline{q}_{\alpha/2;m;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2m}} \sqrt{\dfrac {QME} {r}}   $$
+
+
+
+</li>
+
+<!--------------  ITEM 05 -------------------------->
+<li>
+
+
+Se $\mid \overline{r}_m \mid \leq \Delta_m$,então as m médias são consideradas não diferentes e marca-se o grupo como não divisível e o processo se encerra. Caso contrário, considere que as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).};$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},\overline{Y}_{(k+2).},. . ., \overline{Y}_{(m).};$ e vá para o passo 6;
+
+</li>
+
+
+<!--------------  ITEM 06 -------------------------->
+<li>
+
+
+Para cada grupo obtido e marcado como divisível, considere m o número de médias
+do grupo relacionado. Repita os passos de 2 a 5, com uma ressalva, no passo 4,
+deve-se usar como diferença mínima significativa:
+
+
+$$\Delta_m=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}. $$
+</li>
+
+Esse processo é realizado para todos os grupos até que nenhum outro grupo consiga
+ser dividido em dois novos ou até que todos os grupos contenham apenas 1 média.
+
+
+
+</ol>
+
+
+
+
+
+### Mean grouping based on range (MGR test)
+
+
+Os passos para a aplicação do teste são:
+
+
+
+<ol>
+
+
+
+<!--------------  ITEM 01 -------------------------->
+
+<li>
+
+Fazer $m=n$ e considerar m médias ordenadas:: $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(m).};$
+
+
+</li>
+
+
+<!--------------  ITEM 02 -------------------------->
+<li>
+
+Determinar $k$ conforme discutido anteriormente;
+
+
+</li>
+
+
+<!--------------  ITEM 03 -------------------------->
+<li>
+
+Calcular a estatística do teste por:
+
+$$q_m = \overline{Y}_{(m).} - \overline{Y}_{(1).}  $$
+
+</li>
+
+
+
+<!--------------  ITEM 04 -------------------------->
+<li>
+
+A diferença mínima significativa é:
+
+$$\Delta_m=\overline{q}_{(\alpha;m,v)} \sqrt{\dfrac{QME}{r}}; $$
+
+</li>
+
+
+
+<!--------------  ITEM 05 -------------------------->
+<li>
+
+Se $ q_m \leq \Delta_m$,então as $m$ médias são consideradas não diferentes, marque o grupo como não divisível e vá para o passo 6. Caso contrário, considere as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).};$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},. . ., \overline{Y}_{(m).};$ e vá para o passo 6.
+
+
+</li>
+
+<!--------------  ITEM 06 -------------------------->
+<li>
+
+Para cada grupo obtido e marcado como divisível, considere $m$ o número de médias
+do grupo relacionado. Repita os passos de 2 a 5. Esse processo é realizado para
+todos os grupos até que nenhum outro grupo consiga ser dividido em dois novos
+ou até que todos os grupos contenham apenas 1 média.
+
+</li>
+
+
+
+</ol>
 
 
 
@@ -371,10 +562,6 @@ passo 5, atualizando-se o valor de $m$. Isso deve ser repetido enquanto $m\geq 2
 <h1 id="tituto_Tests">Tests</h1>
 
 <h2 id="titulo_Tukey">Tukey midrange test (TM test) </h2>
-
-
-
-
 
 
 <h2 id="titulo_SNK">SNK midrange test (SNKM test)</h2>
