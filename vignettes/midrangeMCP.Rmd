@@ -250,14 +250,14 @@ Os passos para a aplicação dos teste são:
 
 <!--------------  ITEM 01 -------------------------->
 <li>
-As médias dos tratamentos devem ser ordenadas: $\overline{Y}_{1}.,\overline{Y}_{2}.,..,\overline{Y}_{n}$ 
+As médias dos tratamentos devem ser ordenadas: $\overline{Y}_{(1)}.,\overline{Y}_{(2)}.,..,\overline{Y}_{(n).};$ 
 </li>
 <br/>
 <!--------------  ITEM 02 -------------------------->
 <li>
  A diferença mínima significativa por:
 
-$$ \Delta_{n} = \overline{q}_{\alpha/2;n;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   $$
+$$ \Delta_{n} = \overline{q}_{(\alpha/2;n;v)} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2n}} \sqrt{\dfrac {QME} {r}}   $$
 
 </li>
 
@@ -268,13 +268,13 @@ $$ \Delta_{n} = \overline{q}_{\alpha/2;n;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac 
 Calcula-se o valor da estatítica, determinando-se $k$ e $\overline{Y}$ como descrito anteriormente, por:
 
 
-$$\overline{r}_{n}= \dfrac {\overline{Y}_{1}+\overline{Y}_{n}} {2}-\overline{Y};$$
+$$\overline{r}_{n}= \dfrac {\overline{Y}_{(1)}+\overline{Y}_{(n)}} {2}-\overline{Y^*_.};$$
 </li>
 
 <br/>
 <!--------------  ITEM 04 -------------------------->
 <li>
-Se $\mid \overline{r}_n \mid \leq \Delta_n $, então as $n$ médias serão consideradas não diferentes. Caso contrário, vai para o passo 5, considerando $m = n$ médias;
+Se $\mid \overline{r}_n \mid \leq \Delta_n$, então as $n$ médias serão consideradas não diferentes. Caso contrário, vai para o passo 5, considerando $m = n$ médias;
 
 </li>
 
@@ -289,7 +289,7 @@ Se $\mid \overline{r}_n \mid \leq \Delta_n $, então as $n$ médias serão consi
 <br/>
 <!--------------  ITEM 6 -------------------------->
 <li>
-Considerando os grupos de médias:$\overline{Y}_{(1)},\overline{Y}_{(2)},...,\overline{Y}_{(m)};\overline{Y}_{(2)},\overline{Y}_{(3)}...,\overline{Y}_{(m+1)};...;\overline{Y}_{(n-m+2)},...,\overline{Y}_{(n)};$ o número de grupos é dado por $l=n-m+1$;
+Considerando os grupos de médias:$\overline{Y}_{(1)},\overline{Y}_{(2)},...,\overline{Y}_{(m)};\overline{Y}_{(2)},\overline{Y}_{(3)}...,\overline{Y}_{(m+1)};...;\overline{Y}_{(n-m+1)},\overline{Y}_{(n-m+2)},...,\overline{Y}_{(n)};$ o número de grupos é dado por $l=n-m+1$;
 
 </li>
 
@@ -298,7 +298,10 @@ Considerando os grupos de médias:$\overline{Y}_{(1)},\overline{Y}_{(2)},...,\ov
 <li>
 Para cada um do grupos com $m$ médias, é obtido
 
-$$\overline{r}_m= \dfrac {}{}$$
+$$\overline{r}_m= \dfrac {min \left\{ \overline{Y}_{(j)} \right\}+max \left\{ \overline{Y}_{(j)} \right\}  }{2}- \overline{Y}^*_.,$$
+
+em que $\overline{Y^*}$é obtida nos mesmos moldes, conforme descrito para o conjunto de
+todas as $n$ médias, sujeito apenas ao fato que se tem $m < n$ médias, nesse caso.
 
 </li>
 
@@ -306,11 +309,11 @@ $$\overline{r}_m= \dfrac {}{}$$
 <br/>
 <!--------------  ITEM 08 -------------------------->
 <li>
-Para cada grupo obtido e marcado como divisível, considere m o número de médias
+Para cada grupo obtido e marcado como divisível, considere $m$ o número de médias
 do grupo relacionado, devendo-se usar como diferença mínima significativa dada
 por:
 
-$$\Delta^*_n=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}; $$
+$$\Delta^*_n=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}};$$
 
 </li>
 
@@ -328,7 +331,7 @@ Se $\mid \overline{r}_m \mid \leq \Delta^*_n$, então as $m$ médias não difere
 <li>
 Repete-se o processo para todos os $l$ grupos de $m$ médias, refazendo-se os passos
 7, 8 e 9. Terminado a comparação de todos os $l$ grupos de $m$ médias, retorna-se ao
-passo 5, atualizando-se o valor de $m$. Isso deve ser repetido enquanto $m\geq 2 $.
+passo 5, atualizando-se o valor de $m$. Isso deve ser repetido enquanto $m\geq 2$.
 
 </li>
 
@@ -363,7 +366,7 @@ que diferencia é o passo 8, que segue:
 <li>
 8 O valor da diferença mínima significativa é dada por 
 
-$$\Delta_m=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}; $$
+$$\Delta_m=\overline{q}_{(\alpha/2;m,v)} \sqrt{\dfrac{QME}{r}}. $$
 Assim, $\Delta_m$ é alterado à medida que o número de médias $m$ se modifica nos $l =n−m+ 1$ grupos, modificando-se o argumento $n$ por $m$, que é um dos parâmetros
 da distribuição de $\overline{Q}$.
 
@@ -383,12 +386,12 @@ da distribuição de $\overline{Q}$.
 ### Mean grouping based on midrange (MGM test)
 
 A sigla MGM, vem do inglês: “Mean Grouping based on the Midrange”. Da
-mesma forma como foi proposto para o teste de TM, usou-se o critério de formar uma partição de m médias ordenadas na posição k, em que ocorre
+mesma forma como foi proposto para o teste de TM, usou-se o critério de formar uma partição de $m$ médias ordenadas na posição $k$, em que ocorre
 
 
 
 
-$$max\left\{\overline{Y}_{(j+1)}- \overline{Y}_{(j)} \right\} = \overline{Y}_{(k+1)} -\overline{Y}_{(k)}$$
+$$max\left\{\overline{Y}_{(j+1)}- \overline{Y}_{(j)} \right\} = \overline{Y}_{(k+1)} -\overline{Y}_{k}$$
 para $j = 1,2,...,m - 1$. Se houver empates com dois ou mais valores diferentes
 de $k$, digamos $k1, k2$, . . ., então forma-se a partição em que $k= max \left\{ min(k_1,m-k_1),min(k_2,m-k_2) \right\}$. Assim, definiu-se
 
@@ -438,7 +441,7 @@ $$\overline{r}_{m}= \dfrac {\overline{Y}_{(1)}+\overline{Y}_{(m)}} {2}-\overline
 A diferença mínima significativa é
 
 
-$$ \Delta_{m} = \overline{q}_{\alpha/2;m;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2m}} \sqrt{\dfrac {QME} {r}}   $$
+$$ \Delta_{m} = \overline{q}_{(\alpha/2;m;v)} \sqrt{ \dfrac {QME} {r}}  +  \dfrac {1 }{\sqrt{2m}} \sqrt{\dfrac {QME} {r}};   $$
 
 
 
@@ -448,7 +451,7 @@ $$ \Delta_{m} = \overline{q}_{\alpha/2;m;v} \sqrt{ \dfrac {QME} {r}}  +  \dfrac 
 <li>
 
 
-Se $\mid \overline{r}_m \mid \leq \Delta_m$,então as m médias são consideradas não diferentes e marca-se o grupo como não divisível e o processo se encerra. Caso contrário, considere que as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).};$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},\overline{Y}_{(k+2).},. . ., \overline{Y}_{(m).};$ e vá para o passo 6;
+Se $\mid \overline{r}_m \mid \leq \Delta_m$, então as $m$ médias são consideradas não diferentes e marca-se o grupo como não divisível e o processo se encerra. Caso contrário, considere que as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).};$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},\overline{Y}_{(k+2).},. . ., \overline{Y}_{(m).}$ e vá para o passo 6;
 
 </li>
 
@@ -457,12 +460,12 @@ Se $\mid \overline{r}_m \mid \leq \Delta_m$,então as m médias são considerada
 <li>
 
 
-Para cada grupo obtido e marcado como divisível, considere m o número de médias
+Para cada grupo obtido e marcado como divisível, considere $m$ o número de médias
 do grupo relacionado. Repita os passos de 2 a 5, com uma ressalva, no passo 4,
 deve-se usar como diferença mínima significativa:
 
 
-$$\Delta_m=\overline{q}_{(\alpha/2;n.v)} \sqrt{\dfrac{QME}{r}}. $$
+$$\Delta_m=\overline{q}_{(\alpha/2;m,v)} \sqrt{\dfrac{QME}{r}}. $$
 </li>
 
 Esse processo é realizado para todos os grupos até que nenhum outro grupo consiga
@@ -478,6 +481,13 @@ ser dividido em dois novos ou até que todos os grupos contenham apenas 1 média
 
 ### Mean grouping based on range (MGR test)
 
+
+A sigla MGR, vem do inglês: “Mean Grouping based on the Range”. Uma versão similar do teste de Scott-Knott (SCOTT; KNOTT, 1974), baseado na amplitude estudentizada também foi proposta. A essência do teste é a mesma da proposta apresentada para o teste de MGM. Para divisão dos grupos, usou-se como potencial ponto de partição a posição da máxima amplitude entre médias ordenadas. Assim, para $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(m).};$ a partição deve ser considerada na posição k onde se verifica:
+
+$$max \left\{\overline{Y}_{(j+1).}+\overline{Y}_{(j).} \right\} = \overline{Y}_{(k+1).}-\overline{Y}_{k.} $$
+
+para $j = 1, 2,..., m − 1$. Deve-se considerar para aplicação do teste o quantil superior
+$100\alpha \%, q_{\alpha;m,v}$, da amplitude estudentizada externamente.
 
 Os passos para a aplicação do teste são:
 
