@@ -106,109 +106,558 @@ package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
   FUNÇÕES :
 ------------------------------------>
  <p>
-    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions: </h2>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions (Application): </h2>
 </p>
 
 
 ### MRtest Function: 
+A primeira função do pacote midrangeMCP a ser apresentada é MRTest. Inicialmente, criou-se um arquivo que armazenou o banco de dados, intitulado datast1980.txt. No R:
 
-The MRtest function is expressed as follows:
+~~~r
+dados <- read.table("datast1980.txt", h =T)
+dados$trt <- factor(dados$trt)
+attach(dados) # Quebrando o objeto dados
+~~~
 
-> MRtest( y,  trt  =  NULL,  dferror  =  NULL,  mserror  =  NULL,
-replication  =  NULL,  alpha  =  0.05,  main  =  NULL,
-MCP  =  "all",  ismean  =  FALSE)
+~~~r
+> dados
+trt y
+1 1 19.4
+2 1 32.6
+3 1 27.0
+4 1 32.1
+5 1 33.0
+6 2 17.7
+7 2 24.8
+8 2 27.9
+9 2 25.2
+10 2 24.3
+11 3 17.0
+12 3 19.4
+13 3 9.1
+14 3 11.9
+15 3 15.8
+16 4 20.7
+17 4 21.0
+18 4 20.5
+19 4 18.8
+20 4 18.6
+21 5 14.3
+22 5 14.4
+23 5 11.8
+24 5 11.6
+25 5 14.2
+26 6 17.3
+27 6 19.4
+28 6 19.1
+29 6 16.9
+30 6 20.8
+~~~
 
-being:
+A codificação dos tratamentos no banco de dados foi da seguinte forma:
 
-* y: vector with the response variables, the desired model or the average of treatments;
+Tratamento   | Codificação
+--------- | ------
+3DOK1 | 1
+3DOK5 | 2
+3DOK4 | 3
+3DOK7 | 4
+3DOK13 | 5
+COMPOS | 6
 
-* trt: vector with the levels of the factor under study. If y is an object that receives
-a model of the functions lm () or aov (), in the argument trt you must indicate which
-the model component represents the effect of the treatments. For example, if y
-<- aov (vr ∼ treat), then trt = "treat". The default trt = NULL is
-function protection if the user forgets to enter some information to
-that argument;
+Realizando a análise de variância para obter o quadrado médio e o grau de liberdade do resíduo, tem-se:
 
-* dferror: degree of freedom of the residue. This option will only be needed
-when the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is dferror = NULL;
-
-* msferror: mean square of the residue. This option is necessary only when
-the argument y is a vector with the response variables or vector of treatment means. So the default for this argument is mserror = NULL;
-
-* alpha: level of significance adopted in the tests. The default is alpha = 0.05;
-
-* replication: number of treatment repetitions. If the data are
-unbalanced, the harmonic mean of these repetitions must be reported. This argument should be only when the argument is a vector of means or
-the repetitions of the main treatments unbalanced. The default is replication
-= NULL;
-
-* main: title of your analysis;
-
-* MCP: allows you to choose the desired multiple comparison test. The options are:
-"MGM", "MGR", "SNKM", "TM" and "all". The latter is the default, which results in
-calculate the four tests at once. If you want some tests, but not all,
-this argument can be concatenated with the desired options. For example, if
-want to perform the MGM and TM tests, just use MCP = c ("MGM",
-"TM")
-
-* ismean: logical argument. If ismean = TRUE, it is because the argument y is a
-vector of treatment means. Otherwise, ismean = FALSE.
+~~~r
+anava <- aov(y~trt)
+~~~
 
 
+Os argumentos **y** e **trt** da função MRtest têm três tipos
+de entrada:
+
+* **y** como objeto da função **aov**. Assim, para o argumento **trt** basta informar o nome da coluna que armazena os níveis do tratamento:
+
+
+~~~r
+MRtest(y = anava, trt = "trt")
+~~~
+
+
+~~~r
+MCP’s based on distributions of the studentized midrange
+and range
+Study: aov(y ~ trt) ~ "trt"
+Summary:
+Means std r Min Max
+1 28.82 5.80 5 19.4 33.0
+2 23.98 3.78 5 17.7 27.9
+3 14.64 4.12 5 9.1 19.4
+4 19.92 1.13 5 18.6 21.0
+5 13.26 1.43 5 11.6 14.4
+6 18.70 1.60 5 16.9 20.8
+Scott-Knott Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+Mean Grouping Range Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Range DMS
+19.88667 17.26515 11.78867 24 6 4.372651 6.714167
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g2
+6 18.70 g2
+3 14.64 g3
+5 13.26 g3
+SNK Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid DMS
+comp1 19.8867 17.2651 11.7887 24 6 1.0049 1.9862
+comp2 19.8867 17.2651 11.7887 24 5 1.0555 2.0640
+comp3 19.8867 17.2651 11.7887 24 4 1.1278 2.1750
+comp4 19.8867 17.2651 11.7887 24 3 1.2422 2.3506
+comp5 19.8867 17.2651 11.7887 24 2 1.4594 2.6841
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g1g2
+4 19.92 g2
+6 18.70 g2g3
+3 14.64 g2g3
+5 13.26 g3
+Tukey Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+
+~~~
+
+* $y$ como vetor da variável resposta e o argumento $trt$ como vetor dos tratamentos. Assim, deve-se informar na função MRtest o valor do quadrado médio e o grau de liberdade do resíduo nos argumentos $mserror$ e $dferror$, respectivamente. Dessa forma, tem-se:
+
+
+
+~~~r
+anava <- aov(y~trt)
+glerror <- df.residual(anava)
+qmerror <- deviance(anava) / glerror
+#Aplicando os testes
+MRtest(y = y,
+trt = trt,
+dferror = glerror,
+mserror = qmerror)
+
+~~~
+
+~~~r
+MCP’s based on distributions of the studentized midrange
+and range
+Study: y ~ trt
+Summary:
+Means std r Min Max
+1 28.82 5.80 5 19.4 33.0
+2 23.98 3.78 5 17.7 27.9
+3 14.64 4.12 5 9.1 19.4
+4 19.92 1.13 5 18.6 21.0
+5 13.26 1.43 5 11.6 14.4
+6 18.70 1.60 5 16.9 20.8
+Scott-Knott Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+Mean Grouping Range Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Range DMS
+19.88667 17.26515 11.78867 24 6 4.372651 6.714167
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g2
+6 18.70 g2
+3 14.64 g3
+5 13.26 g3
+SNK Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid DMS
+comp1 19.8867 17.2651 11.7887 24 6 1.0049 1.9862
+comp2 19.8867 17.2651 11.7887 24 5 1.0555 2.0640
+comp3 19.8867 17.2651 11.7887 24 4 1.1278 2.1750
+comp4 19.8867 17.2651 11.7887 24 3 1.2422 2.3506
+comp5 19.8867 17.2651 11.7887 24 2 1.4594 2.6841
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g1g2
+4 19.92 g2
+6 18.70 g2g3
+3 14.64 g2g3
+5 13.26 g3
+Tukey Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+
+~~~
+
+* $y$ como vetor de médias dos tratametos e o argumento $trt$ como vetor dos tratamentos. Assim, deve-se informar na função MRtest que o argumento y* é um
+vetor de médias, isto é, ismean = TRUE. Deve-se também informar o número
+de repetições, o valor do quadrado médio e o grau de liberdade do resíduo nos
+argumentos replication, **mserror** e **dferror**, respectivamente. Suponha
+que no exemplo 3.1, as informações sobre o experimento fossem apenas: a análise
+de variância, as médias e o número de repetições dos tratamentos, isto é:
+
+
+Suponha que as informações sobre o experimento fossem apenas: a análise de variância, as médias e o número de repetições dos tratamentos, isto é:
+
+~~~r
+anova(anava)
+~~~
+
+~~~r
+Analysis of Variance Table
+Response: y
+Df Sum Sq Mean Sq F value Pr(>F)
+trt 5 847.05 169.409 14.37 1.485e-06 ***
+Residuals 24 282.93 11.789
+
+~~~
+
+~~~r
+# Média dos tratamentos
+mean.trt <- c(28.82, 23.98, 14.64, 19.92, 13.26, 18.70)
+# Tratamentos
+treat <- as.factor(1:6)
+# Núm. de repetições
+repet <- 5
+# Grau de liberdade do resíduo (obtido da ANAVA)
+dferror <- 24
+# Quadrado médio do resíduo (obtido da ANAVA)
+mserror <- 11.78867
+
+~~~
+
+Com essas informações a função **MRtest** também realizará os testes quando
+**ismean = TRUE**. Observe os resultados abaixo.
+
+~~~r
+# Analise da funcao MRtest - usando as medias
+MRtest(y = mean.trt,
+trt = treat,
+dferror,
+mserror,
+replication = repet,
+ismean = TRUE)
+
+~~~
+~~~r
+MCP’s based on distributions of the studentized midrange
+and range
+Study: y ~ trt
+Summary:
+Means r
+1 28.82 5
+2 23.98 5
+3 14.64 5
+4 19.92 5
+5 13.26 5
+6 18.70 5
+Mean Grouping Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+Mean Grouping Range Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Range DMS
+19.88667 17.26515 11.78867 24 6 4.372651 6.714167
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g2
+6 18.70 g2
+3 14.64 g3
+5 13.26 g3
+SNK Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid DMS
+comp1 19.8867 17.2651 11.7887 24 6 1.0049 1.9862
+comp2 19.8867 17.2651 11.7887 24 5 1.0555 2.0640
+comp3 19.8867 17.2651 11.7887 24 4 1.1278 2.1750
+comp4 19.8867 17.2651 11.7887 24 3 1.2422 2.3506
+comp5 19.8867 17.2651 11.7887 24 2 1.4594 2.6841
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g1g2
+4 19.92 g2
+6 18.70 g2g3
+3 14.64 g2g3
+5 13.26 g3
+Tukey Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+
+
+~~~
+
+Entretanto, o usuário pode não está interessado em realizar todos os testes. Dessa forma pode-se usar o argumento **MCP** para selecionar os testes desejados. Por exemplo,realizando os testes de **MGM** e de **MGR**, tem-se
+
+
+
+~~~r
+MRtest(y = anava,
+trt = "trt",
+MCP = c("MGM", "MGR"))
+~~~
+
+~~~r
+MCP’s based on distributions of the studentized midrange
+and range
+Study: aov(y ~ trt) ~ "trt"
+Summary:
+Means std r Min Max
+1 28.82 5.80 5 19.4 33.0
+2 23.98 3.78 5 17.7 27.9
+3 14.64 4.12 5 9.1 19.4
+4 19.92 1.13 5 18.6 21.0
+5 13.26 1.43 5 11.6 14.4
+6 18.70 1.60 5 16.9 20.8
+Mean Grouping Midrange Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+19.89 17.27 11.78867 24 6 1.004855 1.986204 1.542945
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+Mean Grouping Range Test
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Range DMS
+19.88667 17.26515 11.78867 24 6 4.372651 6.714167
+Groups:
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g2
+6 18.70 g2
+3 14.64 g3
+5 13.26 g3
+
+~~~
+
+
+Para recuperá-los no objeto teste.TM basta usar, após o nome do objeto, o
+símbolo $
+
+Caso deseje obter apenas os resultados do teste escolhido, basta usar:
+
+~~~r
+teste.TM$Groups
+
+~~~
+
+~~~r
+$group.TMtest
+Means Groups
+1 28.82 g1
+2 23.98 g2
+4 19.92 g3
+6 18.70 g3
+3 14.64 g4
+5 13.26 g4
+
+
+~~~
+
+Após ter criado um objeto para a função **MRtest**, as outras funções do pacote **midrangeMCP**, **MRbarplot** e **MRwrite**, ficam fáceis de serem utilizadas.
 
 ### MRbarplot Function: 
 
-The MRbarplot function is expressed as follows:
-
-> MRbarplot(x, MCP = "all", col = heat.colors(10),
-horiz = FALSE, ...)
-
-being:
-
-* x:MRtest function object;
-
-* MCP: allows you to choose the desired multiple comparison test. The default is
-"all". This option will perform all the tests that were chosen on the object
-MRtest. If you want some of the tests used on this object, you can concatenate it. See the MRCP function MCP argument;
-
-* col: allows you to choose the color of the graph bars. The default is heat.colors (10).
-The value 10 means the desired number of colors. If you want the graph to be colored on the black and white scale, you can choose the gray.colors (10) option;
+Função **MRbarplot** para o objeto **teste.TM**
 
 
-* horiz: choose the direction of the bars. The default is horiz = FALSE, that is, bars
-vertically. If you choose horiz = TRUE, the bars will be plotted horizontally;
+~~~r
+MRbarplot(teste.TM, xlab = "Tratamentos",
+ylab = "Nitrogênio")
+
+~~~
+
+<img  alt="skills"  width="690" height="365" src="https://user-images.githubusercontent.com/59892368/118414592-e5f1e500-b67b-11eb-9e15-11fb6395a00c.PNG"></img>
+
+Caso deseje as barras na vertical, basta alterar o argumento horiz na função MRbarplot.
+
+~~~r
+MRbarplot(teste.TM, xlab = "Tratamentos",
+ylab = "Nitrogênio", horiz = TRUE)
+
+~~~
+
+<img  alt="skills"  width="690" height="365" src="https://user-images.githubusercontent.com/59892368/118414697-9364f880-b67c-11eb-88f3-917033216628.PNG"></img>
 
 
-* ... the function allows the user to add more arguments to the function
-barplot.
+Para publicação de artigos algumas revistas cobram por figuras coloridas. Para plotar o gráfico dos resultados dos testes com o degradê nos tons de preto e cinza, basta alterar o argumento **col** na função **MRbarplot**.
+
+~~~r
+MRbarplot(teste.TM, xlab = "Tratamentos",
+ylab = "Nitrogênio", col = gray.colors(10))
+
+~~~
+
+<img  alt="skills"  width="690" height="365" src="https://user-images.githubusercontent.com/59892368/118414762-d9ba5780-b67c-11eb-9d76-a483b93f67d8.PNG"></img>
+
+Entretanto, se na função **MRtest** o usuário escolher mais de um teste (usando o
+argumento **MCP**), a função **MRbarplot** plotará o resultado de todos os testes escolhidos.Ver exemplo abaixo.
+
+
+~~~r
+# Por "default" MCP = "all", isto é, todos os testes
+# serão analisados
+teste.all <- MRtest(y = anava, trt = "trt")
+# Plotando o resultado dos testes
+MRbarplot(teste.TM, xlab = "Tratamentos",
+ylab = "Nitrogênio", horiz = TRUE)
+
+~~~
+
+
+
+<img  alt="skills"  width="690" height="388" src="https://user-images.githubusercontent.com/59892368/118415019-48e47b80-b67e-11eb-80aa-903c2f648188.PNG"></img>
+
 
 
 
 ### MRwrite Function:
 
-The MRwrite function is expressed as follows:
+A última função apresentada do pacote **midrangeMCP** é **MRwrite**, tendo por
+objetivo exportar os principais resultados da análise dos testes. Por default essa função sempre exportará os resultados para um arquivo com a extensão “<arquivo>.csv”. Lembrando que os arquivos sempre serão exportados para o diretório de trabalho do R. Para a escolha do diretório no R, basta usar a função setwd. A seguir um exemplo para a função **MRwrite** usando o objeto **teste.TM**.
 
-> MRwrite(x, MCP = "all", extension = "csv",
-dataMR = "all")
+~~~r
+# (Sistema Operacional Linux - Ubuntu 12.04)
+# Mudando o diretorio
+setwd("~/Copy/Diretorio")
+# Exportando os resultados de "teste.TM"
+MRwrite(teste.TM)
+~~~
 
 
-being:
+<!-- COLOCAR IMAGEM PÁGINA 141 See your files in Directory
+Format: csv...  -->
 
-* x: MRtest function object;
+Caso não deseje exportar esses dois arquivos, basta usar o argumento **dataMR**. Por exemplo, se o usuário opta por simplesmente exportar o resultado da análise, basta usar:
 
-* MCP: allows you to choose the desired multiple comparison test. The default is
-MCP = "all". This option will perform all the tests that were chosen in the
-MRtest object. If you want some of the tests used on this object, you can
-concatenate it. See the MRCP function MCP argument;
+~~~r
+# (Sistema Operacional Linux - Ubuntu 12.04)
+# Mudando o diretorio
+setwd("~/Copy/Diretorio")
+# Exportando os resultados de "teste.TM"
+MRwrite(teste.TM, dataMR = "groups")
 
-* extension: type of file format. There are four options: "csv", "txt",
-"xlsx" and "latex". The default is "csv".
+~~~
 
-* dataMR: allows you to choose the results to be exported. There are three options:
-"groups", "summary" or "all". The "groups" option exports groups
-of treatment averages evaluated by choosing the test in the MCP argument. The "summary" option exports the descriptive statistics for the response variable. The option
-"all" exports both results. 
+<img  alt="skills"  width="690" height="365" src="https://user-images.githubusercontent.com/59892368/118415426-a083e680-b680-11eb-9b0c-4bd626c2c499.PNG"></img>
 
+
+As outras extensões possíveis são: “<arquivo>.txt” e “<arquivo>.xlsx”. Para detalhes, ver a subseção 3.3.4. Agora, para quem usa LATEX é possível exportar o código em formato de tabela desses resultados.
+
+
+~~~r
+# (Sistema Operacional Linux - Ubuntu 12.04)
+# Mudando o diretorio
+setwd("~/Copy/Diretorio")
+# Exportando os resultados de "teste.TM"
+MRwrite(teste.TM, dataMR = "groups", extension = "latex")
+
+~~~
+
+
+~~~r
+% latex table generated in R 3.2.2
+% by xtable 1.7-4 package
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrl}
+\hline
+trt & Means & Groups \\
+\hline
+1 & 28.82 & g1 \\
+2 & 23.98 & g2 \\
+4 & 19.92 & g3 \\
+6 & 18.70 & g3 \\
+3 & 14.64 & g4 \\
+5 & 13.26 & g4 \\
+\hline
+\end{tabular}
+\end{table}
+See yours tables in Console
+Format: latex
+Basta copiar o código e inserir em algum editor de texto do LATEX. O resultado fica
+dessa forma:
+
+~~~
+
+trt | Means |Groups
+--- | ------|------
+1   | 28.82 |g1
+2   | 23.98 |g2
+4   | 19.92 |g3
+6   | 18.70 |g3
+3   | 14.64 |g4
+5   | 13.26 |g4
 
 
 
@@ -501,7 +950,7 @@ Os passos para a aplicação do teste são:
 
 <li>
 
-Fazer $m=n$ e considerar m médias ordenadas:: $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(m).};$
+Fazer $m=n$ e considerar $m$ médias ordenadas:: $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(m).};$
 
 
 </li>
@@ -541,7 +990,7 @@ $$\Delta_m=\overline{q}_{(\alpha;m,v)} \sqrt{\dfrac{QME}{r}}; $$
 <!--------------  ITEM 05 -------------------------->
 <li>
 
-Se $ q_m \leq \Delta_m$,então as $m$ médias são consideradas não diferentes, marque o grupo como não divisível e vá para o passo 6. Caso contrário, considere as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).};$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},. . ., \overline{Y}_{(m).};$ e vá para o passo 6.
+Se $q_m \leq \Delta_m$,então as $m$ médias são consideradas não diferentes, marque o grupo como não divisível e vá para o passo 6. Caso contrário, considere as médias do grupo $\overline{Y}_{(1).},\overline{Y}_{(2).},. . ., \overline{Y}_{(k).}$ como diferentes das médias do grupo $\overline{Y}_{(k+1).},. . ., \overline{Y}_{(m).};$ e vá para o passo 6.
 
 
 </li>
@@ -566,20 +1015,8 @@ ou até que todos os grupos contenham apenas 1 média.
 
 
 
-<h1 id="tituto_Gui">GUI </h1>
-
-
-<h1 id="tituto_Tests">Tests</h1>
-
-<h2 id="titulo_Tukey">Tukey midrange test (TM test) </h2>
-
-
-<h2 id="titulo_SNK">SNK midrange test (SNKM test)</h2>
-
-<h2 id="titulo_MGM">Mean grouping based on midrange (MGM test) </h2>
-
-<h2 id="titulo_MGR">Mean grouping based on range (MGR test) </h2>
-
 <h2 id="titulo_Performance">Performance and evaluation of the tests </h2>
+
+
  
 <h2 id="titulo_Application">Application and interpretation of tests </h2>
