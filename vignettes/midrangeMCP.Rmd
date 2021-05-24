@@ -96,7 +96,7 @@ package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
 
 
  <p>
-    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="50" height="50" src="https://user-images.githubusercontent.com/59892368/115161200-a3d08600-a072-11eb-909d-c310c414bcfe.png"></img> MidrangeMCP Package </h1>
+    <h1 align="rigth"> <img  alt="icon_CreatingApplication"  width="60" height="60" src="https://user-images.githubusercontent.com/59892368/115161200-a3d08600-a072-11eb-909d-c310c414bcfe.png"></img> MidrangeMCP Package </h1>
 </p>
 
 
@@ -106,7 +106,7 @@ package ‘midrangeMCP’ successfully unpacked and MD5 sums checked
   FUNÇÕES :
 ------------------------------------>
  <p>
-    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions (Application): </h2>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/115161725-ac768b80-a075-11eb-8766-a8cf33960acc.png"></img> The three main functions (Application): </h2>
 </p>
 
 
@@ -333,7 +333,7 @@ Means Groups
 
 ~~~
 
-* $y$ como vetor de médias dos tratametos e o argumento $trt$ como vetor dos tratamentos. Assim, deve-se informar na função MRtest que o argumento y* é um
+* **y** como vetor de médias dos tratametos e o argumento **trt** como vetor dos tratamentos. Assim, deve-se informar na função MRtest que o argumento **y** é um
 vetor de médias, isto é, ismean = TRUE. Deve-se também informar o número
 de repetições, o valor do quadrado médio e o grau de liberdade do resíduo nos
 argumentos replication, **mserror** e **dferror**, respectivamente. Suponha
@@ -501,8 +501,13 @@ Means Groups
 ~~~
 
 
-Para recuperá-los no objeto teste.TM basta usar, após o nome do objeto, o
-símbolo $
+A seguir um exemplo para a função MRwrite u, após o nome do objeto, o
+símbolo $ de acordo com a imagem abaixo:
+
+<img  alt="skills"  width="690" height="365" src="https://user-images.githubusercontent.com/59892368/119241538-8ee18980-bb2d-11eb-9119-0b746ae5c941.PNG"></img>
+
+
+
 
 Caso deseje obter apenas os resultados do teste escolhido, basta usar:
 
@@ -594,9 +599,10 @@ setwd("~/Copy/Diretorio")
 MRwrite(teste.TM)
 ~~~
 
+De acordo com a imagem abaixo: o primeiro arquivo armazenou o resultado do teste de TM com a separação dos grupos. O segundo armazenou as estatísticas descritivas da variável resposta.
 
-<!-- COLOCAR IMAGEM PÁGINA 141 See your files in Directory
-Format: csv...  -->
+<img  alt="skills"  width="690" height="455" src="https://user-images.githubusercontent.com/59892368/119242169-21842780-bb32-11eb-8d7c-59723b921cd8.png"></img>
+
 
 Caso não deseje exportar esses dois arquivos, basta usar o argumento **dataMR**. Por exemplo, se o usuário opta por simplesmente exportar o resultado da análise, basta usar:
 
@@ -671,7 +677,7 @@ trt | Means |Groups
   TESTES :
 ------------------------------------>
  <p>
-    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="35" height="35" src="https://user-images.githubusercontent.com/59892368/115166354-1c424180-a089-11eb-911f-44fa69a7642f.png"></img> Tests: </h2>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/115166354-1c424180-a089-11eb-911f-44fa69a7642f.png"></img> Tests: </h2>
 </p>
 
 
@@ -807,13 +813,13 @@ O algoritmo para o teste de SNKM é o mesmo utilizado para o teste de TM. O
 que diferencia é o passo 8, que segue:
 
 
-<ol>
+<ol start="8">
 
 
 
 <!--------------  ITEM 01 -------------------------->
 <li>
-8 O valor da diferença mínima significativa é dada por 
+ O valor da diferença mínima significativa é dada por 
 
 $$\Delta_m=\overline{q}_{(\alpha/2;m,v)} \sqrt{\dfrac{QME}{r}}. $$
 Assim, $\Delta_m$ é alterado à medida que o número de médias $m$ se modifica nos $l =n−m+ 1$ grupos, modificando-se o argumento $n$ por $m$, que é um dos parâmetros
@@ -1018,5 +1024,779 @@ ou até que todos os grupos contenham apenas 1 média.
 <h2 id="titulo_Performance">Performance and evaluation of the tests </h2>
 
 
+
+<!--- -------------------------------
+APPLICATION AND INTERPRETATION OF TESTS :
+------------------------------------>
+ <p>
+    <h2  id="titulo_Using" align="rigth"> <img  alt="icon_CreatingApplication"  width="45" height="45" src="https://user-images.githubusercontent.com/59892368/119264313-04466c00-bbb9-11eb-9c43-aa7ad76832e0.png"></img> Application and interpretation of tests: </h2>
+</p>
+
+### Teste de agrupamento de médias Midrange (MGM) - Solução analítica
+
+Seguem os passos:
+
+<ol>
+<!--------------  ITEM 01 -------------------------->
+<li>
+Inicialmente, ordena-se as médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+------ | ------|------ |------ |------|------
+13,26  | 14,64 |18,70  |19,92  |23,98 |28,82
+
+
+</li>
+<li>
+Inicialmente, ordena-se as médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+------ | ------|------ |------ |------|------
+13,26  | 14,64 |18,70  |19,92  |23,98 |28,82
+
+
+</li>
+<!--------------  ITEM 02 -------------------------->
+<li>
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a que
+obteve maior diferença:
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13} = 1,38 $$
+$$\overline{Y}_{COMPOS}-\overline{Y}_{3DOK4 =} = 4,06 $$
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMPOS} = 1,22 $$
+
+$$\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7} = 4,06 $$
+$$\color{Red}{\overline{Y}_{3DOK1}-\overline{Y}_{3DOK5}= 4,84} $$
+</li>
+
+<!--------------  ITEM 03 -------------------------->
+<li>
+O passo anterior auxilou a identificar o ponto de corte de dois potenciais grupos de
+médias de populações com médias populacionais diferentes, isto é:
+
+$$ (VERIFICAR FORMULA) $$
+
+Além do mais, o grupo com maior número de médias servirá para estimar a média
+populacional desconhecida, ou seja,
+
+$$\overline{Y}^*= \dfrac{13,26 + 14,64 + 18,70 + 19,92 + 23,98}{5}= 18,10; $$
+
+</li>
+<!--------------  ITEM 04 -------------------------->
+<li>
+Calculando a estatística $\overline{r}_6$, expressão(74):
+
+$$\overline{r}_6=\dfrac{13,26 + 28,82}{2} - 18,10 = 2,94; $$
+
+</li>
+<!--------------  ITEM 05 -------------------------->
+<li>
+Calculando $\Delta_6$ expressa em (76), tem-se
+
+$$\Delta_6= \overline{q}_{(0,05/2;6,24)}\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+$$= 1,004855\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+$$=2,88;$$
+
+</li>
+<!--------------  ITEM 06 -------------------------->
+<li>
+Como $|\overline{r_6}|> |\Delta_6|$, então os dois grupos foram amostrados de populações com
+médias estatisticamente diferentes;
  
-<h2 id="titulo_Application">Application and interpretation of tests </h2>
+</li>
+
+<!--------------  ITEM 07 -------------------------->
+<li>
+Assim, parte para a análise de cada grupo, lembrando que no grupo de maior média, como há apenas uma média, esta recebe a codificação de diferenciação dos
+grupos, isto é,
+
+Tratamento | Média |Resultado
+------     | ------|------ 
+3DOK1      | 28,82 |g1 
+3DOK5      | 23,98 |análise
+3DOK7      | 19,92 |análise  
+COMPOS     | 18,70 |análise 
+3DOK4      | 14,64 |análise 
+3DOK13     | 13,26 |análise
+ 
+
+</li>
+<!--------------  ITEM 08 -------------------------->
+<li>
+Repetindo os passos de 1 a 4, porém, usando apenas os elementos do Grupo 1,
+segue que
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 
+------ | ------|------ |------ |------
+13,26  | 14,64 |18,70  |19,92  |23,98 
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13} = 1,38 $$
+$$\color{Red}{\overline{Y}_{COMP OS}-\overline{Y}_{3DOK4}= 4,06}$$
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+$$\color{Red}{\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06}$$
+
+Nesse caso houve um empate para k. Assim, poderá haver duas possibilidades para
+a separação de grupos:
+
+$$ (VERIFICAR FORMULA)$$
+ou
+
+$$ (VERIFICAR FORMULA)$$
+
+A escolha de $k$ será determinada por:
+
+$$k= max	\left \{min (k_1,m-k_1),min(k_2,m-k_2) \right \}$$
+$$= max	\left \{min (2,3),min(4,1) \right \}$$
+$$= 2.$$
+Portanto, para k = 2 tem-se
+
+$$ (VERIFICAR FORMULA)$$
+$$\overline{r}_5=\dfrac{13,26 + 23,98}{2} - 20,87 = −2,25; $$
+
+</li>
+<!--------------  ITEM 09 -------------------------->
+<li>
+Depois da quebra mais externa a $\Delta_6^*$ tem uma pequena alteração, em que é calculado da seguinte forma:
+
+$$\Delta_6^*= \overline{q}_{(0,05/2;6,24)}\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+$$= 1,004855\sqrt{\dfrac{11,78867}{5}} $$
+$$= 1,542945. $$
+De agora em diante, todos os cálculos de $\overline{r}$ serão comparados com $\Delta_6^*$ ;
+</li>
+<!--------------  ITEM 10-------------------------->
+<li>
+Assim, como $|\overline{r_5}|> |\Delta_6^*|$ conclui-se que os grupos são estatisticamente diferentes. Por enquanto nenhuma letra foi considerada nessa segunda quebra, pois cada
+subgrupo ainda será avaliado;
+</li>
+
+<!--------------  ITEM 11-------------------------->
+<li>
+A avaliação de cada subgrupo será reutilizando os passos 1, 2, 3, 4 e 9. Esse procedimento irá parar até que nenhum outro grupo seja dividido em dois novos grupos
+ou até quando os grupos contiverem apenas 1 média. Dessa forma, o resultado da
+análise fica:
+
+
+Tratamento | Média |Resultado
+------     | ------|------ 
+3DOK1      | 28,82 |g1 
+3DOK5      | 23,98 |g2
+3DOK7      | 19,92 |g3
+COMPOS     | 18,70 |g3
+3DOK4      | 14,64 |g4
+3DOK13     | 13,26 |g4
+
+</li>
+</ol>
+
+### Teste de agrupamento de médias Range (MGR) - Solução analítica
+
+Comparando com a análise do teste de MGM, os passos de 1 a 3 são os mesmos.
+Para os passos seguintes seguem:
+
+<ol start=4>
+<!--------------  ITEM 04-------------------------->
+<li >
+Calcular a estatística q6, expressa em (79):
+
+$$q_6 = 28,82 − 13,26 = 15,56;$$
+</li >
+<!--------------  ITEM 05-------------------------->
+<li >
+Calculando a diferença mínima significativa, expressão (80):
+
+$$\Delta_6=4.372651 \sqrt{\dfrac{11,78867}{5}}= 6.714167; $$
+
+</li >
+<!--------------  ITEM 06-------------------------->
+<li >
+Como $q_6 > \Delta_6$, então os dois grupos foram amostrados de populações com médias
+estatística diferentes;
+
+</li >
+<!--------------  ITEM 07-------------------------->
+<li >
+Assim, parte para a análise de cada grupo, lembrando que no grupo de maior média, como há apenas uma média, esta recebe a primeira letra de diferenciação dos
+grupos, isto é,
+
+
+
+Tratamento | Média |Resultado
+------     | ------|------ 
+3DOK1      | 28,82 |g1 
+3DOK5      | 23,98 |análise
+3DOK7      | 19,92 |análise
+COMPOS     | 18,70 |análise
+3DOK4      | 14,64 |análise
+3DOK13     | 13,26 |análise
+</li >
+<!--------------  ITEM 08-------------------------->
+<li >
+Repetindo os passos de 1 a 3, porém, usando apenas os elementos do grupo 1,
+tem-se
+
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 
+------ | ------|------ |------ |------
+13,26  | 14,64 |18,70  |19,92  |23,98 
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13} = 1,38$$
+
+$$\color{Red}{\overline{Y}_{COMP OS}-\overline{Y}_{3DOK4}= 4,06}$$
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+$$\color{Red}{\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06}$$
+Nesse caso houve um empate para $k$. Assim, poderá haver duas possibilidades para
+a separação de grupos:
+
+$$ (VERIFICAR FORMULA)$$
+ou
+
+$$ (VERIFICAR FORMULA)$$
+A escolha de k será determinada por:
+
+$$k= max	\left \{min (k_1,m-k_1),min(k_2,m-k_2) \right \}$$
+
+$$= max	\left \{min (2,3),min(4,1) \right \}$$
+
+$$= 2.$$
+Portanto, para k = 2 tem-se
+
+$$ (VERIFICAR FORMULA)$$
+
+$$q_5 = 23,98 − 13,26 = 10,72;$$
+
+</li >
+<!--------------  ITEM 09-------------------------->
+<li >
+Como $q_5 > \Delta_6$ conclui-se que os grupos são estatisticamente diferentes. Por
+enquanto nenhuma letra foi considerada, pois cada subgrupo será avaliado;
+</li >
+<!--------------  ITEM 10-------------------------->
+<li >
+A avaliação de cada subgrupo será refazer todos os passos novamente em cada
+subgrupo. Esse procedimento irá parar até que nenhum outro grupo seja dividido
+em dois novos grupos ou até quando os grupos contiverem apenas 1 média. Dessa
+forma, o resultado da análise fica:
+
+Tratamento | Média |Resultado
+------     | ------|------ 
+3DOK1      | 28,82 |g1 
+3DOK5      | 23,98 |g2
+3DOK7      | 19,92 |g2
+COMPOS     | 18,70 |g2
+3DOK4      | 14,64 |g3
+3DOK13     | 13,26 |g3
+</li >
+
+
+
+</ol>
+
+### Teste de Student-Newman-Keuls Midrange (SNKM) - Solução analítica
+
+Os passos para realizar o teste de SNKM é bem similar aos anteriores. O que irá
+diferenciar nos passos iniciais é que o maior “gap” servirá apenas para estimar a média populacional, isto é, calcular $\overline{Y}^*$ Algo interessante também é que a DMS desse teste é alterada à medida que o número de médias se modifica nos grupos avaliados. Assim,
+seguem os passos:
+<ol>
+<!--------------  ITEM 01-------------------------->
+<li>
+Inicialmente, ordena-se as médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+------ | ------|------ |------ |------|------
+13,26  | 14,64 |18,70  |19,92  |23,98 |28,82
+
+</li >
+<!--------------  ITEM 02-------------------------->
+<li >
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a que
+obteve maior diferença:
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13} = 1,38$$
+
+$$\overline{Y}_{COMP OS}-\overline{Y}_{3DOK4}= 4,06$$
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+$$\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06$$
+
+
+$$\color{Red}{\overline{Y}_{3DOK1 }-\overline{Y}_{3DOK5 }= 4,84}$$
+
+</li >
+<!--------------  ITEM 03-------------------------->
+<li >
+O passo anterior auxilou a identificar o ponto de corte de dois grupos de médias,
+isto é:
+
+$$ (VERIFICAR FORMULA)$$
+O grupo com maior número de médias servirá para estimar a média populacional
+desconhecida, ou seja,
+
+$$\overline{Y}^*= \dfrac{13,26 + 14,64 + 18,70 + 19,92 + 23,98}{5}= 18,10; $$
+
+</li >
+
+<!--------------  ITEM 04-------------------------->
+<li>
+Calculando a estatística $\overline{r}_6$, expressão (74):
+
+$$\overline{r}_6=\dfrac{13,26 + 28,82}{2} - 18,10 = 2,94; $$
+
+</li>
+
+<!--------------  ITEM 05-------------------------->
+<li>
+Calculando $\Delta_6$ expressa em (76), tem-se
+
+$$\Delta_6= \overline{q}_{(0,05/2;6,24)}\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+$$= 1.0049\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+$$= 1.9862 $$
+
+</li>
+<!--------------  ITEM 06-------------------------->
+<li>
+Como $|r_6| > |\Delta_6|$, então os dois grupos foram amostrados de populações com
+médias estatisticamente diferentes. O próximo passo é saber quais as médias são
+estatisticamente diferentes;
+
+</li>
+
+<!--------------  ITEM 07-------------------------->
+<li>
+Deve-se fazer os mesmos passos anteriores considerando o primeiro grupo de 5
+médias. Assim, segue que:
+
+<ol>
+<!--------------  ITEM 7.1-------------------------->
+<li>
+Inicialmente, ordena-se as cinco primeiras médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 
+------ | ------|------ |------ |------
+13,26  | 14,64 |18,70  |19,92  |23,98
+
+</li>
+<!--------------  ITEM 7.2-------------------------->
+<li>
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a que obteve maior diferença:
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13} = 1,38$$
+
+$$\color{Red}{\overline{Y}_{COMPOS }-\overline{Y}_{3DOK4 }= 4,06}$$
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+
+
+
+$$\color{Red}{\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06}$$
+
+Nesse caso houve um empate para k. Assim, poderá haver duas possibilidades para a separação de grupos:
+
+$$ (VERIFICAR FORMULA)$$
+ou
+
+$$ (VERIFICAR FORMULA)$$
+A escolha de $k$ será determinada por:
+
+
+$$k= max	\left \{min (k_1,m-k_1),min(k_2,m-k_2) \right \}$$
+
+$$= max	\left \{min (2,3),min(4,1) \right \}$$
+
+$$= 2.$$
+Portanto, para $k$ = 2 tem-se
+
+$$ (VERIFICAR FORMULA)$$
+$$\overline{r}_5=\dfrac{13,26 + 23,98}{2} - 20,87 = −2,25; $$
+
+</li>
+<!--------------  ITEM 7.3-------------------------->
+<li>
+Calculando $\overline{Y}^*$:
+
+$$\overline{Y}^*= \dfrac{18,70 + 19,92 + 23,98}{3}= 20,87; $$
+</li>
+<!--------------  ITEM 7.4-------------------------->
+<li>
+Calculando $\Delta_5^*$,expressão (78),
+
+$$\Delta_5^*= \overline{q}_{(0,05/2;5,24)}\sqrt{\dfrac{11,78867}{5}} $$
+
+$$= 1.0555\sqrt{\dfrac{11,78867}{5}}$$
+
+
+$$= 2.0640 $$
+
+</li>
+
+<!--------------  ITEM 7.5-------------------------->
+<li>
+Calculando $\overline{r}_5$
+
+$$\overline{r}_5=\dfrac{13,26 + 23,98}{2} - 20,87 = −2,25; $$
+
+</li>
+
+<!--------------  ITEM 7.6-------------------------->
+<li>
+$|\overline{r}_5|> |\Delta_5^*|$,conclui-se que as médias são estatisticamente diferentes. Por enquanto nenhuma letra foi considerada, pois cada subgrupo será avaliado;
+</li>
+</ol>
+</li>
+
+<!--------------  ITEM 08-------------------------->
+<li>
+Fazendo os mesmos passos anteriores considerando o segundo grupo de 5 médias,
+segue que:
+<ol>
+<!--------------  ITEM 8.1-------------------------->
+<li>
+
+Inicialmente, ordena-se as cinco primeiras médias dos tratamentos dados por:
+
+ 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+ ------|------ |------ |------|------
+ 14,64 |18,70  |19,92  |23,98 |28,82
+
+</li>
+<!--------------  ITEM 8.2-------------------------->
+<li>
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a
+que obteve maior diferença:
+
+
+
+$$\overline{Y}_{COMPOS }-\overline{Y}_{3DOK4 }= 4,06$$
+
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+
+
+$$\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06$$
+$$\color{Red}{\overline{Y}_{3DOK1}-\overline{Y}_{3DOK5  }= 4,84}$$
+Para o cálculo de $\overline{Y}^*$ os grupos se subdividiram em :
+
+$$ (VERIFICAR FORMULA)$$
+
+
+
+
+</li>
+
+<!--------------  ITEM 8.3-------------------------->
+<li>
+Calculando $\overline{Y}^*$:
+
+$$\overline{Y}^*= \dfrac{14,64 + 18,70 + 19,92 + 23,98}{4}= 19,31; $$
+</li>
+<!--------------  ITEM 8.4-------------------------->
+<li>
+Calculando$\Delta_5^*$,expressão (78),
+
+$$\Delta_5^*= \overline{q}_{(0,05/2;5,24)}\sqrt{\dfrac{11,78867}{5}} $$
+
+$$= 1.0555\sqrt{\dfrac{11,78867}{5}}$$
+
+
+$$= 2.0640 $$
+</li>
+<!--------------  ITEM 8.5-------------------------->
+<li>
+Calculando $\overline{r}_5$
+
+$$\overline{r}_5=\dfrac{14,64 + 28,82}{2} − 19,31 = 2,42; $$
+
+</li>
+<!--------------  ITEM 8.6-------------------------->
+<li>
+$|\overline{r}_5| > |\Delta_5^*|$, conclui-se que as médias são estatisticamente diferentes. Por
+enquanto nenhuma letra foi considerada, pois cada subgrupo será avaliado;
+
+</li>
+</ol>
+</li>
+
+<!--------------  ITEM 09-------------------------->
+<li>
+Até agora nada pode-se afirmar sobre as médias. Assim, o procedimento segue
+avaliando o grupo de 4 médias, depois o grupo com 3 médias até duas a duas. O
+processo se encerra caso não haja diferença entre médias ou até a comparação duas
+a duas;
+
+</li>
+
+<!--------------  ITEM 10-------------------------->
+<li>
+Dessa forma, o resultado da análise ficou da seguinte forma:
+
+Tratamento | Média |Resultado
+------:    | ------|------ 
+3DOK1      | 28,82 |g1  
+3DOK5      | 23,98 |   g2
+3DOK7      | 19,92 |g2
+COMPOS     | 18,70 |g2   g3
+3DOK4      | 14,64 |g2   g3
+3DOK13     | 13,26 |g3
+
+
+</li>
+
+
+
+</ol>
+
+### Teste de Tukey Midrange (TM) - Solução analítica
+
+O procedimento para realizar o teste de Tukey Midrange é similar ao do teste
+de SNKM. O que diferencia é que a DMS é fixa independente do número de médias
+envolvido. Seguem os passos para o teste de TM:
+<ol>
+<!--------------  ITEM 01-------------------------->
+<li>
+Inicialmente, ordena-se as médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+------ | ------|------ |------ |------|------
+13,26  | 14,64 |18,70  |19,92  |23,98 |28,82
+
+
+</li>
+<!--------------  ITEM 02-------------------------->
+<li>
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a que obteve maior diferença:
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13  }= 1,38$$
+
+$$\overline{Y}_{COMPOS }-\overline{Y}_{3DOK4 }= 4,06$$
+
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+
+
+$$\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06$$
+
+$$\color{Red}{\overline{Y}_{3DOK1}-\overline{Y}_{3DOK5  }= 4,84}$$
+</li>
+<!--------------  ITEM 03-------------------------->
+<li>
+O passo anterior auxiliou a identificar o ponto de corte de dois grupos de médias,
+isto é:
+
+$$ (VERIFICAR FORMULA)$$
+
+O grupo com maior número de médias servirá para estimar a média populacional
+desconhecida, ou seja,
+
+$$\overline{Y}^*= \dfrac{13,26 + 14,64 + 18,70 + 19,92 + 23,98}{5}= 18,10; $$
+
+
+
+</li>
+<!--------------  ITEM 04-------------------------->
+<li>
+Calculando a estatística $\overline{r}_6$, expressão (74):
+
+$$\overline{r}_6=\dfrac{13,26 + 28,82}{2} − 18,10 = 2,94; $$
+
+
+</li>
+<!--------------  ITEM 05-------------------------->
+<li>
+Calculando $\Delta_6$ expressa em (76), tem-se
+
+
+
+$$\Delta_6= \overline{q}_{(0,05/2;6,28)}\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+
+$$= 1.004855\sqrt{\dfrac{11,78867}{5}}+\dfrac{1}{\sqrt{6}}\sqrt{\dfrac{11,78867}{5}} $$
+
+
+
+$$= 1,986204; $$
+
+
+</li>
+<!--------------  ITEM 06-------------------------->
+<li>
+Como $|\overline{r}_6| > |\Delta_6|$, então os dois grupos foram amostrados de populações com
+médias estatisticamente diferentes. O próximo passo é saber quais as médias são
+estatisticamente diferentes;
+
+
+</li>
+<!--------------  ITEM 07-------------------------->
+<li>
+Deve-se fazer os mesmos passos anteriores considerando o primeiro grupo de 5
+médias. Assim, segue que:
+<ol>
+<!--------------  ITEM 7.1-------------------------->
+<li>
+Inicialmente, ordena-se as cinco primeiras médias dos tratamentos dados por:
+
+3DOK13 | 3DOK4 |COMPOS |3DOK7  |3DOK5 
+------ | ------|------ |------ |------
+13,26  | 14,64 |18,70  |19,92  |23,98 
+
+</li>
+<!--------------  ITEM 7.2-------------------------->
+<li>
+Após isso, calcula-se as diferenças entre médias consecutivas e verifica-se a
+que obteve maior diferença:
+
+$$\overline{Y}_{3DOK4}-\overline{Y}_{3DOK13  }= 1,38$$
+
+
+$$\color{Red}{\overline{Y}_{COMPOS }-\overline{Y}_{3DOK4 }= 4,06}$$
+
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+
+
+
+$$\color{Red}{\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7 }= 4,06}$$
+
+Nesse caso houve um empate para k. Assim, poderá haver duas possibilidades para a separação de grupos:
+
+$$ (VERIFICAR FORMULA)$$
+
+ou
+
+$$ (VERIFICAR FORMULA)$$
+
+$$k= max	\left \{min (k_1,m-k_1),min(k_2,m-k_2) \right \}$$
+
+$$= max	\left \{min (2,3),min(4,1) \right \}$$
+
+$$= 2.$$
+
+Portanto, para k = 2 tem-se
+
+
+$$ (VERIFICAR FORMULA)$$
+
+$$\overline{r}_5=\dfrac{13,26 + 23,98}{2} − 20,87 = −2,25;; $$
+
+</li>
+<!--------------  ITEM 7.3-------------------------->
+<li>
+Calculando $\overline{Y}^*$:
+
+$$\overline{Y}^*= \dfrac{18,70 + 19,92 + 23,98}{3}= 20,87; $$
+
+</li>
+<!--------------  ITEM 7.4-------------------------->
+<li>
+Calculando $\Delta_5^*$,expressão (77),
+
+$$\Delta_5^*= \overline{q}_{(0,05/2;6,28)}\sqrt{\dfrac{11,78867}{5}} $$
+
+$$= 1,004855\sqrt{\dfrac{11,78867}{5}}$$
+
+
+$$= 1,542945$$
+</li>
+<!--------------  ITEM 7.5-------------------------->
+<li>
+Calculando $\overline{r}_5$
+
+$$\overline{r}_5=\dfrac{13,26 + 23,98}{2} − 20,87 = −2,25; $$
+</li>
+<!--------------  ITEM 7.6-------------------------->
+<li>
+$|\overline{r}_5| > |\Delta_5^*|$,conclui-se que as médias são estatisticamente diferentes.
+</li>
+
+</ol>
+</li>
+<!--------------  ITEM 08-------------------------->
+<li>
+Deve-se fazer os mesmos passos anteriores considerando o segundo grupo de 5 médias. Assim, segue que:
+<ol>
+<!--------------  ITEM 8.1-------------------------->
+<li>
+Inicialmente, ordena-se as cinco primeiras médias dos tratamentos dados por:
+
+ 3DOK4 |COMPOS |3DOK7  |3DOK5 |3DOK1
+ ------|------ |------ |------|------
+ 14,64 |18,70  |19,92  |23,98 |28,82
+</li>
+<!--------------  ITEM 8.2-------------------------->
+<li>
+
+
+
+
+$$\color{Red}{\overline{Y}_{COMPOS }-\overline{Y}_{3DOK4 }= 4,06}$$
+
+
+$$\overline{Y}_{3DOK7}-\overline{Y}_{COMP OS}= 1,22$$
+$$\overline{Y}_{3DOK5}-\overline{Y}_{3DOK7}= 4,06$$
+
+
+$$\color{Red}{\overline{Y}_{3DOK1}-\overline{Y}_{3DOK5  }= 4,84}$$
+Para o cálculo de $\overline{Y}^*$ os grupos se subdividiram em :
+
+$$ (VERIFICAR FORMULA)$$
+
+
+</li>
+<!--------------  ITEM 8.3-------------------------->
+<li>
+Calculando $\overline{Y}^*$
+
+$$\overline{Y}^*= \dfrac{14,64 + 18,70 + 19,92 + 23,98}{4}=19,31;;$$
+
+
+
+</li>
+<!--------------  ITEM 8.4-------------------------->
+<li>
+Calculando $\Delta_5^*$,expressão (77),
+
+$$\Delta_5^*= \overline{q}_{(0,05/2;6,28)}\sqrt{\dfrac{11,78867}{5}} $$
+
+$$= 1,004855\sqrt{\dfrac{11,78867}{5}}$$
+
+
+$$= 1,542945$$
+</li>
+<!--------------  ITEM 8.5-------------------------->
+<li>
+Calculando $\overline{r}_5$
+
+$$\overline{r}_5=\dfrac{14,64 + 28,82}{2} − 19,31 = 2,42; $$
+</li>
+<!--------------  ITEM 8.6-------------------------->
+<li>
+$|\overline{r}_5| > |\Delta_5|$, conclui-se que as médias são estatisticamente diferentes;
+</li>
+</ol>
+</li>
+
+<!--------------  ITEM 09-------------------------->
+<li>
+Até agora nada pode-se afirmar sobre as médias. Assim, o procedimento segue
+avaliando o grupo de 4 médias, depois o grupo com 3 médias até duas a duas. O processo se encerra caso não haja diferença entre médias ou até a comparação duas
+a duas;
+</li>
+<!--------------  ITEM 10-------------------------->
+<li>
+Dessa forma, o resultado da análise ficou da seguinte forma:
+
+Tratamento | Média |Resultado
+------:    | ------|------ 
+3DOK1      | 28,82 |g1  
+3DOK5      | 23,98 |g2
+3DOK7      | 19,92 |g3
+COMPOS     | 18,70 |g3
+3DOK4      | 14,64 |g4
+3DOK13     | 13,26 |g4
+
+</li>
+</ol>
