@@ -1791,7 +1791,7 @@ Dessa forma, o resultado da análise ficou da seguinte forma:
 
 Tratamento | Média |Resultado
 ------:    | ------|------ 
-3DOK1      | 28,82 |g1  
+3DOK1      | 28,82 |g1    |
 3DOK5      | 23,98 |g2
 3DOK7      | 19,92 |g3
 COMPOS     | 18,70 |g3
@@ -1800,3 +1800,203 @@ COMPOS     | 18,70 |g3
 
 </li>
 </ol>
+
+### Interpretation of tests:
+
+Na Tabela 9 será apresentado os resultados dos testes propostos (TM e SNKM) comparando com os testes originais (teste de Tukey e de SNK).
+
+
+
+
+Trat  | Médias |TM |Tukey  |SNKM  |SNK |MGM |MGR |Scott-Knott
+------| ------ |-- |------ |------|----|----|----|------
+1     | 28,82  |g1 |a      |g1    |a   |g1  |g1  |a
+2     | 23,98  |g2 |ab     |g1g2  |b   |g2  |g2  |b
+4     | 19,92  |g3 |bc     |g2    |bc  |g3  |g2  |c
+6     | 18,70  |g3 |bc     |g2g3  |bc  |g3  |g2  |c
+3     | 14,64  |g4 |c      |g2g3  |cd  |g4  |g3  |d
+5     | 13,26  |g4 |c      |g3    |d   |g4  |g3  |d
+
+
+O teste de **TM** apresentou uma maior separação de grupos, resultando assim, numa melhor interpretação prática para os tratamentos. Observe que o teste de **TM**,para esse exemplo, conseguiu separar os grupos de médias sem ambiguidade e igual aos resultados dos testes de **MGM** e de **MGR**. Algo que não ocorreu com o teste de **Tukey** original. O resultado do teste de **SNKM** diferiu do resultado do teste de **SNK**. Portanto, de modo prático os testes de **TM**, **MGM** e **MGR** conseguem informar que o efeito da bactéria 3DOK1 produziu um maior teor de nitrogênio que as demais.
+
+Utilizando agora o Exemplo 3.2, será apresentado como proceder a realização dos testes, utilizando o pacote MidrangeMCP, uma entrada de dados diferente da feita no Exemplo 3.1. Os dados analisados pelo pacote serão as médias dos genótipos, com informações adicionais sobre o quadrado médio do resíduo do experimento e seu grau de liberdade, e o número de repetições das médias.
+
+No R, os genótipos e suas respectivas médias do período de floração foram armazenadas no objeto dados, como observado abaixo
+
+~~~r
+dados
+~~~
+
+~~~r
+genotipo flow
+1 BR501 83.2543
+2 BR505 79.9100
+3 BR506 84.3286
+4 BR507 85.1686
+5 BR508 83.7000
+6 BRS511 81.4200
+7 CMSXS629 83.2671
+8 CMSXS630 85.7471
+9 CMSXS633 80.9100
+10 CMSXS635 82.4800
+11 CMSXS636 75.4286
+12 CMSXS637 79.5886
+13 CMSXS639 78.1500
+14 CMSXS643 87.5143
+15 CMSXS644 82.3543
+16 CMSXS646 78.5914
+17 CMSXS647 77.2871
+18 CMSXS648 81.1243
+19 BRS601 78.3300
+20 SUGARGRAZE 75.4471
+21 V82391 75.3614
+22 V82392 72.5243
+23 V82393 73.8300
+24 XBSW80007 75.1486
+25 XBSW80140 79.3500
+
+~~~
+
+Posteriormente, usou-se a função MRtest com o argumento $ismean = TRUE$ para informar que o argumento $y$ está recebendo as médias dos genótipos.
+
+~~~r
+y <- dados$genotipo
+trt <- dados$flow
+MRtest(y, trt, dferror = 252, mserror = 6.3078,
+replication = 21, alpha = 0.05,
+MCP = c("MGM", "MGR"), ismean = TRUE)
+
+~~~
+
+~~~r
+Mean Grouping Midrange Test
+
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Mid Ext.DMS Int.DMS
+80.01 3.14 6.3078 252 25 0.72453 0.475 0.397
+
+Groups:
+Means Groups
+CMSXS643 87.51 g1
+CMSXS630 85.75 g2
+BR507 85.17 g2
+BR506 84.33 g3
+BR508 83.70 g3
+CMSXS629 83.27 g3
+BR501 83.25 g3
+CMSXS635 82.48 g3
+CMSXS644 82.35 g3
+BRS511 81.42 g4
+CMSXS648 81.12 g4
+CMSXS633 80.91 g4
+BR505 79.91 g5
+CMSXS637 79.59 g5
+XBSW80140 79.35 g5
+CMSXS646 78.59 g5
+BRS601 78.33 g5
+CMSXS639 78.15 g5
+CMSXS647 77.29 g5
+SUGARGRAZE 75.45 g6
+CMSXS636 75.43 g6
+V82391 75.36 g6
+XBSW80007 75.15 g6
+V82393 73.83 g7
+V82392 72.52 g8
+
+Mean Grouping Range Test
+
+Statistics:
+Exp.Mean CV MSerror Df n Stud.Range DMS
+80.01 3.14 6.3078 252 25 5.231999 2.88
+
+Groups:
+Means Groups
+CMSXS643 87.51 g1
+CMSXS630 85.75 g2
+BR507 85.17 g2
+BR506 84.33 g3
+BR508 83.70 g3
+CMSXS629 83.27 g3
+BR501 83.25 g3
+CMSXS635 82.48 g3
+CMSXS644 82.35 g3
+BRS511 81.42 g4
+CMSXS648 81.12 g4
+CMSXS633 80.91 g4
+BR505 79.91 g5
+CMSXS637 79.59 g5
+XBSW80140 79.35 g5
+CMSXS646 78.59 g5
+BRS601 78.33 g5
+CMSXS639 78.15 g5
+CMSXS647 77.29 g5
+SUGARGRAZE 75.45 g6
+CMSXS636 75.43 g6
+V82391 75.36 g6
+XBSW80007 75.15 g6
+V82393 73.83 g7
+V82392 72.52 g7
+
+~~~
+
+Tabela 10 Resultados dos testes de MGM, de MGR e de Scott-Knott avaliando os 25 genótipos de sorgo apresentado no Exemplo 3.2.
+
+| Genótipo | Médias | Diferença entre médias | MGM | MGR | Scott-Knott |
+|----------|--------|:------------------------:|-----|-----|:-------------:|
+| CMSXS643 |87.51   |      -                 |  g1 | g1  |      A      |
+| CMSXS630 |85,75   | 1,77                   |  g2 | g2  |      B      |
+| BR507    |85,17   | 0,58                   |  g2 | g2  |      B      |
+| BR506    |84,33   | 0,84                   |  g3 | g3  |      B      |
+| BR508    |83,70   |  0,63                  |  g3 | g3  |      C      |
+| CMSXS629 |83,27   |   0,43                 |  g3 | g3  |      C       |
+| BR501    |83,25   |    0,01                |  g3 | g3  |      C       |
+| CMSXS635 |82,48   |    0,77                |  g3 | g3  |      C       |
+|CMSXS644  |82,35   |    0,13                |  g3 | g3  |      C       |
+| BRS511   |81,42   |    0,93                |  g4 | g4  |      D       |
+|CMSXS648  |81,12   |     0,30               |  g4 | g4  |      D       |
+|CMSXS633  |80,91   |     0,21               |  g4 | g4  |      D       |
+|BR505     |79,91   |     1,00               |  g5 | g5  |      E       |
+| CMSXS637 | 79,59  |     0,32               |  g5 | g5  |      E       |
+|XBSW80140 | 79,35  |     0,24               |  g5 | g5  |      E       |
+|CMSXS646  |78,59   |    0,76                |  g5 | g5  |      E       |
+|BRS601    |78,33   |   0,26                 |  g5 | g5  |      E       |
+|CMSXS639  |78,15   |   0,18                 |  g5 | g5  |      E       |
+|CMSXS647  | 77,29  |   0,86                 |  g5 | g5  |      E       |
+|SUGARGRAZE|75,45   |   1,84                 |  g6 | g6  |      F       |
+|CMSXS636  |75,43   |   0,02                 |  g6 | g6  |      F       |
+|V82391    |75,36   |   0,07                 |  g6 | g6  |      F       |
+|XBSW80007 |75,15   |   0,21                 |  g6 | g6  |      F       |
+|V82393    |73,83   |   1,32                 |  g7 | g7  |      G       |
+|V82392    |72,52   |    1,31                |  g8 | g7  |      G       |
+
+
+Na Tabela 10, os resultados dos testes são apresentados para a comparação. Nessa tabela também é enfatizado as diferenças consecutivas entre as médias ordenadas para auxílio na comparação dos resultados dos testes. Um outro aspecto é o destaque nas linhas em que um dos testes separou o grupo de médias.
+
+
+Os resultados mostram que os testes propostos (MGM e MGR) apresentaram
+uma maior separação dos grupos de médias do que o teste de Scott-Knott de modo mais
+coerente. Os testes propostos apresentaram resultados bem semelhantes. As médias foram ordenadas para facilitar a discussão. Observe a diferença dos resultados dos testes nos primeiros grupos de médias. As médias dos genótipos BR507 e BR506 foram considerados estatisticamente iguais pelo teste de Scott-Knott, mas diferentes pelo teste de MGM e de MGR. Posteriormente, as médias dos genótipos BR506 e BR508 foram consideradas estatisticamente iguais pelos testes propostos, porém diferentes pelo teste de Scott-Knott. Ocorre uma incoerência no teste de Scott-Knott, muito comum na prática. Perceba a diferença $\overline{Y}_{BR507}-\overline{Y}_{BR506 }=0,84$. O valor de $0,84$ entre essas duas médias não foi o suficiente para o teste de Scott-Knott detectar que estas são amostradas de populações com médias diferentes. Entretanto, esse mesmo teste detectou que a diferença $\overline{Y}_{BR507}-\overline{Y}_{BR508 }=0,63$ era significativa, e portanto, o efeitos médio desses genótipos são diferentes. Isso se deve a filosofia como o teste de Scott-Knott foi desenvolvido. A separação de grupos ocorre pela razão de verossimilhança entre grupos. As diferenças entre médias limitantes de cada grupo podem muitas vezes ser menor do que as diferenças entre médias consecutivas dentro dos grupos.
+
+Ao contrário do teste de **Scott-Knott**, os testes de **MGM** e de **MGR** são mais
+coerentes quanto a este aspecto. A diferença entre os genótipos BR506 e BR508 de
+0,63 não foi suficiente para os testes propostos avaliarem esses dois genótipos como
+estatisticamente diferentes. Entretanto, para a diferença maior entre os genótipos BR507
+e BR506 de 0,84 estes foram estatisticamente diferentes.
+
+Entretanto, em uma situação o teste de **MGR** também não se livrou desse aspecto.
+Verificando a diferença entre os genótipos V82393 e V82392 que foi de 1,31, o teste de
+**MGR** não detectou diferença entre essas médias, como também não foi verificado pelo
+teste de **Scott-Knott**. Esse questionamento se deve ao fato da diferença entre os genótipos
+BR507 e BR506 de 0,84 ter sido detectado como uma diferença significativa pelo teste
+de **MGR**. Já para o teste de **MGM** isso não ocorre, a diferença para os genótipos V82393
+e V82392 de 1,31 foi detectado como genótipos estatisticamente diferentes. Apenas em
+uma situação nenhum dos testes detectou significância numa diferença de 0,86 (diferença
+entre os genótipos CMSXS639 e CMSXS642). A menor diferença significativa detectada
+para os testes de **MGM** e de **MGR** foi de 0,84, e para o teste de **Scott-Knott** foi de 0,63.
+Assim, todos os testes acima desses valores deveriam também detectar diferença. Vale
+lembrar que para os testes propostos, os valores 0,84 e 0,86 estão bem próximos, sendo um limiar para esses testes detectarem a significância na diferença entre as médias.
+Em todas as outras situações em que o teste de **Scott-Knott** diferenciou os grupos de médias os testes de **MGM** e de **MGR** conseguiram também detectar. Levando em consideração que o teste de MGM refinou ainda mais a separação de grupos.
+A maior separação de modo mais coerente ocorre nos testes de MGM e de MGR devido o desenvolvimento de como os testes foram propostos. A separação dos grupos desses testes leva em consideração a maior diferença consecutiva entre médias, e isso foi determinante para que não houvesse a incoerência que muitas vezes ocorre no teste de **Scott-Knott**.
+
+
